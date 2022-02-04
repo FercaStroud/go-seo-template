@@ -1,0 +1,39 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* font-family: "Montserrat"; */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  background-color: #222;
+  color: white;
+}
+
+::moz-selection {
+  color: white;
+  background-color: #00acc1;
+}
+::selection {
+  color: white;
+  background-color: #00acc1;
+}
+
+.fade-in {
+  animation: section-fade-in 0.35s ease;
+}
+
+@keyframes section-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
