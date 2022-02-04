@@ -18,11 +18,11 @@ html, body {
 
 ::moz-selection {
   color: white;
-  background-color: #00acc1;
+  background-color: #5c95ff;
 }
 ::selection {
   color: white;
-  background-color: #00acc1;
+  background-color: #5c95ff;
 }
 
 .fade-in {

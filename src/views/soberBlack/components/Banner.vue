@@ -23,7 +23,7 @@
           v-model="foo"
           name="foo"
           placeholder="lorem"
-          class="form-input border-none basis-4/5"
+          class="custom-input border-none basis-4/5"
         />
         <button type="submit" class="submit basis-1/5">send</button>
       </form>
@@ -50,13 +50,26 @@ export default {
 
 <style scoped>
 .banner {
-  background-image: url(https://via.placeholder.com/1000x700/555555);
+  background-image: url(https://via.placeholder.com/1536x400/555555);
+  height: 400px;
   background-position: center;
   background-size: cover;
   color: #222;
 }
+.custom-input {
+  background-color: #333;
+  color: white;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
 .submit {
   background-color: #f87575;
+  color: white;
   padding: 0.2rem 1rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  opacity: 0.8;
+  transition: all 0.35s ease;
+}
+.submit:hover {
+  opacity: 1;
 }
 </style>

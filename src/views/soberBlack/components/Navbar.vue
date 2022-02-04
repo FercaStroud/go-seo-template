@@ -12,7 +12,7 @@
       <a href="/" class="link p-2">home</a>
       <a href="/portfolio-sober" class="link p-2">portfolio</a>
       <a href="/blog-sober" class="link p-2">blog</a>
-      <a href="/#contact" class="link p-2">contact</a>
+      <a href="/contact-sober" class="link p-2">contact</a>
     </div>
   </div>
 </template>
