@@ -71,11 +71,11 @@ export default {
 <style scoped>
 .feature {
   height: 100%;
-  background-color: rgba(92, 149, 255, 0.1);
+  background-color: #214280;
   transition: all 0.35s ease;
 }
 .feature:hover {
-  background-color: rgba(92, 149, 255, 0.8);
+  background-color: #3a75e4;
 }
 .recomendation {
   background-color: #333;

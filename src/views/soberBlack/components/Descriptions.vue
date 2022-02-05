@@ -1,12 +1,12 @@
 <template>
-  <div class="content font-mono py-10 max-w-screen-2xl 2xl:mx-auto">
+  <div class="content font-mono py-10 px-10 max-w-screen-2xl 2xl:mx-auto">
     <div class="container">
       <div class="flex flex-row flex-wrap">
         <div
           class="
             img-container
             basis-full
-            sm:basis-1/2
+            sm:basis-2/5
             flex
             items-center
             justify-center
@@ -18,7 +18,7 @@
           class="
             text
             basis-full
-            sm:basis-1/2
+            sm:basis-3/5
             flex flex-col
             items-center
             justify-center
@@ -44,7 +44,7 @@
           class="
             text
             basis-full
-            sm:basis-1/2
+            sm:basis-3/5
             flex flex-col
             items-center
             justify-center
@@ -68,7 +68,7 @@
           class="
             img-container
             basis-full
-            sm:basis-1/2
+            sm:basis-2/5
             flex
             items-center
             justify-center

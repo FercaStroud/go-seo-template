@@ -1,7 +1,12 @@
 import { createApp, h } from "vue";
 import App from "./App.vue";
+
 import SoberBlack from "./views/soberBlack/SoberBlack.vue";
+import SoberPortfolio from "./views/soberBlack/portfolio/Portfolio.vue";
+import SoberBlog from "./views/soberBlack/blog/Blog.vue";
 import SoberContact from "./views/soberBlack/contact/Contact.vue";
+import SoberPost from "./views/soberBlack/post/Post.vue";
+
 import "./index.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -15,6 +20,7 @@ import {
   faFacebook,
   faTwitter,
   faInstagram,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 library.add(
   faLaptopCode,
@@ -23,16 +29,19 @@ library.add(
   faStar,
   faFacebook,
   faTwitter,
-  faInstagram
+  faInstagram,
+  faWhatsapp
 );
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 const routes = {
   "/": SoberBlack,
-  "/portfolio-sober": SoberBlack,
-  "/blog-sober": SoberBlack,
+  "/template-1": SoberBlack,
+  "/portfolio-sober": SoberPortfolio,
+  "/blog-sober": SoberBlog,
   "/contact-sober": SoberContact,
+  "/post-sober": SoberPost,
 };
 
 const SimpleRouter = {

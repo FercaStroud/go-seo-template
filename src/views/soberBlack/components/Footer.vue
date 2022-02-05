@@ -1,16 +1,16 @@
 <template>
-  <div class="footer font-mono py-10">
+  <div class="footer font-mono py-10 px-5 sm:px-0">
     <div class="container mx-auto flex flex-row flex-wrap">
-      <div class="flex flex-col basis-full sm:basis-1/2 items-center">
-        <p class="font-base text-lg mb-5 text-center">
+      <div class="flex flex-col basis-full sm:basis-2/3 items-start sm:pr-5">
+        <p class="font-base text-md md:text-lg mb-5 text-left">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
           similique, ducimus molestias repudiandae aliquid esse fugit
           voluptatibus nihil! Nulla, ab.
         </p>
         <a href="/contact-sober" class="custom-link mb-5 rounded">contact</a>
       </div>
-      <div class="flex basis-full sm:basis-1/2">
-        <ul class="mx-auto">
+      <div class="flex basis-full sm:basis-1/3">
+        <ul class="mx-0 sm:ml-5">
           <li>
             <a href="#" class="font-base text-lg social">
               <font-awesome-icon :icon="['fab', 'facebook']" />
@@ -27,6 +27,12 @@
             <a href="#" class="font-base text-lg social">
               <font-awesome-icon :icon="['fab', 'instagram']" />
               Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" class="font-base text-lg social">
+              <font-awesome-icon :icon="['fab', 'whatsapp']" />
+              Whatsapp
             </a>
           </li>
         </ul>
@@ -46,13 +52,12 @@ export default {
   background-color: #333;
 }
 .custom-link {
-  background-color: #5c95ff;
+  background-color: #305fb6;
   padding: 0.2rem 2rem;
-  opacity: 0.8;
   transition: all 0.35s ease;
 }
 .custom-link:hover {
-  opacity: 1;
+  background-color: #5c95ff;
 }
 .social {
   transition: all 0.35s ease;

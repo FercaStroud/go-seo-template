@@ -50,11 +50,17 @@ export default {
 
 <style scoped>
 .banner {
+  margin-top: 66px;
   background-image: url(https://via.placeholder.com/1536x400/555555);
   height: 400px;
   background-position: center;
   background-size: cover;
   color: #222;
+}
+@media screen and (max-width: 639px) {
+  .banner {
+    margin-top: 98px;
+  }
 }
 .custom-input {
   background-color: #333;
@@ -62,14 +68,13 @@ export default {
   border-radius: 0.25rem 0 0 0.25rem;
 }
 .submit {
-  background-color: #f87575;
+  background-color: #c54c4c;
   color: white;
   padding: 0.2rem 1rem;
   border-radius: 0 0.25rem 0.25rem 0;
-  opacity: 0.8;
   transition: all 0.35s ease;
 }
 .submit:hover {
-  opacity: 1;
+  background-color: #f87575;
 }
 </style>

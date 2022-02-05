@@ -169,6 +169,12 @@ export default {
 <style scoped>
 .view-container {
   height: 100vh;
+  margin-top: 66px;
+}
+@media screen and (max-width: 639px) {
+  .view-container {
+    margin-top: 98px;
+  }
 }
 .title {
   position: relative;
@@ -202,12 +208,11 @@ export default {
   height: 3rem;
 }
 .submit {
-  background-color: #f87575;
+  background-color: #c54c4c;
   padding: 0.2rem 1rem;
-  opacity: 0.8;
   transition: all 0.35s ease;
 }
 .submit:hover {
-  opacity: 1;
+  background-color: #f87575;
 }
 </style>
