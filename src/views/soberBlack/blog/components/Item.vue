@@ -11,7 +11,7 @@
         <p class="description">
           {{ description }}
         </p>
-        <a :href="url" class="link">continue reading</a>
+        <router-link :to="url" class="link">continue reading</router-link>
       </div>
     </div>
   </div>

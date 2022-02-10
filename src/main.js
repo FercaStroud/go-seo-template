@@ -1,11 +1,6 @@
-import { createApp, h } from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
-
-import SoberBlack from "./views/soberBlack/SoberBlack.vue";
-import SoberPortfolio from "./views/soberBlack/portfolio/Portfolio.vue";
-import SoberBlog from "./views/soberBlack/blog/Blog.vue";
-import SoberContact from "./views/soberBlack/contact/Contact.vue";
-import SoberPost from "./views/soberBlack/post/Post.vue";
+import router from "./router";
 
 import "./index.css";
 
@@ -15,6 +10,8 @@ import {
   faRocket,
   faShoppingCart,
   faStar,
+  faClock,
+  faTruck,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -23,10 +20,15 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 library.add(
+  // free solid
   faLaptopCode,
   faRocket,
   faShoppingCart,
   faStar,
+  faClock,
+  faTruck,
+
+  // free brands
   faFacebook,
   faTwitter,
   faInstagram,
@@ -35,31 +37,7 @@ library.add(
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-const routes = {
-  "/": SoberBlack,
-  "/template-1": SoberBlack,
-  "/portfolio-sober": SoberPortfolio,
-  "/blog-sober": SoberBlog,
-  "/contact-sober": SoberContact,
-  "/post-sober": SoberPost,
-};
-
-const SimpleRouter = {
-  data: () => ({
-    currentRoute: window.location.pathname,
-  }),
-
-  computed: {
-    CurrentComponent() {
-      return routes[this.currentRoute] || NotFoundComponent;
-    },
-  },
-
-  render() {
-    return h(this.CurrentComponent);
-  },
-};
-
-createApp(SimpleRouter)
+createApp(App)
+  .use(router)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

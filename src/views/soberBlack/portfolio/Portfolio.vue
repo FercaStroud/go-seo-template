@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col">
+  <div class="portfolio-container flex flex-col">
     <Navbar />
     <div
       class="
-        portfolio-container
+        portfolio
         font-mono
         max-w-screen-2xl
         2xl:mx-auto
@@ -115,6 +115,10 @@ export default {
 
 <style scoped>
 .portfolio-container {
+  background-color: #222;
+  color: white;
+}
+.portfolio {
   margin-top: 66px;
 }
 @media screen and (max-width: 639px) {

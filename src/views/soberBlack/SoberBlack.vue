@@ -1,5 +1,5 @@
 <template>
-  <div class="sober fade-in">
+  <div class="sober">
     <Navbar />
     <Banner />
     <Features />
@@ -28,4 +28,8 @@ export default {
 </script>
 
 <style scoped>
+.sober {
+  background-color: #222;
+  color: white;
+}
 </style>

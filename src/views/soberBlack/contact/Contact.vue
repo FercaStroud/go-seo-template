@@ -178,6 +178,8 @@ export default {
 
 <style scoped>
 .view-container {
+  background-color: #222;
+  color: white;
   height: 100vh;
   margin-top: 66px;
 }

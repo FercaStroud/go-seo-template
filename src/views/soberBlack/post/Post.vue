@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col">
+  <div class="post-container flex flex-col">
     <Navbar />
     <div
       class="
-        post-container
+        post
         font-mono
         max-w-screen-2xl
         2xl:mx-auto
@@ -92,10 +92,14 @@ export default {
 
 <style scoped>
 .post-container {
+  background-color: #222;
+  color: white;
+}
+.post {
   margin-top: 66px;
 }
 @media screen and (max-width: 639px) {
-  .post-container {
+  .post {
     margin-top: 98px;
   }
 }

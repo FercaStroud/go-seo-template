@@ -1,9 +1,9 @@
 <template>
-  <div class="navbar font-mono flex flex-col sm:flex-row px-5 py-2 sm:px-10">
+  <div class="navbar flex flex-col sm:flex-row px-5 py-2 sm:px-10">
     <div class="logo basis-full mb-2 sm:mb-0 sm:basis-1/4">
       <div class="img-container">
         <router-link to="/">
-          <img src="https://via.placeholder.com/150x50/5c95ff/222222/" alt="" />
+          <img src="https://via.placeholder.com/150x50/FF70A6/000000" alt="" />
         </router-link>
       </div>
     </div>
@@ -38,28 +38,35 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #1e1e1e;
   position: fixed;
   width: 100vw;
   top: 0;
   z-index: 1;
-}
-
-.img-container {
-  background-color: #5c95ff;
-  width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.img-container > img {
-  width: 100%;
-  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.022),
+    0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
+    0px 0px 29.2px rgba(0, 0, 0, 0.048), 0px 0px 80px rgba(0, 0, 0, 0.07);
 }
 .link {
-  transition: all 0.35s ease;
+  position: relative;
+  color: #555;
+  transition: color 0.35s ease;
 }
 .link:hover {
-  background-color: #5c95ff;
+  color: black;
+}
+.link::after {
+  position: absolute;
+  content: "";
+  background-color: #ff70a6;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 0;
+  border-radius: 1rem;
+  transition: width 0.35s ease;
+}
+.link:hover::after {
+  width: 100%;
 }
 </style>

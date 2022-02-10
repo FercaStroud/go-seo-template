@@ -7,7 +7,7 @@
           similique, ducimus molestias repudiandae aliquid esse fugit
           voluptatibus nihil! Nulla, ab.
         </p>
-        <a href="/contact-sober" class="custom-link mb-5 rounded">contact</a>
+        <router-link to="/contact-sober" class="custom-link mb-5 rounded">contact</router-link>
       </div>
       <div class="flex basis-full sm:basis-1/3">
         <ul class="mx-0 sm:ml-5">

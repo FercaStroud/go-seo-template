@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col">
+  <div class="blog-container flex flex-col">
     <Navbar />
     <div
       class="
-        blog-container
+        blog
         font-mono
         max-w-screen-2xl
         2xl:mx-auto
@@ -94,10 +94,14 @@ export default {
 
 <style scoped>
 .blog-container {
+  background-color: #222;
+  color: white;
+}
+.blog {
   margin-top: 66px;
 }
 @media screen and (max-width: 639px) {
-  .blog-container {
+  .blog {
     margin-top: 98px;
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="content font-mono pt-10 max-w-screen-2xl 2xl:mx-auto">
-    <div class="features flex flex-row flex-wrap px-5 pb-10">
+    <div class="features flex flex-row flex-wrap justify-center px-5 pb-10">
       <div class="basis-full sm:basis-1/3 p-2 sm:p-5 flex-col text-center">
         <div class="feature p-5">
           <p class="text-5xl mb-5">
