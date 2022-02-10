@@ -119,11 +119,11 @@ export default {
   color: white;
 }
 .portfolio {
-  margin-top: 66px;
+  margin-top: 4rem;
 }
 @media screen and (max-width: 639px) {
   .portfolio-container {
-    margin-top: 98px;
+    margin-top: 5rem;
   }
 }
 .section-title {

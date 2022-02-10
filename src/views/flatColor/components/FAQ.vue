@@ -5,7 +5,7 @@
     >
       <h2 class="title main-title font-black text-xl sm:text-2xl">FAQ</h2>
       <div class="questions flex flex-col sm:flex-row flex-wrap">
-        <div class="question basis-1/2 mb-5">
+        <div class="question basis-1/2 p-5">
           <div class="title-box flex">
             <h3 class="title font-black text-lg mb-2">
               Lorem ipsum dolor sit amet?
@@ -18,7 +18,7 @@
           </p>
         </div>
 
-        <div class="question basis-1/2 mb-5">
+        <div class="question basis-1/2 p-5">
           <div class="title-box flex">
             <h3 class="title font-black text-lg mb-2">Lorem, ipsum dolor?</h3>
           </div>
@@ -28,11 +28,11 @@
           </p>
         </div>
 
-        <div class="question basis-1/2 mb-5">
+        <div class="question basis-1/2 p-5">
           <div class="title-box flex">
             <h3 class="title font-black text-lg mb-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit?
-          </h3>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+            </h3>
           </div>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
@@ -41,11 +41,11 @@
           </p>
         </div>
 
-        <div class="question basis-1/2 mb-5">
+        <div class="question basis-1/2 p-5">
           <div class="title-box flex">
             <h3 class="title font-black text-lg mb-2">
-            Lorem ipsum dolor sit amet consectetur?
-          </h3>
+              Lorem ipsum dolor sit amet consectetur?
+            </h3>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
@@ -77,9 +77,10 @@ export default {
   bottom: -5px;
   height: 5px;
   width: 100%;
-  background-color: #70D6FF;
+  border-radius: 1rem;
+  background-color: #0092cc;
 }
 .main-title::after {
-  background-color: #FF70A6;
+  background-color: #ff70a6;
 }
 </style>

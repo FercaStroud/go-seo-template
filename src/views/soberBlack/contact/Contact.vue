@@ -181,11 +181,11 @@ export default {
   background-color: #222;
   color: white;
   height: 100vh;
-  margin-top: 66px;
+  margin-top: 4rem;
 }
 @media screen and (max-width: 639px) {
   .view-container {
-    margin-top: 98px;
+    margin-top: 5rem;
   }
 }
 .title {

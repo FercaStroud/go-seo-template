@@ -12,9 +12,13 @@
 
     <div class="container mx-auto flex flex-col sm:flex-row">
       <div class="img-container basis-1/2 flex justify-center items-center">
-        <img src="https://via.placeholder.com/500x500/555555" alt="" class="img" />
+        <img
+          src="https://via.placeholder.com/600x600/cccccc/000000"
+          alt=""
+          class="img"
+        />
       </div>
-      <div class="text basis-1/2 p-5 flex flex-col justify-center">
+      <div class="text basis-1/2 p-10 flex flex-col justify-center">
         <h1 class="font-black text-3xl sm:text-4xl mb-5">
           Lorem ipsum <br />
           dolor sit amet <br />
@@ -82,7 +86,7 @@ export default {
   border-radius: 0.25rem 0 0 1rem;
 }
 .submit {
-  background-color: #2F6690;
+  background-color: #0092cc;
   /* color: white; */
   padding: 0.2rem 1rem;
   border-radius: 0 1rem 0.25rem 0;

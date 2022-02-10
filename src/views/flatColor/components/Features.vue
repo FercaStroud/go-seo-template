@@ -32,58 +32,71 @@
       </p>
     </div>
 
-    <div class="features flex flex-row flex-wrap justify-center py-10">
-      <div class="feature basis-full sm:basis-1/3 p-5 flex-col text-center">
-        <p class="text-4xl mb-5">
+    <div class="features flex flex-row flex-wrap justify-center p-10">
+      <div
+        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+      >
+        <p class="text-2xl lg:text-4xl mb-5">
           <font-awesome-icon :icon="['fas', 'laptop-code']" />
         </p>
-        <p class="font-black text-2xl mb-2">Lorem, ipsum dolor.</p>
-        <p class="text-lg">
+        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">
+          Lorem, ipsum dolor.
+        </p>
+        <p class="lg:text-lg">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
           earum.
         </p>
       </div>
 
-      <div class="feature basis-full sm:basis-1/3 p-5 flex-col text-center">
-        <p class="text-4xl mb-5">
-            <font-awesome-icon :icon="['fas', 'rocket']" />
-          </p>
-          <p class="font-black text-2xl mb-2">Lorem, ipsum dolor.</p>
-          <p class="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-            nostrum?
-          </p>
+      <div
+        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+      >
+        <p class="text-2xl lg:text-4xl mb-5">
+          <font-awesome-icon :icon="['fas', 'rocket']" />
+        </p>
+        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+          nostrum?
+        </p>
       </div>
 
-      <div class="feature basis-full sm:basis-1/3 p-5 flex-col text-center">
-        <p class="text-4xl mb-5">
-            <font-awesome-icon :icon="['fas', 'clock']" />
-          </p>
-          <p class="font-black text-2xl mb-2">Lorem, ipsum dolor.</p>
-          <p class="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-            distinctio.
-          </p>
+      <div
+        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+      >
+        <p class="text-2xl lg:text-4xl mb-5">
+          <font-awesome-icon :icon="['fas', 'clock']" />
+        </p>
+        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+          distinctio.
+        </p>
       </div>
 
-      <div class="feature basis-full sm:basis-1/3 p-5 flex-col text-center">
-        <p class="text-4xl mb-5">
-            <font-awesome-icon :icon="['fas', 'truck']" />
-          </p>
-          <p class="font-black text-2xl mb-2">Lorem, ipsum dolor.</p>
-          <p class="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, fugit!
-          </p>
+      <div
+        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+      >
+        <p class="text-2xl lg:text-4xl mb-5">
+          <font-awesome-icon :icon="['fas', 'truck']" />
+        </p>
+        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+          fugit!
+        </p>
       </div>
 
-      <div class="feature basis-full sm:basis-1/3 p-5 flex-col text-center">
-        <p class="text-4xl mb-5">
-            <font-awesome-icon :icon="['fas', 'shopping-cart']" />
-          </p>
-          <p class="font-black text-2xl mb-2">Lorem, ipsum dolor.</p>
-          <p class="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, minima.
-          </p>
+      <div
+        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+      >
+        <p class="text-2xl lg:text-4xl mb-5">
+          <font-awesome-icon :icon="['fas', 'shopping-cart']" />
+        </p>
+        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, minima.
+        </p>
       </div>
     </div>
   </div>
@@ -109,6 +122,7 @@ export default {
   bottom: -5px;
   height: 5px;
   width: 100%;
+  border-radius: 1rem;
   background-color: #ff70a6;
 }
 </style>

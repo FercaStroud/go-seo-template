@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 .banner {
-  margin-top: 66px;
+  margin-top: 4rem;
   background-image: url(https://via.placeholder.com/1536x400/555555);
   height: 400px;
   background-position: center;
@@ -59,7 +59,7 @@ export default {
 }
 @media screen and (max-width: 639px) {
   .banner {
-    margin-top: 98px;
+    margin-top: 5rem;
   }
 }
 .custom-input {

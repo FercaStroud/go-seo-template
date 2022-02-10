@@ -73,7 +73,6 @@ export default {
 
 <style scoped>
 .map {
-  /* height: 15rem;
-  width: 20rem; */
+  z-index: 0;
 }
 </style>

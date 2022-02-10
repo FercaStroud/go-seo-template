@@ -14,8 +14,10 @@
         <ul>
           <li class="mb-1"><a href="#" class="capitalize link">about us</a></li>
           <li class="mb-1"><a href="#" class="capitalize link">careers</a></li>
-          <li class="mb-1"><a href="#" class="capitalize link">blog</a></li>
           <li class="mb-1"><a href="#" class="capitalize link">linkedin</a></li>
+          <li class="mb-1"><a href="#" class="capitalize link">portfolio</a></li>
+          <li class="mb-1"><a href="#" class="capitalize link">blog</a></li>
+          <li class="mb-1"><a href="#" class="capitalize link">contact</a></li>
         </ul>
       </div>
     </div>
