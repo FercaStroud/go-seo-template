@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans">
+  <div class="font-sans fade-in">
     <Navbar />
     <div class="content">
       <Banner />
