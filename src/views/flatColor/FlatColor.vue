@@ -41,10 +41,4 @@ export default {
     margin-top: 5rem;
   }
 }
-.text {
-  border: 1px solid black;
-}
-span {
-  color: #555;
-}
 </style>

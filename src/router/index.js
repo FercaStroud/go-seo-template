@@ -9,6 +9,7 @@ import SoberPost from "../views/soberBlack/post/Post.vue";
 import SoberContact from "../views/soberBlack/contact/Contact.vue";
 
 import FlatColor from "../views/flatColor/FlatColor.vue";
+import FlatPortfolio from "../views/flatColor/portfolio/Portfolio.vue";
 
 const soberRoutes = [
   {
@@ -33,6 +34,14 @@ const soberRoutes = [
   },
 ];
 
+const flatRoutes = [
+  {
+    path: "/portfolio-flat",
+    name: "portfolioFlat",
+    component: FlatPortfolio,
+  },
+];
+
 const routes = [
   {
     path: "/",
@@ -50,6 +59,7 @@ const routes = [
     name: "FlatColor",
     component: FlatColor,
   },
+  ...flatRoutes,
 ];
 
 const router = createRouter({

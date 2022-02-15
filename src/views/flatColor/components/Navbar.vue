@@ -20,12 +20,10 @@
         sm:basis-3/4
       "
     >
-      <router-link to="/template-1" class="link px-2">home</router-link>
-      <router-link to="/portfolio-sober" class="link px-2"
-        >portfolio</router-link
-      >
-      <router-link to="/blog-sober" class="link px-2">blog</router-link>
-      <router-link to="/contact-sober" class="link px-2">contact</router-link>
+      <router-link to="/template-2" class="link px-2"> home </router-link>
+      <router-link to="/portfolio-flat" class="link px-2"> portfolio </router-link>
+      <router-link to="/template-2" class="link px-2"> blog </router-link>
+      <router-link to="/template-2" class="link px-2"> contact </router-link>
     </div>
   </div>
 </template>
@@ -41,7 +39,7 @@ export default {
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: #fff;
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.022),
     0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
