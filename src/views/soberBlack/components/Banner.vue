@@ -1,23 +1,15 @@
 <template>
-  <div
-    class="
-      banner
-      font-mono
-      flex
-      items-center
-      py-20
-      max-w-screen-2xl
-      2xl:mx-auto
-    "
-  >
-    <div class="px-2 sm:pl-20 sm:w-2/3 lg:w-1/3">
-      <h1 class="font-black text-lg mb-5 sm:text-2xl lg:text-3xl">
-        Lorem ipsum dolor sit amet consectetur.
-      </h1>
-      <p class="text-base sm:text-lg mb-5">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-      </p>
-      <form @submit.prevent="onSubmit" class="flex">
+  <div class="banner-container">
+    <div class="banner-img"></div>
+    <div class="content flex flex-col px-5 pt-20 sm:p-10 lg:p-20">
+      <div class="banner-text sm:w-1/3 xl:w-1/4">
+        <h1 class="font-black text-2xl sm:text-3xl mb-5">Lorem ipsum dolor sit amet.</h1>
+        <p class="sm:text-xl mb-5">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati,
+          ullam.
+        </p>
+      </div>
+      <form @submit.prevent="onSubmit" class="flex w-1/3">
         <input
           type="text"
           v-model="foo"
@@ -49,19 +41,36 @@ export default {
 </script>
 
 <style scoped>
-.banner {
+.banner-container {
+  position: relative;
   margin-top: 4rem;
-  background-image: url(https://via.placeholder.com/1536x400/555555);
   height: 400px;
-  background-position: center;
-  background-size: cover;
-  color: #222;
+  color: white;
 }
 @media screen and (max-width: 639px) {
-  .banner {
+  .banner-container {
     margin-top: 5rem;
   }
 }
+
+.banner-img {
+  background-image: url(https://images.unsplash.com/photo-1643575102128-0d6b42fbdda1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80);
+  content: "";
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.content {
+  position: absolute;
+  top: 0;
+  background-color: #2225;
+  width: 100%;
+  height: 100%;
+}
+.banner-text {
+}
+
 .custom-input {
   background-color: #333;
   color: white;

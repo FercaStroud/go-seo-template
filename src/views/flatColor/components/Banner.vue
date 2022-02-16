@@ -11,14 +11,14 @@
     </div>
 
     <div class="container mx-auto flex flex-col sm:flex-row">
-      <div class="img-container basis-1/2 flex justify-center items-center">
+      <div class="img-container basis-1/2 flex justify-center items-center p-0 sm:pl-5">
         <img
-          src="https://via.placeholder.com/600x600/cccccc/000000"
+          src="https://images.unsplash.com/photo-1644866686516-0da93fe45a9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
           alt=""
           class="img"
         />
       </div>
-      <div class="text basis-1/2 p-10 flex flex-col justify-center">
+      <div class="text basis-1/2 p-5 sm:p-10 flex flex-col justify-center">
         <h1 class="font-black text-3xl sm:text-4xl mb-5">
           Lorem ipsum <br />
           dolor sit amet <br />

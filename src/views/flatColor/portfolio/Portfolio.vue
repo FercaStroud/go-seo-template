@@ -59,7 +59,7 @@
             @click="handleModal(i)"
             :src="project.url"
             alt=""
-            class="w-full pb-5"
+            class="image-grid w-full mb-5"
           />
         </template>
       </div>
@@ -140,6 +140,32 @@ export default {
   .content {
     margin-top: 5rem;
   }
+}
+
+.title {
+  position: relative;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  height: 5px;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: #ff70a6;
+}
+
+.image-grid {
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+.image-grid:hover {
+  box-shadow: 0.3px 0.3px 2.2px rgba(0, 0, 0, 0.02),
+    0.7px 0.7px 5.3px rgba(0, 0, 0, 0.028),
+    1.3px 1.3px 10px rgba(0, 0, 0, 0.035),
+    2.2px 2.2px 17.9px rgba(0, 0, 0, 0.042),
+    4.2px 4.2px 33.4px rgba(0, 0, 0, 0.05), 10px 10px 80px rgba(0, 0, 0, 0.07);
 }
 
 .modal {

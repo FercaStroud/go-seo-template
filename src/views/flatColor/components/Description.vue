@@ -10,7 +10,7 @@
       sm:py-10
     "
   >
-    <div class="text basis-full sm:basis-1/2 p-5 flex flex-col justify-center">
+    <div class="text basis-full sm:basis-1/2 flex flex-col justify-center mb-10 sm:mb-0 sm:pr-10">
       <div class="title-box flex">
         <h2 class="title font-black text-xl sm:text-2xl mb-2">
           Lorem ipsum dolor sit amet.
@@ -37,7 +37,7 @@
       "
     >
       <img
-        src="https://via.placeholder.com/600x600/cccccc/000000"
+        src="https://images.unsplash.com/photo-1644955876498-bcb2dddb8645?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         alt=""
         class="img"
       />

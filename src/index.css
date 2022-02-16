@@ -35,3 +35,16 @@ html, body {
     opacity: 1;
   }
 }
+
+.fade-out {
+  animation: section-fade-out 0.35s ease;
+}
+
+@keyframes section-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
