@@ -10,6 +10,9 @@ import SoberContact from "../views/soberBlack/contact/Contact.vue";
 
 import FlatColor from "../views/flatColor/FlatColor.vue";
 import FlatPortfolio from "../views/flatColor/portfolio/Portfolio.vue";
+import FlatBlog from "../views/flatColor/blog/Blog.vue";
+import FlatPost from "../views/flatColor/post/Post.vue";
+import FlatContact from "../views/flatColor/contact/Contact.vue";
 
 const soberRoutes = [
   {
@@ -39,6 +42,21 @@ const flatRoutes = [
     path: "/portfolio-flat",
     name: "portfolioFlat",
     component: FlatPortfolio,
+  },
+  {
+    path: "/blog-flat",
+    name: "blogFlat",
+    component: FlatBlog,
+  },
+  {
+    path: "/post-flat",
+    name: "postFlat",
+    component: FlatPost,
+  },
+  {
+    path: "/contact-flat",
+    name: "contactFlat",
+    component: FlatContact,
   },
 ];
 

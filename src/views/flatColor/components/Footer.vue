@@ -1,9 +1,25 @@
 <template>
   <footer
-    class="flex flex-col sm:flex-row flex-wrap p-5 sm:px-10 justify-center items-start"
+    class="
+      flex flex-col
+      sm:flex-row
+      flex-wrap
+      p-5
+      sm:px-10
+      justify-center
+      items-start
+    "
   >
     <div
-      class="column basis-full sm:basis-1/2 lg:basis-1/4 flex flex-col gap-10 mb-10"
+      class="
+        column
+        basis-full
+        sm:basis-1/2
+        lg:basis-1/4
+        flex flex-col
+        gap-10
+        mb-10
+      "
     >
       <div class="list">
         <div class="title-box flex">
@@ -15,15 +31,35 @@
           <li class="mb-1"><a href="#" class="capitalize link">about us</a></li>
           <li class="mb-1"><a href="#" class="capitalize link">careers</a></li>
           <li class="mb-1"><a href="#" class="capitalize link">linkedin</a></li>
-          <li class="mb-1"><a href="#" class="capitalize link">portfolio</a></li>
-          <li class="mb-1"><a href="#" class="capitalize link">blog</a></li>
-          <li class="mb-1"><a href="#" class="capitalize link">contact</a></li>
+          <li class="mb-1">
+            <router-link to="/portfolio-flat" class="capitalize link">
+              portfolio
+            </router-link>
+          </li>
+          <li class="mb-1">
+            <router-link to="/blog-flat" class="capitalize link">
+              blog
+            </router-link>
+          </li>
+          <li class="mb-1">
+            <router-link to="/contact-flat" class="capitalize link">
+              contact
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>
 
     <div
-      class="column basis-full sm:basis-1/2 lg:basis-1/4 flex flex-col gap-10 mb-10"
+      class="
+        column
+        basis-full
+        sm:basis-1/2
+        lg:basis-1/4
+        flex flex-col
+        gap-10
+        mb-10
+      "
     >
       <div class="list">
         <div class="title-box flex">
@@ -55,11 +91,21 @@
     </div>
 
     <div
-      class="column basis-full sm:basis-1/2 lg:basis-1/4 flex flex-col gap-10 mb-10"
+      class="
+        column
+        basis-full
+        sm:basis-1/2
+        lg:basis-1/4
+        flex flex-col
+        gap-10
+        mb-10
+      "
     >
       <div class="list">
         <div class="title-box flex">
-          <h3 class="title uppercase font-black text-lg mb-5">doing business</h3>
+          <h3 class="title uppercase font-black text-lg mb-5">
+            doing business
+          </h3>
         </div>
         <ul>
           <li class="mb-1">
@@ -76,7 +122,15 @@
     </div>
 
     <div
-      class="column basis-full sm:basis-1/2 lg:basis-1/4 flex flex-col gap-10 mb-10"
+      class="
+        column
+        basis-full
+        sm:basis-1/2
+        lg:basis-1/4
+        flex flex-col
+        gap-10
+        mb-10
+      "
     >
       <div class="list">
         <div class="title-box flex">

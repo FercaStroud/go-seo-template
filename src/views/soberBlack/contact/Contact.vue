@@ -20,123 +20,136 @@
         </h1>
       </div>
 
-      <div class="content flex p-5 flex-col justify-center items-center md:flex-row">
+      <div
+        class="
+          content
+          flex
+          p-5
+          flex-col
+          justify-center
+          items-center
+          md:flex-row
+        "
+      >
         <Map />
 
         <div class="flex justify-center items-center p-5">
-          <form @submit.prevent="onSubmit" class="flex flex-col sm:items-center">
-          <div class="mb-5 flex flex-col sm:flex-row sm:items-center">
-            <label
-              for="name"
-              class="
-                custom-label
-                basis-full
-                sm:basis-1/4 sm:w-20 sm:mr-5
-                mb-2
-                sm:mb-0
-                font-normal
-                text-xl
-              "
-            >
-              Name<span class="required">*</span>:
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your name"
-              v-model="name"
-              required
-              class="
-                custom-input
-                basis-full
-                sm:basis-3/4
-                rounded
-                border-none
-                font-normal
-                text-xl
-              "
-            />
-          </div>
-
-          <div class="mb-5 flex flex-col sm:flex-row sm:items-center">
-            <label
-              for="email"
-              class="
-                custom-label
-                basis-full
-                sm:basis-1/4 sm:w-20 sm:mr-5
-                mb-2
-                sm:mb-0
-                font-normal
-                text-xl
-              "
-            >
-              Email<span class="required">*</span>:
-            </label>
-            <input
-              type="mail"
-              id="email"
-              name="email"
-              placeholder="Your email"
-              v-model="email"
-              required
-              class="
-                custom-input
-                basis-full
-                sm:basis-3/4
-                rounded
-                border-none
-                font-normal
-                text-xl
-              "
-            />
-          </div>
-
-          <div class="mb-5 flex flex-col sm:flex-row sm:items-center">
-            <label
-              for="budget"
-              class="
-                custom-label
-                basis-full
-                sm:basis-1/4 sm:w-20 sm:mr-5
-                mb-2
-                sm:mb-0
-                font-normal
-                text-xl
-              "
-            >
-              budget<span class="required">*</span>:
-            </label>
-            <select
-              id="budget"
-              name="budget"
-              v-model="selectedBudget"
-              required
-              class="
-                custom-input custom-select
-                basis-full
-                sm:basis-3/4
-                rounded
-                border-none
-                font-normal
-                text-xl
-              "
-            >
-              <option disabled value="">Plese select one</option>
-              <option>$10,000 - $15,000</option>
-              <option>$15,000 - $20,000</option>
-              <option>$20,000+</option>
-            </select>
-          </div>
-
-          <button
-            type="submit"
-            class="submit basis-full sm:self-stretch text-xl rounded"
+          <form
+            @submit.prevent="onSubmit"
+            class="flex flex-col sm:items-center"
           >
-            send
-          </button>
-        </form>
+            <div class="mb-5 flex flex-col sm:flex-row sm:items-center">
+              <label
+                for="name"
+                class="
+                  custom-label
+                  basis-full
+                  sm:basis-1/4 sm:w-20 sm:mr-5
+                  mb-2
+                  sm:mb-0
+                  font-normal
+                  text-xl
+                "
+              >
+                Name<span class="required">*</span>:
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                v-model="name"
+                required
+                class="
+                  custom-input
+                  basis-full
+                  sm:basis-3/4
+                  rounded
+                  border-none
+                  font-normal
+                  text-xl
+                "
+              />
+            </div>
+
+            <div class="mb-5 flex flex-col sm:flex-row sm:items-center">
+              <label
+                for="email"
+                class="
+                  custom-label
+                  basis-full
+                  sm:basis-1/4 sm:w-20 sm:mr-5
+                  mb-2
+                  sm:mb-0
+                  font-normal
+                  text-xl
+                "
+              >
+                Email<span class="required">*</span>:
+              </label>
+              <input
+                type="mail"
+                id="email"
+                name="email"
+                placeholder="Your email"
+                v-model="email"
+                required
+                class="
+                  custom-input
+                  basis-full
+                  sm:basis-3/4
+                  rounded
+                  border-none
+                  font-normal
+                  text-xl
+                "
+              />
+            </div>
+
+            <div class="mb-5 flex flex-col sm:flex-row sm:items-center">
+              <label
+                for="budget"
+                class="
+                  custom-label
+                  basis-full
+                  sm:basis-1/4 sm:w-20 sm:mr-5
+                  mb-2
+                  sm:mb-0
+                  font-normal
+                  text-xl
+                "
+              >
+                budget<span class="required">*</span>:
+              </label>
+              <select
+                id="budget"
+                name="budget"
+                v-model="selectedBudget"
+                required
+                class="
+                  custom-input custom-select
+                  basis-full
+                  sm:basis-3/4
+                  rounded
+                  border-none
+                  font-normal
+                  text-xl
+                "
+              >
+                <option disabled value="">Plese select one</option>
+                <option>$10,000 - $15,000</option>
+                <option>$15,000 - $20,000</option>
+                <option>$20,000+</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              class="submit basis-full sm:self-stretch text-xl rounded"
+            >
+              send
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -151,6 +164,11 @@ import Footer from "../components/Footer.vue";
 
 export default {
   name: "SoberContact",
+  components: {
+    Navbar,
+    Map,
+    Footer,
+  },
   data() {
     return {
       name: "",
@@ -167,11 +185,6 @@ export default {
       this.email = "";
       this.selectedBudget = "";
     },
-  },
-  components: {
-    Navbar,
-    Map,
-    Footer,
   },
 };
 </script>

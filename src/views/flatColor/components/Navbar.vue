@@ -22,8 +22,8 @@
     >
       <router-link to="/template-2" class="link px-2"> home </router-link>
       <router-link to="/portfolio-flat" class="link px-2"> portfolio </router-link>
-      <router-link to="/template-2" class="link px-2"> blog </router-link>
-      <router-link to="/template-2" class="link px-2"> contact </router-link>
+      <router-link to="/blog-flat" class="link px-2"> blog </router-link>
+      <router-link to="/contact-flat" class="link px-2"> contact </router-link>
     </div>
   </div>
 </template>
