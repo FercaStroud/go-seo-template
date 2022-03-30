@@ -37,7 +37,11 @@ library.add(
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
+import { createMetaManager } from 'vue-meta'
+
+
 createApp(App)
   .use(router)
+  .use(createMetaManager())
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");
