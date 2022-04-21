@@ -10,50 +10,67 @@
       </svg>
     </div>
 
-    <div class="container mx-auto flex flex-col sm:flex-row">
-      <div
-        class="
-          img-container
-          basis-1/2
-          flex
-          justify-center
-          items-center
-          p-0
-          sm:pl-5
-        "
-      >
-        <img
-          :src="
-            false
-              ? '/images/home/banner-stand.jpg'
-              : 'https://via.placeholder.com/1300x900/cccccc/222222'
-          "
-          alt=""
-          class="img"
-        />
-      </div>
-      <div class="text basis-1/2 p-5 sm:p-10 flex flex-col justify-center">
-        <div class="img-container flex justify-center items-center mb-10">
-          <img
-            :src="
-              false
-                ? '/logo.png'
-                : 'https://via.placeholder.com/550x200/cccccc/222222?text=your logo'
+    <div class="container mx-auto">
+      <Carousel :wrap-around="true">
+      <Slide  v-for="slide in 1" :key="slide">
+        <div class="container mx-auto flex flex-col sm:flex-row">
+          <div
+            class="
+              img-container
+              basis-1/2
+              flex
+              justify-center
+              items-center
+              p-0
+              sm:pl-5
             "
-            alt=""
-          />
+          >
+            <img
+              :src="
+                false
+                  ? '/images/home/banner-stand.jpg'
+                  : 'https://via.placeholder.com/1300x900/cccccc/222222'
+              "
+              alt=""
+              class="img"
+            />
+          </div>
+          <div class="text basis-1/2 p-5 sm:p-10 flex flex-col justify-center">
+            <div class="img-container flex justify-center items-center mb-10">
+              <img
+                :src="
+                  false
+                    ? '/logo.png'
+                    : 'https://via.placeholder.com/550x200/cccccc/222222?text=your logo'
+                "
+                alt=""
+              />
+            </div>
+            <p class="font-normal text-2xl sm:text-3xl lg:text-4xl">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </div>
         </div>
-        <p class="font-normal text-2xl sm:text-3xl lg:text-4xl">
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
-      </div>
+      </Slide>
+
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
     </div>
   </div>
 </template>
 
 <script>
+import { useMeta } from "vue-meta";
+import { Carousel, Navigation, Slide } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
+
 export default {
   name: "Banner",
+  setup() {
+    useMeta({});
+  },
   data() {
     return {
       foo: "",
@@ -65,10 +82,36 @@ export default {
       this.foo = "";
     },
   },
+  components: {
+    Carousel,
+    Slide,
+    Navigation,
+  },
 };
 </script>
 
 <style scoped>
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: #70d6ff;
+  color: #222;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 10px;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+}
+
 .banner {
   position: relative;
 }

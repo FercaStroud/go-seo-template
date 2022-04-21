@@ -12,7 +12,7 @@
   >
     <div class="text basis-full sm:basis-1/2 flex flex-col justify-center mb-10 sm:mb-0 sm:pr-10">
       <div class="title-box flex">
-        <h2 class="title font-black text-xl sm:text-2xl mb-2">
+        <h2 class="title-primary font-black text-xl sm:text-2xl mb-2">
           Lorem ipsum dolor sit amet.
         </h2>
       </div>
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.title {
+/* .title {
   position: relative;
 }
 .title::after {
@@ -64,5 +64,5 @@ export default {
   width: 100%;
   border-radius: 1rem;
   background-color: #ff70a6;
-}
+} */
 </style>

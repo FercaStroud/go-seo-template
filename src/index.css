@@ -23,6 +23,21 @@ html, body {
   background-color: #5c95ff;
 }
 
+img {
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+.title-primary {
+  text-decoration: underline solid 3px #ff70a6;
+}
+.title-secondary {
+  text-decoration: underline solid 3px #0092cc;
+}
+
 .fade-in {
   animation: section-fade-in 0.35s ease;
 }

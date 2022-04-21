@@ -14,10 +14,13 @@
     "@tailwindcss/forms": "^0.4.0",
     "axios": "^0.26.1",
     "vue": "^3.2.25",
+    "vue-carousel": "^0.18.0",
     "vue-gtag-next": "^1.14.0",
     "vue-meta": "^3.0.0-alpha.7",
     "vue-router": "^4.0.12",
-    "vue-scrollto": "^2.20.0"
+    "vue-scrollto": "^2.20.0",
+    "vue-slick-carousel": "^1.0.6",
+    "vue3-carousel": "^0.1.38"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",

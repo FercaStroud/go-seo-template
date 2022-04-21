@@ -12,7 +12,7 @@
         sm:px-20
       "
     >
-      <h2 class="title font-black text-xl sm:text-2xl">
+      <h2 class="title-primary font-black text-xl sm:text-2xl">
         Lorem ipsum dolor sit amet.
       </h2>
       <p>
@@ -32,14 +32,14 @@
       </p>
     </div>
 
-    <div class="features flex flex-row flex-wrap justify-center p-10">
+    <div class="features flex flex-row flex-wrap justify-center my-10">
       <div
-        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+        class="feature basis-1/2 sm:basis-1/3 p-5 md:p-10 flex-col text-center"
       >
-        <p class="text-2xl lg:text-4xl mb-5">
+        <p class="text-xl sm:text-2xl lg:text-4xl mb-5">
           <font-awesome-icon :icon="['fas', 'laptop-code']" />
         </p>
-        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">
+        <p class="font-black sm:text-lg md:text-xl lg:text-2xl mb-2">
           Lorem, ipsum dolor.
         </p>
         <p class="lg:text-lg">
@@ -49,12 +49,14 @@
       </div>
 
       <div
-        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+        class="feature basis-1/2 sm:basis-1/3 p-5 md:p-10 flex-col text-center"
       >
-        <p class="text-2xl lg:text-4xl mb-5">
+        <p class="text-xl sm:text-2xl lg:text-4xl mb-5">
           <font-awesome-icon :icon="['fas', 'rocket']" />
         </p>
-        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="font-black sm:text-lg md:text-xl lg:text-2xl mb-2">
+          Lorem, ipsum dolor.
+        </p>
         <p class="lg:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
           nostrum?
@@ -62,12 +64,14 @@
       </div>
 
       <div
-        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+        class="feature basis-1/2 sm:basis-1/3 p-5 md:p-10 flex-col text-center"
       >
-        <p class="text-2xl lg:text-4xl mb-5">
+        <p class="text-xl sm:text-2xl lg:text-4xl mb-5">
           <font-awesome-icon :icon="['fas', 'clock']" />
         </p>
-        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="font-black sm:text-lg md:text-xl lg:text-2xl mb-2">
+          Lorem, ipsum dolor.
+        </p>
         <p class="lg:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
           distinctio.
@@ -75,12 +79,14 @@
       </div>
 
       <div
-        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+        class="feature basis-1/2 sm:basis-1/3 p-5 md:p-10 flex-col text-center"
       >
-        <p class="text-2xl lg:text-4xl mb-5">
+        <p class="text-xl sm:text-2xl lg:text-4xl mb-5">
           <font-awesome-icon :icon="['fas', 'truck']" />
         </p>
-        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="font-black sm:text-lg md:text-xl lg:text-2xl mb-2">
+          Lorem, ipsum dolor.
+        </p>
         <p class="lg:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
           fugit!
@@ -88,12 +94,14 @@
       </div>
 
       <div
-        class="feature basis-full sm:basis-1/3 p-5 md:p-10 flex-col text-center"
+        class="feature basis-1/2 sm:basis-1/3 p-5 md:p-10 flex-col text-center"
       >
-        <p class="text-2xl lg:text-4xl mb-5">
+        <p class="text-xl sm:text-2xl lg:text-4xl mb-5">
           <font-awesome-icon :icon="['fas', 'shopping-cart']" />
         </p>
-        <p class="font-black text-lg md:text-xl lg:text-2xl mb-2">Lorem, ipsum dolor.</p>
+        <p class="font-black sm:text-lg md:text-xl lg:text-2xl mb-2">
+          Lorem, ipsum dolor.
+        </p>
         <p class="lg:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, minima.
         </p>
@@ -112,7 +120,7 @@ export default {
 .about {
   background-color: #eee;
 }
-.title {
+/* .title {
   position: relative;
 }
 .title::after {
@@ -124,5 +132,5 @@ export default {
   width: 100%;
   border-radius: 1rem;
   background-color: #ff70a6;
-}
+} */
 </style>
