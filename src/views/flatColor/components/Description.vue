@@ -1,53 +1,29 @@
 <template>
-  <div
-    class="
-      description-container
-      container
-      mx-auto
-      flex flex-row flex-wrap
-      p-5
-      sm:px-0
-      sm:py-10
-    "
-  >
-    <div class="text basis-full sm:basis-1/2 flex flex-col justify-center mb-10 sm:mb-0 sm:pr-10">
-      <div class="title-box flex">
-        <h2 class="title-primary font-black text-xl sm:text-2xl mb-2">
-          Lorem ipsum dolor sit amet.
-        </h2>
-      </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, labore
-        sequi sit velit nihil, dolore vitae tempora dolorem aliquid ea illo
-        iusto nesciunt voluptatibus ut quaerat tenetur aut temporibus maxime
-        eius, saepe accusamus beatae magnam. Molestiae nesciunt quos facere
-        aliquam ratione deleniti tenetur eaque, sequi labore laborum mollitia
-        inventore pariatur.
-      </p>
-    </div>
-
-    <div
-      class="
-        img-container
-        basis-full
-        sm:basis-1/2
-        flex
-        justify-center
-        sm:justify-end
-      "
-    >
-      <img
-        src="https://images.unsplash.com/photo-1644955876498-bcb2dddb8645?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        alt=""
-        class="img"
+  <div class="description-container container mx-auto">
+    <template v-for="(post, i) in posts" :key="i">
+      <DescriptionElement
+        :title="post.title"
+        :description="post.description"
+        :img="`http://panel.appsgorilasonline.com/uploads/images/posts/${post.image_src}`"
+        :textSide="i % 2 == 0 ? 'left' : 'right'"
       />
-    </div>
+    </template>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+import DescriptionElement from "./DescriptionElement.vue";
+
 export default {
   name: "Description",
+  computed: mapState(["posts"]),
+  mounted() {
+    this.$store.dispatch("loadPosts");
+  },
+  components: {
+    DescriptionElement,
+  },
 };
 </script>
 

@@ -24,7 +24,7 @@ export default {
   name: "FlatColor",
   setup() {
     useMeta({
-      title: "Template 1 home",
+      title: "",
       htmlAttrs: { lang: "es-MX", amp: true },
     });
   },
