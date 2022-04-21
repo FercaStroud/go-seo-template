@@ -11,32 +11,41 @@
     </div>
 
     <div class="container mx-auto flex flex-col sm:flex-row">
-      <div class="img-container basis-1/2 flex justify-center items-center p-0 sm:pl-5">
+      <div
+        class="
+          img-container
+          basis-1/2
+          flex
+          justify-center
+          items-center
+          p-0
+          sm:pl-5
+        "
+      >
         <img
-          src="https://images.unsplash.com/photo-1644866686516-0da93fe45a9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+          :src="
+            false
+              ? '/images/home/banner-stand.jpg'
+              : 'https://via.placeholder.com/1300x900/cccccc/222222'
+          "
           alt=""
           class="img"
         />
       </div>
       <div class="text basis-1/2 p-5 sm:p-10 flex flex-col justify-center">
-        <h1 class="font-black text-3xl sm:text-4xl mb-5">
-          Lorem ipsum <br />
-          dolor sit amet <br />
-          consectetur adipisicing elit.
-        </h1>
-
-        <span class="mb-5">Lorem ipsum dolor sit amet.</span>
-
-        <form @submit.prevent="onSubmit" class="form flex">
-          <input
-            type="text"
-            v-model="foo"
-            name="foo"
-            placeholder="lorem"
-            class="custom-input border-none basis-4/5"
+        <div class="img-container flex justify-center items-center mb-10">
+          <img
+            :src="
+              false
+                ? '/logo.png'
+                : 'https://via.placeholder.com/550x200/cccccc/222222?text=your logo'
+            "
+            alt=""
           />
-          <button type="submit" class="submit basis-1/5">send</button>
-        </form>
+        </div>
+        <p class="font-normal text-2xl sm:text-3xl lg:text-4xl">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
       </div>
     </div>
   </div>
@@ -76,6 +85,12 @@ export default {
     0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
     0px 0px 29.2px rgba(0, 0, 0, 0.048), 0px 0px 80px rgba(0, 0, 0, 0.07);
 }
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
 .form {
   border-radius: 0.25rem 1rem 0.25rem 1rem;
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.022),
@@ -87,7 +102,6 @@ export default {
 }
 .submit {
   background-color: #0092cc;
-  /* color: white; */
   padding: 0.2rem 1rem;
   border-radius: 0 1rem 0.25rem 0;
   transition: all 0.35s ease;
