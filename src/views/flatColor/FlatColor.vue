@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta'
+
 import Navbar from "./components/Navbar.vue";
 import Banner from "./components/Banner.vue";
 import Features from "./components/Features.vue";
@@ -21,6 +23,12 @@ import Footer from "./components/Footer.vue";
 
 export default {
   name: "FlatColor",
+  setup () {
+    useMeta({
+      title: '',
+      htmlAttrs: { lang: 'es-MX', amp: true }
+    })
+  },
   components: {
     Navbar,
     Banner,
