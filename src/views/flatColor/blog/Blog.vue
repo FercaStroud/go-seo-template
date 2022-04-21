@@ -2,7 +2,7 @@
   <div class="font-sans fade-in">
     <Navbar />
     <div class="content relative container mx-auto flex flex-col items-center mb-20">
-      <h1 class="title font-black text-2xl sm:text-3xl mt-10 mb-5">Blog</h1>
+      <h1 class="title-primary font-black text-2xl sm:text-3xl mt-10 mb-5">Blog</h1>
 
       <div class="flex flex-row flex-wrap justify-center">
         <template v-for="(card, i) in cards" :key="i">
@@ -28,42 +28,42 @@ import Footer from "../components/Footer.vue";
 const response = [
   {
     img: "250x300",
-    title: "post title",
+    title: "product name",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam recusandae amet pariatur expedita quam, culpa natus animi obcaecati vitae dolor?",
     link: "/post-flat",
   },
   {
     img: "250x300",
-    title: "post title",
+    title: "product name",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cumque, laudantium error voluptatem aspernatur nesciunt eos in doloribus modi voluptate.",
     link: "/post-flat",
   },
   {
     img: "250x300",
-    title: "post title",
+    title: "product name",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo commodi maiores soluta dolor blanditiis magnam explicabo in doloremque nihil? Magnam!",
     link: "/post-flat",
   },
   {
     img: "250x300",
-    title: "post title",
+    title: "product name",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda, neque accusamus facilis impedit totam nulla laboriosam necessitatibus odio optio!",
     link: "/post-flat",
   },
   {
     img: "250x300",
-    title: "post title",
+    title: "product name",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt minus molestiae consequatur hic vel eligendi ducimus assumenda vero aut fuga.",
     link: "/post-flat",
   },
   {
     img: "250x300",
-    title: "post title",
+    title: "product name",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magnam voluptas commodi cumque sequi deserunt quos et. Voluptates, veritatis sed.",
     link: "/post-flat",
@@ -93,19 +93,5 @@ export default {
   .content {
     margin-top: 5rem;
   }
-}
-
-.title {
-  position: relative;
-}
-.title::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -10px;
-  height: 5px;
-  width: 100%;
-  border-radius: 1rem;
-  background-color: #ff70a6;
 }
 </style>

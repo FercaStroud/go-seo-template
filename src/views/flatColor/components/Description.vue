@@ -28,17 +28,4 @@ export default {
 </script>
 
 <style scoped>
-/* .title {
-  position: relative;
-}
-.title::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -5px;
-  height: 5px;
-  width: 100%;
-  border-radius: 1rem;
-  background-color: #ff70a6;
-} */
 </style>

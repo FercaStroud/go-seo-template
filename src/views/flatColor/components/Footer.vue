@@ -22,11 +22,10 @@
       "
     >
       <div class="list">
-        <div class="title-box flex">
-          <h3 class="title uppercase font-black text-lg mb-5">
-            get to know us
-          </h3>
-        </div>
+        <h3 class="title-primary uppercase font-black text-lg mb-5">
+          get to know us
+        </h3>
+
         <ul>
           <li class="mb-1"><a href="#" class="capitalize link">about us</a></li>
           <li class="mb-1"><a href="#" class="capitalize link">careers</a></li>
@@ -62,11 +61,9 @@
       "
     >
       <div class="list">
-        <div class="title-box flex">
-          <h3 class="title uppercase font-black text-lg mb-5">
-            let us help you
-          </h3>
-        </div>
+        <h3 class="title-primary uppercase font-black text-lg mb-5">
+          let us help you
+        </h3>
         <ul>
           <li class="mb-1">
             <a href="#" class="capitalize link">order history</a>
@@ -76,9 +73,9 @@
       </div>
 
       <div class="list">
-        <div class="title-box flex">
-          <h3 class="title uppercase font-black text-lg mb-5">get the app</h3>
-        </div>
+        <h3 class="title-primary uppercase font-black text-lg mb-5">
+          get the app
+        </h3>
         <ul>
           <li class="mb-1">
             <a href="#" class="capitalize link">app store</a>
@@ -102,11 +99,9 @@
       "
     >
       <div class="list">
-        <div class="title-box flex">
-          <h3 class="title uppercase font-black text-lg mb-5">
-            doing business
-          </h3>
-        </div>
+        <h3 class="title-primary uppercase font-black text-lg mb-5">
+          doing business
+        </h3>
         <ul>
           <li class="mb-1">
             <a href="#" class="capitalize link">become a partner</a>
@@ -133,9 +128,9 @@
       "
     >
       <div class="list">
-        <div class="title-box flex">
-          <h3 class="title uppercase font-black text-lg mb-5">follow us</h3>
-        </div>
+        <h3 class="title-primary uppercase font-black text-lg mb-5">
+          follow us
+        </h3>
         <ul>
           <li class="mb-1">
             <a href="#" class="capitalize link">
@@ -184,19 +179,6 @@ footer {
 .column {
   /* border: 1px solid white; */
   height: 100%;
-}
-.title {
-  position: relative;
-}
-.title::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -3px;
-  height: 3px;
-  border-radius: 1rem;
-  width: 100%;
-  background-color: #ff70a6;
 }
 .link {
   color: #ccc;

@@ -4,9 +4,7 @@
       <div class="img-container flex justify-center items-center mb-2">
         <div class="img">{{ img }}</div>
       </div>
-      <div class="title-box flex mb-5">
-        <h2 class="card-title font-black text-xl sm:text-2xl">{{ title }}</h2>
-      </div>
+        <h2 class="title-secondary font-black text-xl sm:text-2xl mb-2">{{ title }}</h2>
       <div class="card-drescription">
         <p class="description">
           {{ description }}
@@ -50,19 +48,6 @@ export default {
   height: 250px;
   width: 300px;
   background-color: #ccc;
-}
-.card-title {
-  position: relative;
-}
-.card-title::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -5px;
-  height: 5px;
-  width: 100%;
-  border-radius: 1rem;
-  background-color: #70d6ff;
 }
 .card-link {
   color: #ff70a6;

@@ -32,10 +32,11 @@ img {
 }
 
 .title-primary {
-  text-decoration: underline solid 3px #ff70a6;
+  text-decoration: underline solid 5px #ff70a6;
 }
 .title-secondary {
-  text-decoration: underline solid 3px #0092cc;
+  /* text-decoration: underline solid 3px #0092cc; */
+  text-decoration: underline solid 5px #70d6ff;
 }
 
 .fade-in {
