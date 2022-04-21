@@ -47,14 +47,29 @@
         </div>
       </div>
 
-      <div class="columns-1 gap-5 sm:columns-2 md:columns-3 my-5 sm:mb-10">
+      <div class="flex flex-wrap justify-center items-center mb-5">
         <template v-for="(project, i) in projects" :key="i">
-          <img
-            @click="handleModal(i)"
-            :src="`http://panel.appsgorilasonline.com/uploads/images/${project.src}`"
-            alt=""
-            class="image-grid w-full mb-5"
-          />
+          <div
+            class="
+              img-container
+              basis-full
+              sm:basis-1/2
+              lg:basis-1/3
+              aspect-video
+              overflow-hidden
+              flex
+              justify-center
+              items-center
+              p-2
+            "
+          >
+            <img
+              @click="handleModal(i)"
+              :src="`http://panel.appsgorilasonline.com/uploads/images/${project.src}`"
+              alt=""
+              class="w-full"
+            />
+          </div>
         </template>
       </div>
     </div>
