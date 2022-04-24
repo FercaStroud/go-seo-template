@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = import.meta.env.VITE_BASE_URL_POSTS;
+const baseUrl = `${import.meta.env.VITE_BASE_URL}/api/get/public/posts?domain=exposystands.com`;
 
 const getAll = () => {
   const request = axios.get(baseUrl);

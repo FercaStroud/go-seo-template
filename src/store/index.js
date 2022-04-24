@@ -7,11 +7,13 @@ const store = createStore({
     return {
       posts: {},
       projects: {},
+      baseUrl: import.meta.env.VITE_BASE_URL,
     };
   },
   getters: {
     posts: (state) => state.posts,
     projects: (state) => state.projects,
+    baseUrl: (state) => state.baseUrl,
   },
   mutations: {
     setPosts(state, initialPosts) {

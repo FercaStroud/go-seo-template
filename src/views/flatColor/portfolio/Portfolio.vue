@@ -65,7 +65,7 @@
           >
             <img
               @click="handleModal(i)"
-              :src="`http://panel.appsgorilasonline.com/uploads/images/${project.src}`"
+              :src="`${this.baseUrl}/uploads/images/${project.src}`"
               alt=""
               class="w-full"
             />
@@ -88,7 +88,7 @@ export default {
     Navbar,
     Footer,
   },
-  computed: mapState(["projects"]),
+  computed: mapState(["projects", "baseUrl"]),
   mounted() {
     this.$store.dispatch("loadProjects");
   },
