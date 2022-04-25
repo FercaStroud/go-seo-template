@@ -28,7 +28,7 @@
                 {{ modalTitle }}
               </h1>
 
-              <button @click="handleModal(0)" class="modal-button">
+              <button @click="handleModal(0)" class="primary-button">
                 cerrar
               </button>
             </div>
@@ -152,15 +152,5 @@ export default {
   height: 100%;
   width: auto;
   max-height: 70vh;
-}
-
-.modal-button {
-  background-color: #ff70a6;
-  color: white;
-  padding: 0rem 0.5rem;
-  transition: all 0.35s ease;
-}
-.modal-button:hover {
-  background-color: #ff1f75;
 }
 </style>

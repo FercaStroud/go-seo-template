@@ -2,7 +2,7 @@
   <div class="font-sans fade-in">
     <Navbar />
     <div class="content relative container mx-auto flex flex-col items-center mb-20">
-      <h1 class="title-primary font-black text-2xl sm:text-3xl mt-10 mb-5">Blog</h1>
+      <h1 class="title-primary font-black text-2xl sm:text-3xl mt-10 mb-5">Products</h1>
 
       <div class="flex flex-row flex-wrap justify-center">
         <template v-for="(card, i) in cards" :key="i">
@@ -71,7 +71,7 @@ const response = [
 ];
 
 export default {
-  name: "blog",
+  name: "Products",
   components: {
     Navbar,
     Card,

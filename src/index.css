@@ -39,6 +39,25 @@ img {
   text-decoration: underline solid 5px #70d6ff;
 }
 
+.primary-button {
+  background-color: #ff70a6;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.35s ease;
+}
+.primary-button:hover {
+  background-color: #ff1f75;
+}
+
+.secondary-button {
+  background-color: #70d6ff;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.35s ease;
+}
+.secondary-button:hover {
+  background-color: #0092cc;
+}
+
 .fade-in {
   animation: section-fade-in 0.35s ease;
 }

@@ -10,8 +10,9 @@ import SoberContact from "../views/soberBlack/contact/Contact.vue";
 
 import FlatColor from "../views/flatColor/FlatColor.vue";
 import FlatPortfolio from "../views/flatColor/portfolio/Portfolio.vue";
-import FlatBlog from "../views/flatColor/blog/Blog.vue";
-import FlatPost from "../views/flatColor/post/Post.vue";
+import FlatProducts from "../views/flatColor/products/Products.vue";
+import FlatProduct from "../views/flatColor/product/Product.vue";
+import FlatShoppingCart from "../views/flatColor/ShoppingCart/ShoppingCart.vue";
 import FlatContact from "../views/flatColor/contact/Contact.vue";
 
 const soberRoutes = [
@@ -44,14 +45,19 @@ const flatRoutes = [
     component: FlatPortfolio,
   },
   {
-    path: "/blog-flat",
-    name: "blogFlat",
-    component: FlatBlog,
+    path: "/products-flat",
+    name: "productsFlat",
+    component: FlatProducts,
   },
   {
-    path: "/post-flat",
-    name: "postFlat",
-    component: FlatPost,
+    path: "/product-flat",
+    name: "productFlat",
+    component: FlatProduct,
+  },
+  {
+    path: "/cart-flat",
+    name: "cartFlat",
+    component: FlatShoppingCart,
   },
   {
     path: "/contact-flat",

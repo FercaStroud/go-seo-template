@@ -9,7 +9,8 @@
         <p class="description">
           {{ description }}
         </p>
-        <router-link :to="link" class="card-link">read more »</router-link>
+        <!-- <router-link :to="link" class="card-link">read more »</router-link> -->
+        <a href="#" class="card-link">read more »</a>
       </div>
     </div>
   </div>
