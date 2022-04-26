@@ -13,6 +13,9 @@ import {
   faStar,
   faClock,
   faTruck,
+  faPlus,
+  faMinus,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -28,6 +31,9 @@ library.add(
   faStar,
   faClock,
   faTruck,
+  faPlus,
+  faMinus,
+  faTrash,
 
   // free brands
   faFacebook,

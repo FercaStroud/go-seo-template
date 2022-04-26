@@ -1,7 +1,7 @@
 <template>
   <div class="font-sans fade-in">
     <Navbar />
-    <div class="content container mx-auto flex flex-wrap p-5">
+    <div class="content container mx-auto flex flex-wrap items-start p-5">
       <div class="basis-full md:basis-2/3 flex flex-wrap sm:px-5 mb-5 md:mb-0">
         <div class="basis-1/4 px-2 md:px-5 flex flex-col items-center gap-2">
           <div
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="basis-full md:basis-1/3 sm:px-5">
+      <div class="description basis-full md:basis-1/3 p-5">
         <h1 class="title-primary font-black text-xl sm:text-2xl mb-5">
           {{ product.title }}
         </h1>
@@ -102,5 +102,12 @@ export default {
 }
 .discount {
   color: #ff70a6;
+}
+.description {
+  box-shadow: 0.3px 0.3px 2.2px rgba(0, 0, 0, 0.02),
+    0.7px 0.7px 5.3px rgba(0, 0, 0, 0.028),
+    1.3px 1.3px 10px rgba(0, 0, 0, 0.035),
+    2.2px 2.2px 17.9px rgba(0, 0, 0, 0.042),
+    4.2px 4.2px 33.4px rgba(0, 0, 0, 0.05), 10px 10px 80px rgba(0, 0, 0, 0.07);
 }
 </style>
