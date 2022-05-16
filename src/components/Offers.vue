@@ -1,12 +1,12 @@
 <template lang="pug">
 .container.mx-auto.p-2(v-if='render')
-  .offer.flex.justify-between.items-center.text-center
+  .offer.flex.justify-between.items-center.text-center.relative
     carousel.basis-full.p-5(:wrap-around='true' :autoplay='5000' :transition='500')
       slide(v-for='offer in $store.state.offers' :key='offer.id')
         .flex.flex-col
           h2.font-black {{ offer.title }}
           p.text-sm.description(v-html='offer.description')
-    .pr-5
+    .absolute.offers-btn.w-12.h-full.flex.justify-center.items-center
       button.close.w-8.h-8(@click='closeOffer')
         font-awesome-icon(:icon="['fas', 'times']")
 
@@ -45,6 +45,10 @@ export default {
     1.3px 1.3px 10px rgba(0, 0, 0, 0.035),
     2.2px 2.2px 17.9px rgba(0, 0, 0, 0.042),
     4.2px 4.2px 33.4px rgba(0, 0, 0, 0.05), 10px 10px 80px rgba(0, 0, 0, 0.07);
+}
+.offers-btn {
+  top: 0;
+  right: 0;
 }
 .close {
   color: #d30000;
