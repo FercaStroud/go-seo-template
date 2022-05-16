@@ -58,8 +58,68 @@ const loadSlides = async ({commit}, payload) => {
     }
 };
 
+const loadEmails = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('emails?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_EMAILS', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
+const loadPhones = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('phones?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_PHONES', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
+const loadSocialMedia = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('social-media?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_SOCIAL_MEDIA', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
 export default {
     loadPageSettings,
     loadOffers,
-    loadSlides
+    loadSlides,
+    loadSocialMedia,
+    loadEmails,
+    loadPhones,
 };

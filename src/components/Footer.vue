@@ -12,64 +12,60 @@ footer.flex.flex-col.flex-wrap.p-5.justify-center.items-start(class='sm:flex-row
           router-link.capitalize.link(to='/contact')
             | Contacto
         li.mb-1
-          a.capitalize.link(href='https://enmedioasociados.com/')
-            | Enmedio Asociados
+          router-link.capitalize.link(to='/contact')
+            | Blog
         li.mb-1
-          a.capitalize.link(href='http://appsgorilasonline.com/')
-            | Gorilas Online
+          router-link.capitalize.link(to='/contact')
+            | Servicios
+        li.mb-1
+          router-link.capitalize.link(to='/contact')
+            | Productos
   .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
     .list
       h3.title-primary.uppercase.font-black.text-lg.mb-5
         | LLamanos
       ul
-        li.mb-1
-          a.capitalize.link(href='tel:8711188750')
+        li.mb-1(v-for="(phone, key) in $store.state.phones" :key="key")
+          a.capitalize.link(:href="'tel:' + phone.phone")
             font-awesome-icon(:icon="['fa', 'phone']")
-            | (871) 118 8750
+            | {{' ' + phone.title }}
+  .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
     .list
       h3.title-primary.uppercase.font-black.text-lg.mb-5 Dudas y aclaraciones
       ul
-        li.mb-1
-          a.capitalize.link(href='mailto:infoexposystands@gmail.com')
+        li.mb-1(v-for="(email, key) in $store.state.emails" :key="key")
+          a.capitalize.link(:href="'mailto:' + email.email")
             font-awesome-icon(:icon="['fa', 'envelope']")
-            | infoexposystands@gmail.com
+            | {{' ' + email.title }}
   .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
     .list
-      h3.title-primary.uppercase.font-black.text-lg.mb-5
-        | doing business
+      h3.title-primary.uppercase.font-black.text-lg.mb-5 Síguenos en
       ul
-        li.mb-1
-          a.capitalize.link(href='#') become a partner
-        li.mb-1
-          a.capitalize.link(href='#') our clients
-        li.mb-1
-          a.capitalize.link(href='#') oportunities
-  .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
-    .list
-      h3.title-primary.uppercase.font-black.text-lg.mb-5 follow us
-      ul
-        li.mb-1
-          a.capitalize.link(href='#')
-            font-awesome-icon(:icon="['fab', 'facebook']")
-            | Facebook
-        li.mb-1
-          a.capitalize.link(href='#')
-            font-awesome-icon(:icon="['fab', 'twitter']")
-            | Twitter
-        li.mb-1
-          a.capitalize.link(href='#')
-            font-awesome-icon(:icon="['fab', 'instagram']")
-            | Instagram
-        li.mb-1
-          a.capitalize.link(href='#')
-            font-awesome-icon(:icon="['fab', 'whatsapp']")
-            | Whatsapp
+        li.mb-1(v-for="(social, key) in $store.state.socialMedia" :key="key")
+          a.capitalize.link(:href='social.url')
+            img(
+              style="float:left;width:20px; margin-right:5px"
+              :src='PUBLIC_ASSETS + "images/social-media/" + social.icon'
+              :alt='social.title'
+            )
+            | {{' ' + social.title }}
+
 
 </template>
 
 <script>
 export default {
   name: "Footer",
+  data() {
+    return {
+      PUBLIC_ASSETS: import.meta.env.VITE_PUBLIC_ASSETS
+    }
+  },
+  mounted() {
+    this.$store.dispatch('loadPhones');
+    this.$store.dispatch('loadEmails');
+    this.$store.dispatch('loadSocialMedia');
+  },
 };
 </script>
 
@@ -78,18 +74,22 @@ footer {
   background-color: #222;
   color: white;
 }
+
 .column {
   /* border: 1px solid white; */
   height: 100%;
 }
+
 .link {
   color: #ccc;
   position: relative;
   transition: color 0.35s ease;
 }
+
 .link:hover {
   color: white;
 }
+
 .link::after {
   position: absolute;
   content: "";
@@ -101,6 +101,7 @@ footer {
   background-color: #d30000;
   transition: width 0.35s ease;
 }
+
 .link:hover::after {
   width: 100%;
 }

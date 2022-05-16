@@ -13,6 +13,7 @@
     router-link.link.px-2(to='/')  Inicio
     router-link.link.px-2(to='/portfolio')  Portafolio
     router-link.link.px-2(to='/blog')  Blog
+    router-link.link.px-2(to='/services')  Servicios
     router-link.link.px-2(to='/products')  Productos
     router-link.link.px-2(to='/contact')  Contacto
 
