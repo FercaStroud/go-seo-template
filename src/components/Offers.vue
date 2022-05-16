@@ -2,7 +2,7 @@
 .container.mx-auto.p-2(v-if='render')
   .offer.flex.justify-between.items-center.text-center.relative
     carousel.basis-full.p-5(:wrap-around='true' :autoplay='5000' :transition='500')
-      slide(v-for='offer in $store.state.offers' :key='offer.id')
+      slide(v-for='(offer,key) in $store.state.offers' :key='key')
         .flex.flex-col
           h2.font-black {{ offer.title }}
           p.text-sm.description(v-html='offer.description')
@@ -24,7 +24,7 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch('loadOffers');
+      this.$store.dispatch('loadOffers')
   },
   methods: {
     closeOffer() {

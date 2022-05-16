@@ -1,12 +1,12 @@
 <template lang="pug">
 .content
-  Offers
+  //Offers
   Banner
 </template>
 
 <script>
 
-import Offers from "../../components/Offers.vue";
+//import Offers from "../../components/Offers.vue";
 import Banner from "./components/Banner.vue";
 export default {
   name: "Home",
@@ -16,7 +16,7 @@ export default {
   },
   components: {
     Banner,
-    Offers
+    //Offers
   },
 };
 </script>
