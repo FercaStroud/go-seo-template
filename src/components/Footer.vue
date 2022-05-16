@@ -49,7 +49,10 @@ footer.flex.flex-col.flex-wrap.p-5.justify-center.items-start(class='sm:flex-row
               :alt='social.title'
             )
             | {{' ' + social.title }}
-
+  .column.basis-full.flex.flex-col.text-center(style="font-size:.8em")
+    p Desarrollado por Gorilas Online | Todos los derechos reservados {{DOMAIN}}  &nbsp;
+      a | Aviso de Privacidad &nbsp;
+      a | Términos y Condiciones &nbsp;
 
 </template>
 
@@ -58,6 +61,7 @@ export default {
   name: "Footer",
   data() {
     return {
+      DOMAIN: import.meta.env.VITE_DOMAIN,
       PUBLIC_ASSETS: import.meta.env.VITE_PUBLIC_ASSETS
     }
   },
