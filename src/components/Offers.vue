@@ -1,20 +1,27 @@
 <template lang="pug">
-.container.mx-auto.p-2(v-if='render')
+.container.mx-auto.p-2(v-if="render")
   .offer.flex.justify-between.items-center.text-center.relative
-    carousel.basis-full.p-5(:wrap-around='true' :autoplay='5000' :transition='500')
-      slide(v-for='(offer,key) in $store.state.offers' :key='key')
+    swiper.basis-full.p-5(
+      :slides-per-view="1",
+      :pagination="true",
+      :centeredSlides="true",
+      :autoplay="{ delay: 3000, disableOnInteraction: false }",
+      :modules="modules"
+    )
+      swiper-slide(v-for="(offer,key) in $store.state.offers", :key="key")
         .flex.flex-col
           h2.font-black {{ offer.title }}
-          p.text-sm.description(v-html='offer.description')
+          p.text-sm.mb-5.description(v-html="offer.description")
     .absolute.offers-btn.w-12.h-full.flex.justify-center.items-center
-      button.close.w-8.h-8(@click='closeOffer')
+      button.close.w-8.h-8(@click="closeOffer")
         font-awesome-icon(:icon="['fas', 'times']")
-
 </template>
 
 <script>
-import { Carousel, Slide } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default {
   name: "Offers",
@@ -24,7 +31,7 @@ export default {
     };
   },
   mounted() {
-      this.$store.dispatch('loadOffers')
+    this.$store.dispatch("loadOffers");
   },
   methods: {
     closeOffer() {
@@ -32,8 +39,13 @@ export default {
     },
   },
   components: {
-    Carousel,
-    Slide,
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Autoplay, Pagination],
+    };
   },
 };
 </script>

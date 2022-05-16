@@ -7,14 +7,15 @@
         fill-opacity="1",
         d="M0,64L48,80C96,96,192,128,288,149.3C384,171,480,181,576,176C672,171,768,149,864,133.3C960,117,1056,107,1152,138.7C1248,171,1344,245,1392,282.7L1440,320L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
       )
-  div
-    pre {{$store.state}}
-  .container.mx-auto
+  .container.mx-auto.py-5
     swiper(
-      :slides-per-view="3"
-      :space-between="50"
+      :slides-per-view="1",
+      :pagination="true",
+      :centeredSlides="true",
+      :autoplay="{ delay: 2500, disableOnInteraction: false }",
+      :modules="modules"
     )
-      swiper-slide(v-for="(slide, key) in $store.state.slides" :key="key")
+      swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
         img.w-full.h-auto(
           :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
           :alt="slide.title"
@@ -22,12 +23,10 @@
 </template>
 
 <script>
-//import { Carousel, Slide } from "vue3-carousel";
-//import "vue3-carousel/dist/carousel.css";
-
-import {Swiper, SwiperSlide} from 'swiper/vue';
-
-import 'swiper/css';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default {
   name: "Banner",
@@ -42,6 +41,11 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Autoplay, Pagination],
+    };
   },
 };
 </script>
