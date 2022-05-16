@@ -1,5 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import './utils/axios';
+
 import router from "./router";
 import store from "./store";
 
@@ -7,15 +9,21 @@ import "./index.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faLaptopCode,
-  faRocket,
+  faStore,
+  // faShop,
+  // faBoxArchive,
+  // faPersonRunning,
   faShoppingCart,
   faStar,
+  faPlay,
+  faPhone,
+  faEnvelope,
   faClock,
   faTruck,
   faPlus,
   faMinus,
   faTrash,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -25,15 +33,21 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 library.add(
   // free solid
-  faLaptopCode,
-  faRocket,
+  faStore,
+  // faShop,
+  // faBoxArchive,
+  // faPersonRunning,
   faShoppingCart,
   faStar,
+  faPlay,
+  faPhone,
+  faEnvelope,
   faClock,
   faTruck,
   faPlus,
   faMinus,
   faTrash,
+  faTimes,
 
   // free brands
   faFacebook,
@@ -44,8 +58,7 @@ library.add(
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-import { createMetaManager } from 'vue-meta'
-
+import { createMetaManager } from "vue-meta";
 
 createApp(App)
   .use(store)

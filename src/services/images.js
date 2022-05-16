@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = `${import.meta.env.VITE_BASE_URL}/api/get/public/images?domain=exposystands.com`;
+const baseUrl = "http://panel.appsgorilasonline.com/api/get/public/images?domain=exposystands.com";
 
 const getAll = () => {
   const request = axios.get(baseUrl);

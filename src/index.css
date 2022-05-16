@@ -10,7 +10,8 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -32,7 +33,7 @@ img {
 }
 
 .title-primary {
-  text-decoration: underline solid 5px #ff70a6;
+  text-decoration: underline solid 5px #d30000;
 }
 .title-secondary {
   /* text-decoration: underline solid 3px #0092cc; */
@@ -40,13 +41,13 @@ img {
 }
 
 .primary-button {
-  background-color: #ff70a6;
+  background-color: #d30000;
   color: white;
   padding: 0.2rem 0.5rem;
   transition: all 0.35s ease;
 }
 .primary-button:hover {
-  background-color: #ff1f75;
+  background-color: #ff0a0a;
 }
 
 .secondary-button {
@@ -87,3 +88,4 @@ img {
 .border {
   border: 1px solid black;
 }
+
