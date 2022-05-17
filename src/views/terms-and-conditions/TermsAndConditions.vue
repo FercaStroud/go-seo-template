@@ -1,6 +1,7 @@
 <template lang="pug">
 .content
-  .container.mx-auto.p-2(v-html="$store.state.settings.terms_and_conditions")
+  .container.mx-auto.p-2
+    .ql-editor(v-html="$store.state.settings.terms_and_conditions")
 </template>
 
 <script>
@@ -16,7 +17,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+@import "../../styles/quill-core.css";
 .content {
   margin-top: 4rem;
   transition: all 0.35s ease;
