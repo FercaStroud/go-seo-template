@@ -2,12 +2,13 @@
 .content
   Offers
   Banner
+  About
 </template>
 
 <script>
-
 import Offers from "../../components/Offers.vue";
 import Banner from "./components/Banner.vue";
+import About from "./components/About.vue";
 export default {
   name: "Home",
   mounted() {
@@ -15,6 +16,7 @@ export default {
     )
   },
   components: {
+    About,
     Banner,
     Offers
   },
