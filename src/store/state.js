@@ -4,6 +4,7 @@ export default {
     offers: [],
     phones: [],
     emails: [],
+    services: [],
     socialMedia: [],
     isLoading: false,
 };

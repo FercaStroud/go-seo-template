@@ -3,12 +3,14 @@
   Offers
   Banner
   About
+  Services
 </template>
 
 <script>
 import Offers from "../../components/Offers.vue";
 import Banner from "./components/Banner.vue";
 import About from "./components/About.vue";
+import Services from "./components/Services.vue";
 export default {
   name: "Home",
   mounted() {
@@ -16,6 +18,7 @@ export default {
     )
   },
   components: {
+    Services,
     About,
     Banner,
     Offers

@@ -96,6 +96,25 @@ const loadPhones = async ({commit}, payload) => {
     }
 };
 
+const loadServices = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('services?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_SERVICES', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
 const loadSocialMedia = async ({commit}, payload) => {
     commit('SET_LOADING', true);
     try {
@@ -122,4 +141,5 @@ export default {
     loadSocialMedia,
     loadEmails,
     loadPhones,
+    loadServices,
 };

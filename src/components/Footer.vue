@@ -12,13 +12,13 @@ footer.flex.flex-col.flex-wrap.p-5.justify-center.items-start(class='sm:flex-row
           router-link.capitalize.link(to='/contact')
             | Contacto
         li.mb-1
-          router-link.capitalize.link(to='/contact')
+          router-link.capitalize.link(to='/blog')
             | Blog
         li.mb-1
-          router-link.capitalize.link(to='/contact')
+          router-link.capitalize.link(to='/services')
             | Servicios
         li.mb-1
-          router-link.capitalize.link(to='/contact')
+          router-link.capitalize.link(to='/products')
             | Productos
   .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
     .list

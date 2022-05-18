@@ -16,6 +16,9 @@ const SET_PHONES = (state, payload) => {
 const SET_EMAILS = (state, payload) => {
     state.emails = payload.data;
 };
+const SET_SERVICES = (state, payload) => {
+    state.services = payload.data;
+};
 const SET_LOADING = (state, payload) => {
     state.isLoading = payload;
 };
@@ -27,5 +30,6 @@ export default {
     SET_SLIDES,
     SET_SOCIAL_MEDIA,
     SET_PHONES,
-    SET_EMAILS
+    SET_EMAILS,
+    SET_SERVICES,
 };
