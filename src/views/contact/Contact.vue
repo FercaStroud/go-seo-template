@@ -85,7 +85,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../../styles/quill-core.css";
+// @import "../../../styles/quill-core.css";
 .content {
   margin-top: 4.5rem;
   transition: all 0.35s ease;

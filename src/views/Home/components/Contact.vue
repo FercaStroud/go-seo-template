@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/quill-core.css";
+// @import "../../../styles/quill-core.css";
 .form-container {
   width: 100%;
 
