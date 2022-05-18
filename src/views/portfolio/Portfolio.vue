@@ -18,7 +18,7 @@
   .flex.flex-wrap.justify-center.items-center.mb-5
     template(v-for="(image, key) in $store.state.images", :key="key")
       .img-container.flex.justify-center.-items-center.basis-full.aspect-video.overflow-hidden.p-2.mb-2(
-        class="sm:basis-1/2 lg:basis-1/3"
+        class="sm:basis-1/2 lg:basis-1/4"
       )
         img.h-full.w-auto(
           @click="handleModal(key)",

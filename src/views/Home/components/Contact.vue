@@ -4,20 +4,20 @@
   .mb-5
     //- .ql-editor(v-html="description" )
 
-  .form-container.flex.flex-row.flex-wrap.justify-center.items-center.gap-10.px-10(
+  .form-container.flex.flex-row.flex-wrap.justify-center.items-stretch.gap-10.px-10(
     class="sm:gap-0"
   )
-    .map-container.flex.justify-center.items-center(class="basis-1/2")
+    .map-container.flex.justify-start.items-center(class="basis-1/3")
       Map
 
     form.form.flex.flex-col.justify-center.items-center.gap-5(
-      class="basis-1/2 sm:items-start",
+      class="basis-1/2 sm:items-stretch",
       @submit.prevent="onSubmit"
     )
       .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
-        label.w-20(for="name") Nombre
+        label.w-32(for="name") Nombre
           span.required *
-        input#name.form-input.ml-0(
+        input#name.form-input.basis-full.ml-0(
           class="sm:ml-5",
           type="text",
           name="name",
@@ -27,9 +27,9 @@
         )
 
       .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
-        label.w-20(for="email") Correo
+        label.w-32(for="email") Correo
           span.required *
-        input#email.form-input.ml-0(
+        input#email.form-input.basis-full.ml-0(
           class="sm:ml-5",
           type="email",
           name="email",
@@ -39,9 +39,9 @@
         )
 
       .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
-        label.w-20(for="budget") Presupuesto
+        label.w-32(for="budget") Presupuesto
           span.required *
-        select#budget.form-input.ml-0(
+        select#budget.form-input.basis-full.ml-0(
           class="sm:ml-5",
           name="budget",
           v-model="selectedBudget",
@@ -92,7 +92,7 @@ export default {
   .form-input {
     border: 1px solid #ccc;
     height: 3rem;
-    width: 18rem;
+    // width: 18rem;
     padding: 0.5rem 1rem;
     border-radius: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
