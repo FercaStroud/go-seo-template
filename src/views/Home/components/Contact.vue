@@ -1,8 +1,6 @@
 <template lang="pug">
-.content.container.mx-auto.flex.flex-col.items-center.mb-20
-  h1.title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
-    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) Contacta con nosotros!
+.container.mx-auto.flex.flex-col.items-center.my-5
+  h1.title-primary.text-center.font-black.text-xl.mb-5(class="sm:text-2xl") Contacta con nosotros!
   .mb-5
     //- .ql-editor(v-html="description" )
 
@@ -58,10 +56,9 @@
 </template>
 
 <script>
-import Map from "../../components/Map.vue";
-
+import Map from "../../../components/Map.vue";
 export default {
-  name: "Portfolio",
+  name: "Contact",
   mounted() {},
   components: { Map },
   data() {
@@ -81,21 +78,11 @@ export default {
       this.selectedBudget = "";
     },
   },
-};
+}
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "../../../styles/quill-core.css";
-.content {
-  margin-top: 4.5rem;
-  transition: all 0.35s ease;
-}
-@media screen and (max-width: 639px) {
-  .content {
-    margin-top: 7.5rem;
-  }
-}
-
 .form-container {
   width: 100%;
 

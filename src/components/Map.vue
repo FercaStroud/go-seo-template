@@ -1,15 +1,11 @@
-<template>
-  <div class="map sm:p-5 w-60 h-60 sm:w-80 sm:h-80">
-    <l-map v-model="zoom" v-model:zoom="zoom" :center="cords">
-      <l-tile-layer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      ></l-tile-layer>
-
-      <l-marker :lat-lng="cords">
-        <l-tooltip>our ubication</l-tooltip>
-      </l-marker>
-    </l-map>
-  </div>
+<template lang="pug">
+.map.w-60.h-60(class="sm:p-5 sm:w-80 sm:h-80")
+  l-map(v-model="zoom" v-model:zoom="zoom" :center="cords")
+    l-tile-layer(
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    )
+    l-marker(:lat-lng="cords")
+        l.tooltip Nuestra ubicación
 </template>
 
 <script>
