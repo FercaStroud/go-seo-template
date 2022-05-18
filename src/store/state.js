@@ -6,5 +6,6 @@ export default {
     emails: [],
     services: [],
     socialMedia: [],
+    images: [],
     isLoading: false,
 };

@@ -134,6 +134,44 @@ const loadSocialMedia = async ({commit}, payload) => {
     }
 };
 
+const loadPosts = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('posts?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_POSTS', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
+const loadPortfolio = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('images?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_PORTFOLIO', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
 export default {
     loadPageSettings,
     loadOffers,
@@ -142,4 +180,6 @@ export default {
     loadEmails,
     loadPhones,
     loadServices,
+    loadPosts,
+    loadPortfolio,
 };

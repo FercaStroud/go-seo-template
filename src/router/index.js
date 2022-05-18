@@ -23,6 +23,16 @@ const routes = [
     component: () => import('../views/blog/Blog.vue'),
   },
   {
+    path: "/portfolio",
+    name: "Portfolio",
+    component: () => import('../views/portfolio/Portfolio.vue'),
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import('../views/contact/Contact.vue'),
+  },
+  {
     path: "/privacy-policy",
     name: "PrivacyPolicy",
     component: () => import('../views/privacy-policy/PrivacyPolicy.vue'),

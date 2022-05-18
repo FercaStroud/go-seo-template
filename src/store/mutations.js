@@ -19,6 +19,12 @@ const SET_EMAILS = (state, payload) => {
 const SET_SERVICES = (state, payload) => {
     state.services = payload.data;
 };
+const SET_POSTS = (state, payload) => {
+    state.posts = payload.data;
+};
+const SET_PORTFOLIO = (state, payload) => {
+    state.images = payload.data;
+};
 const SET_LOADING = (state, payload) => {
     state.isLoading = payload;
 };
@@ -32,4 +38,6 @@ export default {
     SET_PHONES,
     SET_EMAILS,
     SET_SERVICES,
+    SET_POSTS,
+    SET_PORTFOLIO
 };
