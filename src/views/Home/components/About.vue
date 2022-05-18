@@ -1,6 +1,6 @@
 <template lang="pug">
-.features-container.container.mx-auto
-  .about.text-center.flex.flex-col.justify-center.items-center.gap-5.p-10.mt-10(class='sm:px-20')
+.features-container.container.mx-auto.mt-10.mb-0(class="sm:mb-10")
+  .about.text-center.flex.flex-col.justify-center.items-center.p-5(class="sm:p-10")
     .ql-editor(v-html="$store.state.settings.about" )
 
 </template>

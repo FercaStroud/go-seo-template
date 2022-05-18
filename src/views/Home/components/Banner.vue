@@ -1,5 +1,5 @@
 <template lang="pug">
-.banner.my-5.relative
+.banner.mt-2.mb-5.relative
   .background.w-full.h-full.absolute
     svg(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1440 320")
       path(
