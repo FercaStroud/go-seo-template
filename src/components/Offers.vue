@@ -35,6 +35,7 @@ export default {
   },
   methods: {
     closeOffer() {
+      console.log("test");
       this.render = false;
     },
   },
@@ -65,6 +66,7 @@ export default {
 .close {
   color: #d30000;
   transition: color 0.35s ease;
+  z-index: 1;
 }
 .close:hover {
   color: #ff0a0a;
