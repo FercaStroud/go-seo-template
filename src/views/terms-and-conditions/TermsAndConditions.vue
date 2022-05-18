@@ -20,12 +20,12 @@ export default {
 <style scoped>
 @import "../../styles/quill-core.css";
 .content {
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   transition: all 0.35s ease;
 }
 @media screen and (max-width: 639px) {
   .content {
-    margin-top: 5rem;
+    margin-top: 7.5rem;
   }
 }
 
