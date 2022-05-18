@@ -1,7 +1,10 @@
 <template lang="pug">
 .flex.flex-col.flex-wrap.p-5.mb-5(class="md:mb-10 md:flex-row")
   .flex.items-center.basis-full(class="md:basis-1/3")
-    img(:src="img_src || 'https://via.placeholder.com/300x300'", :alt="title")
+    img(
+      :src="img_src ? PUBLIC_ASSETS + 'images/posts/' + img_src : 'https://via.placeholder.com/300x300'",
+      :alt="title"
+    )
 
   .text.flex.flex-col.justify-center.pt-5.text-center.basis-full(
     class="sm:text-left md:basis-2/3 md:px-10"
