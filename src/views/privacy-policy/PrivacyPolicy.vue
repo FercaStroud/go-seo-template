@@ -1,6 +1,6 @@
 <template lang="pug">
 .content
-  .container.mx-auto.p-2
+  .container.mx-auto.p-2.mb-5(class="md:px-12 py-5")
     .ql-editor(v-html="$store.state.settings.privacy_policy")
 </template>
 
@@ -29,5 +29,4 @@ export default {
     margin-top: 5rem;
   }
 }
-
 </style>

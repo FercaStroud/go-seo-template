@@ -1,6 +1,6 @@
 <template lang="pug">
 .content
-  .container.mx-auto.p-2
+  .container.mx-auto.p-2.mb-5(class="md:px-12 py-5")
     .ql-editor(v-html="$store.state.settings.terms_and_conditions")
 </template>
 

@@ -1,0 +1,91 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* font-family: "Montserrat"; */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+::moz-selection {
+  color: white;
+  background-color: #5c95ff;
+}
+::selection {
+  color: white;
+  background-color: #5c95ff;
+}
+
+img {
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+.title-primary {
+  text-decoration: underline solid 5px #d30000;
+}
+.title-secondary {
+  /* text-decoration: underline solid 3px #0092cc; */
+  text-decoration: underline solid 5px #70d6ff;
+}
+
+.primary-button {
+  background-color: #d30000;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.35s ease;
+}
+.primary-button:hover {
+  background-color: #ff0a0a;
+}
+
+.secondary-button {
+  background-color: #70d6ff;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.35s ease;
+}
+.secondary-button:hover {
+  background-color: #0092cc;
+}
+
+.fade-in {
+  animation: section-fade-in 0.35s ease;
+}
+
+@keyframes section-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: section-fade-out 0.35s ease;
+}
+
+@keyframes section-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.border {
+  border: 1px solid black;
+}
+
