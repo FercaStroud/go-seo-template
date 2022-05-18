@@ -13,11 +13,6 @@
 import Post from "./components/Post.vue";
 export default {
   name: "Blog",
-  data() {
-    return {
-      PUBLIC_ASSETS: import.meta.env.VITE_PUBLIC_ASSETS,
-    };
-  },
   mounted() {
     this.$store.dispatch("loadPosts");
   },
