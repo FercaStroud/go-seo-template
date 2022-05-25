@@ -14,13 +14,13 @@
             :alt="modalTitle"
           )
 
-  //- Galery
+  //- Gallery
   .flex.flex-wrap.justify-center.items-center.mb-5
     template(v-for="(image, key) in $store.state.images", :key="key")
-      .img-container.flex.justify-center.-items-center.basis-full.aspect-video.overflow-hidden.p-2.mb-2(
+      .img-container.flex.justify-center.items-center.basis-full.aspect-square.overflow-hidden(
         class="sm:basis-1/2 lg:basis-1/4"
       )
-        img.h-full.w-auto(
+        img.gallery-image(
           @click="handleModal(key)",
           :src="PUBLIC_ASSETS + 'images/portfolios/' + image.src"
         )
@@ -61,6 +61,12 @@ export default {
   .content {
     margin-top: 7.5rem;
   }
+}
+
+.gallery-image {
+  width: 98%;
+  height: auto;
+  margin: 1%;
 }
 
 .modal-container {

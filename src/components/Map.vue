@@ -42,7 +42,7 @@ export default {
       zoom: 15,
       iconWidth: 25,
       iconHeight: 40,
-      cords: [25.5298807, -103.418228, 20],
+      cords: [25.5298807, -103.418228],
     };
   },
   computed: {
