@@ -1,5 +1,8 @@
 <template lang="pug">
 .container.mx-auto.my-5
+  h1.title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
+  ) Servicios
   .flex.flex-col.justify-center.items-center.text-center
     .features.flex.flex-wrap.justify-center.items-center
       .flex.flex-col.text-center.p-5.basis-full(

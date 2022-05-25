@@ -1,5 +1,8 @@
 <template lang="pug">
 .content.flex.flex-col.items-center.relative.container.mx-auto
+  h1.title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
+  ) Portafolio
   //- Modal
   .modal-container.fade-in.fixed.w-full.top-0.flex.justify-center.items-center(
     v-if="showModal",
