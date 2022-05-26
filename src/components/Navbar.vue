@@ -39,7 +39,7 @@ export default {
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 2;
+  z-index: 4;
   background-color: #fff;
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.022),
     0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
