@@ -75,6 +75,8 @@ export default {
   .gallery-image {
     width: 98%;
     height: auto;
+    max-width: 500px;
+    max-height: 500px;
     margin: 1%;
   }
   .details {

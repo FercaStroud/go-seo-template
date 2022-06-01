@@ -5,12 +5,12 @@
   ) Servicios
   .flex.flex-col.justify-center.items-center.text-center
     .features.flex.flex-wrap.justify-center.items-center
-      .flex.flex-col.text-center.p-5.basis-full(
+      .flex.flex-col.justify-center.items-center.text-center.p-5.basis-full(
         class="basis-1/2 sm:basis-1/3 md:p-10",
         v-for="(service, key) in $store.state.services",
         :key="key"
       )
-        .flex.justify-center.items-center.p-2.mb-5.h-10
+        .img-container.flex.justify-center.items-center.p-2.h-10
           img(
             :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
             :alt="service.title"
@@ -33,4 +33,12 @@ export default {
 </script>
 
 <style scoped>
+.img-container {
+  max-width: 40px;
+  max-height: 40px;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
+}
 </style>
