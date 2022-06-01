@@ -1,5 +1,5 @@
 <template lang="pug">
-.content.flex.flex-col.items-center.relative.px-5.py-2(class="sm:px-10")
+.container.mx-auto.content.flex.flex-col.items-center.relative.px-5.py-2(class="sm:px-10")
   h1.title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) Portafolio
@@ -22,9 +22,9 @@
     template(v-for="(image, key) in $store.state.images", :key="key")
       .gallery-img-container.flex.justify-center.items-center.basis-full.aspect-square.overflow-hidden(
         class="sm:basis-1/2 lg:basis-1/4"
+        @click="handleModal(key)",
       )
         img.gallery-image(
-          @click="handleModal(key)",
           :src="PUBLIC_ASSETS + 'images/portfolios/' + image.src",
           :alt="image.title"
         )

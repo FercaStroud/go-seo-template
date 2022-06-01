@@ -1,22 +1,22 @@
 <template lang="pug">
-.navbar.flex.flex-col.px-5.py-2(class='sm:flex-row sm:px-10')
-  .logo.basis-full.mb-2(class='sm:mb-0 sm:basis-1/4')
-    .img-container
-      router-link(to='/')
-        img(
-          v-if="$store.state.settings.logo !== undefined"
-          :src='PUBLIC_ASSETS + "images/logos/" + $store.state.settings.logo'
-          alt='LOGO'
-        )
-        img(v-else src='https://via.placeholder.com/150x50/cccccc/000000' alt='LOGO')
-  .links.flex.flex-wrap.text-sm.justify-between.items-center.basis-full(class='sm:text-base sm:justify-end sm:basis-3/4')
-    router-link.link.px-2(to='/')  Inicio
-    router-link.link.px-2(to='/portfolio')  Portafolio
-    router-link.link.px-2(to='/blog')  Blog
-    router-link.link.px-2(to='/services')  Servicios
-    router-link.link.px-2(to='/products')  Productos
-    router-link.link.px-2(to='/contact')  Contacto
-
+.navbar
+  .container.mx-auto.flex.flex-col.px-5.py-2(class='sm:flex-row sm:px-10')
+    .logo.basis-full.mb-2(class='sm:mb-0 sm:basis-1/4')
+      .img-container
+        router-link(to='/')
+          img(
+            v-if="$store.state.settings.logo !== undefined"
+            :src='PUBLIC_ASSETS + "images/logos/" + $store.state.settings.logo'
+            alt='LOGO'
+          )
+          img(v-else src='https://via.placeholder.com/150x50/cccccc/000000' alt='LOGO')
+    .links.flex.flex-wrap.text-sm.justify-between.items-center.basis-full(class='sm:text-base sm:justify-end sm:basis-3/4')
+      router-link.link.px-2(to='/')  Inicio
+      router-link.link.px-2(to='/portfolio')  Portafolio
+      router-link.link.px-2(to='/blog')  Blog
+      router-link.link.px-2(to='/services')  Servicios
+      router-link.link.px-2(to='/products')  Productos
+      router-link.link.px-2(to='/contact')  Contacto
 </template>
 
 <script>
@@ -45,6 +45,16 @@ export default {
     0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
     0px 0px 29.2px rgba(0, 0, 0, 0.048), 0px 0px 80px rgba(0, 0, 0, 0.07);
 }
+
+.img-container {
+  max-width: 150px;
+  max-height: 50px;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
 .link {
   position: relative;
   color: #555;
