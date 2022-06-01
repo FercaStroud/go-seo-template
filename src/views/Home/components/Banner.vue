@@ -9,24 +9,26 @@
       )
   .container.mx-auto.py-5
     swiper(
-      :slides-per-view="1",
+      :keyboard="true"
+      :navigation="true"
       :pagination="true",
-      :centeredSlides="true",
-      :autoplay="{ delay: 2500, disableOnInteraction: false }",
+      :autoplay="{ delay: 7500 }",
       :modules="modules"
     )
       swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
-        img.w-full.h-auto(
-          :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
-          :alt="slide.title"
-        )
+        a(target="_blank" :href="slide.href")
+          img.w-full.h-auto(
+            :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
+            :alt="slide.title"
+          )
 </template>
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default {
   name: "Banner",
@@ -44,7 +46,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Autoplay, Pagination],
+      modules: [Autoplay, Pagination, Navigation, Keyboard],
     };
   },
 };

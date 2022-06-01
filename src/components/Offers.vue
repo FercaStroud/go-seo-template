@@ -12,6 +12,9 @@
         .flex.flex-col
           h2.font-black {{ offer.title }}
           p.text-sm.mb-5.description(v-html="offer.description")
+          .p-5
+            a.close(:href="offer.href" target="_blank") Más Detalles
+
     .absolute.offers-btn.w-12.h-full.flex.justify-center.items-center
       button.close.w-8.h-8(@click="closeOffer")
         font-awesome-icon(:icon="['fas', 'times']")
@@ -35,7 +38,7 @@ export default {
   },
   methods: {
     closeOffer() {
-      console.log("test");
+      //console.log("test");
       this.render = false;
     },
   },
