@@ -1,13 +1,6 @@
 <template lang="pug">
-.banner.mt-2.mb-5.relative
-  .background.w-full.h-full.absolute
-    svg(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1440 320")
-      path(
-        fill="#FF6A00",
-        fill-opacity="1",
-        d="M0,64L48,80C96,96,192,128,288,149.3C384,171,480,181,576,176C672,171,768,149,864,133.3C960,117,1056,107,1152,138.7C1248,171,1344,245,1392,282.7L1440,320L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-      )
-  .container.mx-auto.py-5
+.banner.mt-2.mb-5.py-5
+  .container.mx-auto
     swiper(
       :keyboard="true"
       :navigation="true"
@@ -69,15 +62,14 @@ export default {
   padding: 10px;
 }
 
-.background {
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.background svg {
-  width: 100%;
+.banner {
+  background-color: transparent;
+  background-image: url("../../../assets/background.png");
+  width: 100vw;
   height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .img-container img {

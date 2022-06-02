@@ -5,8 +5,8 @@
   )
     h2.title-primary.font-black.text-2xl(class="md:text-3xl") {{ title }}
 
-  .img-container.flex.items-center.basis-full
-    img(
+  .img-container.basis-full
+    img.w-full.h-auto(
       :src="img_src ? PUBLIC_ASSETS + 'images/posts/' + img_src : 'https://via.placeholder.com/300x300'",
       :alt="title"
     )
