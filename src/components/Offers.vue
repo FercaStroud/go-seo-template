@@ -3,7 +3,7 @@
   .offer.flex.justify-between.items-center.text-center.relative
     swiper.basis-full.p-5(
       :slides-per-view="1",
-      :pagination="true",
+      :pagination="{ clickable: true }",
       :centeredSlides="true",
       :autoplay="{ delay: 3000, disableOnInteraction: false }",
       :modules="modules"

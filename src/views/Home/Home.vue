@@ -5,6 +5,7 @@
   About
   Services
   Contact
+  ClientsProviders
 </template>
 
 <script>
@@ -13,6 +14,7 @@ import Banner from "./components/Banner.vue";
 import About from "./components/About.vue";
 import Services from "./components/Services.vue";
 import Contact from "./components/Contact.vue";
+import ClientsProviders from "../../components/ClientsProviders.vue";
 
 export default {
   name: "Home",
@@ -26,6 +28,7 @@ export default {
     Banner,
     Offers,
     Contact,
+    ClientsProviders,
   },
 };
 </script>
