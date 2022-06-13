@@ -32,6 +32,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("loadSlides");
+
   },
   components: {
     Swiper,
@@ -65,7 +66,7 @@ export default {
 .banner {
   background-color: transparent;
   background-image: url("../../../assets/background.png");
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

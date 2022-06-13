@@ -1,6 +1,6 @@
 <template lang="pug">
-.map.w-60.h-60(class="sm:p-5 sm:w-80 sm:h-80")
-  l-map(v-model="zoom" v-model:zoom="zoom" :center="cords")
+.map()
+  l-map( v-model:zoom="zoom" :center="cords" style="height:400px; width:98vw")
     l-tile-layer(
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     )

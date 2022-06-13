@@ -4,8 +4,8 @@
   Banner
   About
   Services
-  Contact
   ClientsProviders
+  Contact
 </template>
 
 <script>

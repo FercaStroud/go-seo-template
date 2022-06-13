@@ -1,5 +1,5 @@
 export default {
-    settings: [],
+    settings: { logo: ''},
     slides: [],
     offers: [],
     phones: [],

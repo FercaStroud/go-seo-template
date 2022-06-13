@@ -5,11 +5,10 @@
       .img-container
         router-link(to='/')
           img(
-            v-if="$store.state.settings.logo !== undefined"
+            v-if="$store.state.settings.logo"
             :src='PUBLIC_ASSETS + "images/logos/" + $store.state.settings.logo'
             alt='LOGO'
           )
-          img(v-else src='https://via.placeholder.com/150x50/cccccc/000000' alt='LOGO')
     .links.flex.flex-wrap.text-sm.justify-between.items-center.basis-full(class='sm:text-base sm:justify-end sm:basis-3/4')
       router-link.link.px-2(to='/')  Inicio
       router-link.link.px-2(to='/portfolio')  Portafolio
@@ -29,7 +28,6 @@ export default {
     }
   },
   mounted() {
-
   },
 };
 </script>

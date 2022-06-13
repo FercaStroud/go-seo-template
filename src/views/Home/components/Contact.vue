@@ -1,15 +1,12 @@
 <template lang="pug">
 .container.mx-auto.flex.flex-col.items-center.my-5
-  h1.title-primary.text-center.font-black.text-xl.mb-5(class="sm:text-2xl") Contacta con nosotros!
-  .mb-5
-    //- .ql-editor(v-html="description" )
+  .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
+  ) Contáctanos
 
   .form-container.flex.flex-row.flex-wrap.justify-center.items-stretch.gap-10.px-10(
     class="sm:gap-0"
   )
-    .map-container.flex.justify-start.items-center(class="basis-1/3")
-      Map
-
     form.form.flex.flex-col.justify-center.items-center.gap-5(
       class="basis-1/2 sm:items-stretch",
       @submit.prevent="onSubmit"
@@ -39,20 +36,30 @@
         )
 
       .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
-        label.w-32(for="budget") Presupuesto
+        label.w-32(for="subject") Asunto
           span.required *
-        select#budget.form-input.basis-full.ml-0(
+        input#subject.form-input.basis-full.ml-0(
           class="sm:ml-5",
-          name="budget",
-          v-model="selectedBudget",
+          type="text",
+          name="name",
+          placeholder="Nombre completo",
+          v-model="name",
           required
         )
-          option(value="", disable) Seect one
-          option $10,000 - $15,000
-          option $15,000 - $20,000
-          option $20,000+
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
+        label.w-32(for="message") Mensaje
+          span.required *
+        textarea#message.form-input.basis-full.ml-0(
+          class="sm:ml-5",
+          name="message",
+          placeholder="Mensaje",
+          v-model="name",
+          required
+        )
 
       button.submit.text-lg(type="submit") Enviar
+    Map(style="margin-top:30px")
+
 </template>
 
 <script>
