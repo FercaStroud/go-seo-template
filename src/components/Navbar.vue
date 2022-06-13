@@ -10,12 +10,12 @@
             alt='LOGO'
           )
     .links.flex.flex-wrap.text-sm.justify-between.items-center.basis-full(class='sm:text-base sm:justify-end sm:basis-3/4')
-      router-link.link.px-2(to='/')  Inicio
-      router-link.link.px-2(to='/portfolio')  Portafolio
-      router-link.link.px-2(to='/blog')  Blog
-      router-link.link.px-2(to='/services')  Servicios
-      router-link.link.px-2(to='/products')  Productos
-      router-link.link.px-2(to='/contact')  Contacto
+      router-link.link.primary-underline-h.px-2(to='/')  Inicio
+      router-link.link.primary-underline-h.px-2(to='/portfolio')  Portafolio
+      router-link.link.primary-underline-h.px-2(to='/blog')  Blog
+      router-link.link.primary-underline-h.px-2(to='/services')  Servicios
+      router-link.link.primary-underline-h.px-2(to='/products')  Productos
+      router-link.link.primary-underline-h.px-2(to='/contact')  Contacto
 </template>
 
 <script>
@@ -54,25 +54,10 @@ export default {
 }
 
 .link {
-  position: relative;
   color: #555;
   transition: color 0.35s ease;
 }
 .link:hover {
   color: black;
-}
-.link::after {
-  position: absolute;
-  content: "";
-  background-color: #d30000;
-  left: 0;
-  bottom: -2px;
-  height: 3px;
-  width: 0;
-  border-radius: 1rem;
-  transition: width 0.35s ease;
-}
-.link:hover::after {
-  width: 100%;
 }
 </style>

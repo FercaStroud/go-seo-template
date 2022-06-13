@@ -5,7 +5,8 @@ import './utils/axios';
 import router from "./router";
 import store from "./store";
 
-import "./index.css";
+// import "./index.css";
+import "./styles/style.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {

@@ -1,11 +1,14 @@
 <template lang="pug">
-.map()
-  l-map( v-model:zoom="zoom" :center="cords" style="height:400px; width:98vw")
-    l-tile-layer(
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    )
+.map
+  l-map(
+    v-model:zoom="zoom",
+    :center="cords",
+    :options="mapOptions",
+    style="height: 400px; width: 98vw"
+  )
+    l-tile-layer(url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
     l-marker(:lat-lng="cords")
-        l.tooltip Nuestra ubicación
+      l.tooltip Nuestra ubicación
 </template>
 
 <script>
@@ -39,10 +42,13 @@ export default {
   },
   data() {
     return {
-      zoom: 15,
+      zoom: 16,
       iconWidth: 25,
       iconHeight: 40,
       cords: [25.5298807, -103.418228],
+      mapOptions: {
+        scrollWheelZoom: false,
+      },
     };
   },
   computed: {

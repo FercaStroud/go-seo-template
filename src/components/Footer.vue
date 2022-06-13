@@ -7,19 +7,19 @@ footer
           | SITE MAP
         ul
           li.mb-1
-            router-link.capitalize.link(to='/portfolio')
+            router-link.capitalize.link.primary-underline-h(to='/portfolio')
               | Portafolio
           li.mb-1
-            router-link.capitalize.link(to='/contact')
+            router-link.capitalize.link.primary-underline-h(to='/contact')
               | Contacto
           li.mb-1
-            router-link.capitalize.link(to='/blog')
+            router-link.capitalize.link.primary-underline-h(to='/blog')
               | Blog
           li.mb-1
-            router-link.capitalize.link(to='/services')
+            router-link.capitalize.link.primary-underline-h(to='/services')
               | Servicios
           li.mb-1
-            router-link.capitalize.link(to='/products')
+            router-link.capitalize.link.primary-underline-h(to='/products')
               | Productos
     .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
       .list
@@ -27,7 +27,7 @@ footer
           | LLamanos
         ul
           li.mb-1(v-for="(phone, key) in $store.state.phones" :key="key")
-            a.capitalize.link(:href="'tel:' + phone.phone")
+            a.capitalize.link.primary-underline-h(:href="'tel:' + phone.phone")
               font-awesome-icon(:icon="['fa', 'phone']")
               | {{' ' + phone.title }}
     .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
@@ -35,7 +35,7 @@ footer
         h3.title-primary.uppercase.font-black.text-lg.mb-5 Dudas y aclaraciones
         ul
           li.mb-1(v-for="(email, key) in $store.state.emails" :key="key")
-            a.capitalize.link(:href="'mailto:' + email.email")
+            a.capitalize.link.primary-underline-h(:href="'mailto:' + email.email")
               font-awesome-icon(:icon="['fa', 'envelope']")
               | {{' ' + email.title }}
     .column.basis-full.flex.flex-col.gap-10.mb-10(class='sm:basis-1/2 lg:basis-1/4')
@@ -43,7 +43,7 @@ footer
         h3.title-primary.uppercase.font-black.text-lg.mb-5 Síguenos en
         ul
           li.mb-1(v-for="(social, key) in $store.state.socialMedia" :key="key")
-            a.capitalize.link(:href='social.url')
+            a.capitalize.link.primary-underline-h(:href='social.url')
               img(
                 style="float:left;width:20px; margin-right:5px"
                 :src='PUBLIC_ASSETS + "images/social-media/" + social.icon'
@@ -52,10 +52,10 @@ footer
               | {{' ' + social.title }}
     .column.basis-full.flex.flex-col.text-center(style="font-size:.8em")
       p Desarrollado por&nbsp;
-        a.link(href="https://appsgorilasonline.com/" target="_blank") Gorilas Online&nbsp;
+        a.link.primary-underline-h(href="https://appsgorilasonline.com/" target="_blank") Gorilas Online&nbsp;
         | | Todos los derechos reservados {{DOMAIN}}  &nbsp;
-        router-link.capitalize.link(to='/privacy-policy') | Aviso de Privacidad &nbsp;
-        router-link.capitalize.link(to='/terms-and-conditions') | Términos y Condiciones &nbsp;
+        router-link.capitalize.link.primary-underline-h(to='/privacy-policy') | Aviso de Privacidad &nbsp;
+        router-link.capitalize.link.primary-underline-h(to='/terms-and-conditions') | Términos y Condiciones &nbsp;
 
 </template>
 
@@ -91,25 +91,5 @@ footer {
   color: #ccc;
   position: relative;
   transition: color 0.35s ease;
-}
-
-.link:hover {
-  color: white;
-}
-
-.link::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -2px;
-  height: 2px;
-  border-radius: 1rem;
-  width: 0;
-  background-color: #d30000;
-  transition: width 0.35s ease;
-}
-
-.link:hover::after {
-  width: 100%;
 }
 </style>

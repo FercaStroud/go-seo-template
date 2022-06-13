@@ -4,14 +4,32 @@
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) Contáctanos
 
-  .form-container.flex.flex-row.flex-wrap.justify-center.items-stretch.gap-10.px-10(
-    class="sm:gap-0"
-  )
-    form.form.flex.flex-col.justify-center.items-center.gap-5(
-      class="basis-1/2 sm:items-stretch",
+  .contact-container.container.flex.flex-wrap
+    .flex.flex-col.basis-full.p-5(class="sm:basis-1/2")
+      p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rem veritatis totam animi nam, vero obcaecati, voluptatibus veniam facilis laboriosam provident ea! At dignissimos id officiis officia molestias nulla quos, quaerat iure minima hic ut eum corporis quod necessitatibus reprehenderit, blanditiis ducimus magnam beatae, ad delectus tempore laboriosam eos! Maxime.
+
+      .flex.flex-col.justify-between.align-center(class="sm:flex-row")
+        .flex.flex-col.mb-5(class="sm:mb-0")
+          h3.title-primary.uppercase.font-black.text-lg.mb-5 Llamanos
+          ul
+            li.mb-1(v-for="(phone, key) in $store.state.phones" :key="key")
+              a.capitalize.primary-underline-h(:href="'tel:' + phone.phone")
+                font-awesome-icon(:icon="['fa', 'phone']")
+                | {{' ' + phone.title }}
+        .flex.flex-col
+          h3.title-primary.uppercase.font-black.text-lg.mb-5 Dudas y aclaraciones
+          ul
+            li.mb-1(v-for="(email, key) in $store.state.emails" :key="key")
+              a.capitalize.primary-underline-h(:href="'mailto:' + email.email")
+                font-awesome-icon(:icon="['fa', 'envelope']")
+                | {{' ' + email.title }}
+
+
+    form.form.basis-full.flex.flex-col.gap-5.p-5(
+      class="sm:basis-1/2",
       @submit.prevent="onSubmit"
     )
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
         label.w-32(for="name") Nombre
           span.required *
         input#name.form-input.basis-full.ml-0(
@@ -23,7 +41,7 @@
           required
         )
 
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
         label.w-32(for="email") Correo
           span.required *
         input#email.form-input.basis-full.ml-0(
@@ -35,7 +53,7 @@
           required
         )
 
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
         label.w-32(for="subject") Asunto
           span.required *
         input#subject.form-input.basis-full.ml-0(
@@ -46,7 +64,7 @@
           v-model="name",
           required
         )
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
         label.w-32(for="message") Mensaje
           span.required *
         textarea#message.form-input.basis-full.ml-0(
@@ -56,17 +74,19 @@
           v-model="name",
           required
         )
+      button.submit.primary-button.text-lg(type="submit") Enviar
 
-      button.submit.text-lg(type="submit") Enviar
-    Map(style="margin-top:30px")
-
+  Map(style="margin-top: 30px")
 </template>
 
 <script>
 import Map from "../../../components/Map.vue";
 export default {
   name: "Contact",
-  mounted() {},
+  mounted() {
+    this.$store.dispatch('loadPhones');
+    this.$store.dispatch('loadEmails');
+  },
   components: { Map },
   data() {
     return {
@@ -85,17 +105,12 @@ export default {
       this.selectedBudget = "";
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 // @import "../../../styles/quill-core.css";
-.form-container {
-  width: 100%;
-
-  .required {
-    color: #d30000;
-  }
+.form {
   .form-input {
     border: 1px solid #ccc;
     height: 3rem;
@@ -104,14 +119,8 @@ export default {
     border-radius: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
   .submit {
-    background-color: #d30000;
-    color: white;
     padding: 0.2rem 2rem;
     border-radius: 0.2rem 0.5rem 0.2rem 0.5rem;
-    transition: all 0.35s ease;
-    &:hover {
-      background-color: #ff1f75;
-    }
   }
 }
 </style>

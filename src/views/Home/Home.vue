@@ -4,6 +4,7 @@
   Banner
   About
   Services
+  Blog
   ClientsProviders
   Contact
 </template>
@@ -13,8 +14,9 @@ import Offers from "../../components/Offers.vue";
 import Banner from "./components/Banner.vue";
 import About from "./components/About.vue";
 import Services from "./components/Services.vue";
-import Contact from "./components/Contact.vue";
+import Blog from "./components/Blog.vue";
 import ClientsProviders from "../../components/ClientsProviders.vue";
+import Contact from "./components/Contact.vue";
 
 export default {
   name: "Home",
@@ -23,12 +25,13 @@ export default {
     )
   },
   components: {
-    Services,
-    About,
-    Banner,
     Offers,
-    Contact,
+    Banner,
+    About,
+    Services,
+    Blog,
     ClientsProviders,
+    Contact,
   },
 };
 </script>

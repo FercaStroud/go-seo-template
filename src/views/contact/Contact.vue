@@ -1,25 +1,38 @@
 <template lang="pug">
-.content.container.mx-auto.flex.flex-col.items-center.mb-20
-  h1.title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+.content.container.mx-auto.flex.flex-col.items-center.my-5
+  .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) Contacta con nosotros!
-  .mb-5
-    //- .ql-editor(v-html="description" )
+  ) Contáctanos
 
-  .form-container.flex.flex-row.flex-wrap.justify-center.items-center.gap-10.px-10(
-    class="sm:gap-0"
-  )
-    .map-container.flex.justify-center.items-center(class="basis-1/2")
-      Map
+  .contact-container.container.flex.flex-wrap
+    .flex.flex-col.basis-full.p-5(class="sm:basis-1/2")
+      p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rem veritatis totam animi nam, vero obcaecati, voluptatibus veniam facilis laboriosam provident ea! At dignissimos id officiis officia molestias nulla quos, quaerat iure minima hic ut eum corporis quod necessitatibus reprehenderit, blanditiis ducimus magnam beatae, ad delectus tempore laboriosam eos! Maxime.
 
-    form.form.flex.flex-col.justify-center.items-center.gap-5(
-      class="basis-1/2 sm:items-start",
+      .flex.flex-col.justify-between.align-center(class="sm:flex-row")
+        .flex.flex-col.mb-5(class="sm:mb-0")
+          h3.title-primary.uppercase.font-black.text-lg.mb-5 Llamanos
+          ul
+            li.mb-1(v-for="(phone, key) in $store.state.phones" :key="key")
+              a.capitalize.primary-underline-h(:href="'tel:' + phone.phone")
+                font-awesome-icon(:icon="['fa', 'phone']")
+                | {{' ' + phone.title }}
+        .flex.flex-col
+          h3.title-primary.uppercase.font-black.text-lg.mb-5 Dudas y aclaraciones
+          ul
+            li.mb-1(v-for="(email, key) in $store.state.emails" :key="key")
+              a.capitalize.primary-underline-h(:href="'mailto:' + email.email")
+                font-awesome-icon(:icon="['fa', 'envelope']")
+                | {{' ' + email.title }}
+
+
+    form.form.basis-full.flex.flex-col.gap-5.p-5(
+      class="sm:basis-1/2",
       @submit.prevent="onSubmit"
     )
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
-        label.w-20(for="name") Nombre
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
+        label.w-32(for="name") Nombre
           span.required *
-        input#name.form-input.ml-0(
+        input#name.form-input.basis-full.ml-0(
           class="sm:ml-5",
           type="text",
           name="name",
@@ -28,10 +41,10 @@
           required
         )
 
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
-        label.w-20(for="email") Correo
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
+        label.w-32(for="email") Correo
           span.required *
-        input#email.form-input.ml-0(
+        input#email.form-input.basis-full.ml-0(
           class="sm:ml-5",
           type="email",
           name="email",
@@ -40,29 +53,40 @@
           required
         )
 
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 sm:items-center")
-        label.w-20(for="budget") Presupuesto
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
+        label.w-32(for="subject") Asunto
           span.required *
-        select#budget.form-input.ml-0(
+        input#subject.form-input.basis-full.ml-0(
           class="sm:ml-5",
-          name="budget",
-          v-model="selectedBudget",
+          type="text",
+          name="name",
+          placeholder="Nombre completo",
+          v-model="name",
           required
         )
-          option(value="", disable) Seect one
-          option $10,000 - $15,000
-          option $15,000 - $20,000
-          option $20,000+
+      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
+        label.w-32(for="message") Mensaje
+          span.required *
+        textarea#message.form-input.basis-full.ml-0(
+          class="sm:ml-5",
+          name="message",
+          placeholder="Mensaje",
+          v-model="name",
+          required
+        )
+      button.submit.primary-button.text-lg(type="submit") Enviar
 
-      button.submit.text-lg(type="submit") Enviar
+  Map(style="margin-top: 30px")
 </template>
 
 <script>
 import Map from "../../components/Map.vue";
-
 export default {
-  name: "Portfolio",
-  mounted() {},
+  name: "Contact",
+  mounted() {
+    this.$store.dispatch('loadPhones');
+    this.$store.dispatch('loadEmails');
+  },
   components: { Map },
   data() {
     return {
@@ -84,8 +108,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-// @import "../../../styles/quill-core.css";
+<style lang="scss" scoped>
 .content {
   margin-top: 4.5rem;
   transition: all 0.35s ease;
@@ -96,28 +119,17 @@ export default {
   }
 }
 
-.form-container {
-  width: 100%;
-
-  .required {
-    color: #d30000;
-  }
+.form {
   .form-input {
     border: 1px solid #ccc;
     height: 3rem;
-    width: 18rem;
+    // width: 18rem;
     padding: 0.5rem 1rem;
     border-radius: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
   .submit {
-    background-color: #d30000;
-    color: white;
     padding: 0.2rem 2rem;
     border-radius: 0.2rem 0.5rem 0.2rem 0.5rem;
-    transition: all 0.35s ease;
-    &:hover {
-      background-color: #ff1f75;
-    }
   }
 }
 </style>

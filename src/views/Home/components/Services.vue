@@ -5,8 +5,9 @@
   ) Servicios
   .flex.flex-col.justify-center.items-center.text-center
     .features.flex.flex-wrap.justify-center.items-center
-      .flex.flex-col.justify-center.items-center.text-center.p-5.basis-full(
+      a.flex.flex-col.justify-center.items-center.text-center.p-5.basis-full(
         class="basis-1/2 sm:basis-1/3 md:p-10",
+        href="/services",
         v-for="(service, key) in $store.state.services",
         :key="key"
       )

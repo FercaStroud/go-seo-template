@@ -8,7 +8,7 @@ transition(name="fade")
     )
     p.mt-2.font-black.text-xl Cargando
     .circles.flex.mt-2
-      .circle.w-2.h-2.m-2(v-for="i in 5", :key="i")
+      .circle.bg-primary.w-2.h-2.m-2(v-for="i in 5", :key="i")
 </template>
 
 <script>
@@ -31,7 +31,6 @@ export default {
   z-index: 9999;
 
   .circles .circle {
-    background-color: #d30000;
     border-radius: 50%;
     animation: scaleIn 1s ease;
     transform: scale(0);

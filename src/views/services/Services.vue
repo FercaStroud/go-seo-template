@@ -9,7 +9,7 @@
       v-for="(service, key) in $store.state.services",
       :key="key"
     )
-      .flex.justify-center.items-center.h-20.mb-2
+      .img-container.flex.justify-center.items-center.h-20.mb-2
         img(
           :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
           :alt="service.title"
@@ -28,6 +28,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("loadServices");
+    window.scrollTo(0,0);
   },
   components: {},
 };
@@ -43,5 +44,14 @@ export default {
   .content {
     margin-top: 7.5rem;
   }
+}
+
+.img-container {
+  max-width: 40px;
+  max-height: 40px;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
 }
 </style>
