@@ -2,7 +2,7 @@
 div
   Preloader
   metainfo
-    template(v-slot:title="{ content }") {{ content ? '${content} | SITE_NAME' : 'SITE_NAME' }}
+    template(v-slot:title="{ content }") {{ content ? content + ' | ' + SITE_NAME : SITE_NAME }}
   Navbar
   router-view
   Footer
@@ -22,6 +22,11 @@ export default {
       title: "",
       htmlAttrs: { lang: "es-MX", amp: true },
     });
+  },
+  data() {
+    return {
+      SITE_NAME: import.meta.env.VITE_TITLE_DOMAIN,
+    };
   },
   mounted() {
     this.$store.dispatch('loadPageSettings');

@@ -1,6 +1,7 @@
 export default {
     settings: { logo: ''},
     slides: [],
+    clients: [],
     offers: [],
     phones: [],
     emails: [],

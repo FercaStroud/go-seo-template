@@ -11,11 +11,12 @@
           )
     .links.flex.flex-wrap.text-sm.justify-between.items-center.basis-full(class='sm:text-base sm:justify-end sm:basis-3/4')
       router-link.link.primary-underline-h.px-2(to='/')  Inicio
-      router-link.link.primary-underline-h.px-2(to='/portfolio')  Portafolio
-      router-link.link.primary-underline-h.px-2(to='/blog')  Blog
-      router-link.link.primary-underline-h.px-2(to='/services')  Servicios
-      router-link.link.primary-underline-h.px-2(to='/products')  Productos
-      router-link.link.primary-underline-h.px-2(to='/contact')  Contacto
+      router-link.link.primary-underline-h.px-2(to='/portfolio')  {{ $store.state.settings.portfolio_navigator_title }}
+      router-link.link.primary-underline-h.px-2(to='/blog')  {{ $store.state.settings.blog_navigator_title }}
+      router-link.link.primary-underline-h.px-2(to='/services')  {{ $store.state.settings.services_navigator_title }}
+      router-link.link.primary-underline-h.px-2(to='/products')  {{ $store.state.settings.store_navigator_title }}
+      router-link.link.primary-underline-h.px-2(to='/contact')  {{ $store.state.settings.contact_navigator_title }}
+
 </template>
 
 <script>

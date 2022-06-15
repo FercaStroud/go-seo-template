@@ -2,11 +2,11 @@
 .container.mx-auto.flex.flex-col.items-center.my-5
   .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) Contáctanos
+  )  {{ $store.state.settings.contact_component_title }}
 
   .contact-container.container.flex.flex-wrap
     .flex.flex-col.basis-full.p-5(class="sm:basis-1/2")
-      p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rem veritatis totam animi nam, vero obcaecati, voluptatibus veniam facilis laboriosam provident ea! At dignissimos id officiis officia molestias nulla quos, quaerat iure minima hic ut eum corporis quod necessitatibus reprehenderit, blanditiis ducimus magnam beatae, ad delectus tempore laboriosam eos! Maxime.
+      p.mb-5(v-html="$store.state.settings.contact_text")
 
       .flex.flex-col.justify-between.align-center(class="sm:flex-row")
         .flex.flex-col.mb-5(class="sm:mb-0")

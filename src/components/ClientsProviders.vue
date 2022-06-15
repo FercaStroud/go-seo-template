@@ -2,7 +2,7 @@
 .container.mx-auto.text-center.p-2.my-5(style="background-color: #eee;")
   .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) Nuestros clientes
+  ) {{ $store.state.settings.clients_component_title }}
   .flex.justify-between.items-center
     swiper.p-5.overflow-hidden(
       :slides-per-view="'auto'",
@@ -13,47 +13,12 @@
       :autoplay="{ delay: 3000, disableOnInteraction: false }",
       :modules="modules"
     )
-      swiper-slide(v-for="(slide, key) in slidesData", :key="key")
+      swiper-slide(v-for="(client, key) in $store.state.clients", :key="key")
         .slide-container.flex.justify-center.items-center.p-2.h-64.mb-10
-          img.slide.w-full.h-auto(:src="slide.src" :alt="slide.name")
+          img.slide.w-full.h-auto(:src="PUBLIC_ASSETS + 'images/clients/' + client.src", :alt="client.name")
 </template>
 
 <script>
-const response = [
-  {
-    name: "image 1",
-    src: "https://via.placeholder.com/500x500/FF0000/000000?text=image 1",
-  },
-  {
-    name: "image 2",
-    src: "https://via.placeholder.com/500x500/00FF00/000000?text=image 2",
-  },
-  {
-    name: "image 3",
-    src: "https://via.placeholder.com/500x500/0000FF/000000?text=image 3",
-  },
-  {
-    name: "image 4",
-    src: "https://via.placeholder.com/500x500/FF0000/000000?text=image 4",
-  },
-  {
-    name: "image 5",
-    src: "https://via.placeholder.com/500x500/00FF00/000000?text=image 5",
-  },
-  {
-    name: "image 6",
-    src: "https://via.placeholder.com/500x500/0000FF/000000?text=image 6",
-  },
-  {
-    name: "image 7",
-    src: "https://via.placeholder.com/500x500/FF0000/000000?text=image 7",
-  },
-  {
-    name: "image 8",
-    src: "https://via.placeholder.com/500x500/00FF00/000000?text=image 8",
-  },
-];
-
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -63,7 +28,7 @@ export default {
   name: "ClientsProviders",
   data() {
     return {
-      slidesData: response,
+      PUBLIC_ASSETS: import.meta.env.VITE_PUBLIC_ASSETS,
       breakpoints: {
         640: {
           slidesPerView: 2,
@@ -79,6 +44,9 @@ export default {
         },
       },
     };
+  },
+  mounted() {
+    this.$store.dispatch("loadClients");
   },
   components: {
     Swiper,

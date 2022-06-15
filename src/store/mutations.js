@@ -25,6 +25,9 @@ const SET_POSTS = (state, payload) => {
 const SET_PORTFOLIO = (state, payload) => {
     state.images = payload.data;
 };
+const SET_CLIENTS = (state, payload) => {
+    state.clients = payload.data;
+};
 const SET_LOADING = (state, payload) => {
     state.isLoading = payload;
 };
@@ -39,5 +42,6 @@ export default {
     SET_EMAILS,
     SET_SERVICES,
     SET_POSTS,
-    SET_PORTFOLIO
+    SET_PORTFOLIO,
+    SET_CLIENTS
 };
