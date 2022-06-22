@@ -51,6 +51,12 @@ img {
 .title-secondary {
   text-decoration: underline solid 5px $secondary-color;
 }
+.title-primary-sm {
+  text-decoration: underline solid 3px $primary-color;
+}
+.title-secondary-sm {
+  text-decoration: underline solid 3px $secondary-color;
+}
 
 .primary-underline-h {
   position: relative;
