@@ -2,7 +2,7 @@
 .container.mx-auto.content.flex.flex-col.items-center.relative.px-5.py-2(class="sm:px-10")
   h1.title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) Portafolio
+  ) {{ $store.state.settings.portfolio_navigator_title }}
   //- Modal
   .modal-container.fade-in.fixed.w-full.top-0.flex.justify-center.items-center(
     v-if="showModal",

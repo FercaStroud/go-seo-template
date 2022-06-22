@@ -65,7 +65,7 @@ export default {
 
 .banner {
   background-color: transparent;
-  background-image: url("../../../assets/background.png");
+  //background-image: url("../../../assets/background.png");
   width: 100%;
   height: 100%;
   background-position: center;

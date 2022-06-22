@@ -16,7 +16,11 @@
             :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
             :alt="service.title"
           )
-        p.font-black.text-base.mb-2(class="sm:text-lg md:text-xl lg:text-2xl") {{ service.title }}
+        p.font-black.text-base.mb-2(class="sm:text-lg md:text-xl lg:text-2xl")
+          br/
+          br/
+          br/
+          | {{ service.title }}
 </template>
 
 <script>
@@ -35,8 +39,8 @@ export default {
 
 <style scoped>
 .img-container {
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 200px;
+  max-height: 200px;
 }
 .img-container img {
   width: 100%;

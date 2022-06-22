@@ -46,7 +46,7 @@ export default {
 }
 
 .img-container {
-  max-width: 150px;
+  max-width: 200px;
   max-height: 50px;
 }
 .img-container img {
