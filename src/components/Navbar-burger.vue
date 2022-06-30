@@ -81,13 +81,13 @@ export default {
     0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
     0px 0px 29.2px rgba(0, 0, 0, 0.048), 0px 0px 80px rgba(0, 0, 0, 0.07);
 }
-.img-container {
+.img-container a {
   max-width: 200px;
   max-height: 50px;
 }
-.img-container img {
-  width: 100%;
-  height: auto;
+.img-container a img {
+  width: auto;
+  height: 100%;
 }
 
 .burger {
