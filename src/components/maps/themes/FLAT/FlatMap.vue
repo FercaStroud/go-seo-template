@@ -27,7 +27,7 @@ import {
 import "leaflet/dist/leaflet.css";
 
 export default {
-  name: "Map",
+  name: "FlatMap",
   components: {
     LMap,
     LIcon,

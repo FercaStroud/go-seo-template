@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Offers from "../../components/Offers.vue";
+import Offers from "../../components/offers/Offers.vue";
 import Banner from "./components/Banner.vue";
 import About from "./components/About.vue";
 import Services from "./components/Services.vue";
