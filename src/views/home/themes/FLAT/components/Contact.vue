@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import Map from "../../../components/maps/Map.vue";
+import Map from "../../../../../components/maps/Map.vue";
 export default {
   name: "Contact",
   mounted() {

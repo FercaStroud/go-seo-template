@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../../styles/quill-core.css";
+@import "../../../../../styles/quill-core.css";
 h2, .img-container {
   padding: 12px 15px;
 }

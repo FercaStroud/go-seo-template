@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../../../styles/quill-core.css";
+@import "../../../../../styles/quill-core.css";
 .about {
   background-color: #eee;
 }
