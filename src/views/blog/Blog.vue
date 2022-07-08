@@ -1,36 +1,17 @@
 <template lang="pug">
-.content.relative.flex.flex-col.justify-center.items-center.mb-20
-  .container.mx-auto
-    template(v-for="(post, key) in $store.state.posts" :key="key")
-      Post(
-        :img_src="post.image_src",
-        :title="post.title",
-        :description="post.description"
-      )
+component(:is="$store.state.settings.theme_name")
 </template>
 
 <script>
-import Post from "./components/Post.vue";
+import FLAT from "./themes/FLAT/FlatBlog.vue";
+
 export default {
   name: "Blog",
-  mounted() {
-    this.$store.dispatch("loadPosts");
-  },
   components: {
-    Post,
+    FLAT,
   },
 };
 </script>
 
-<style scoped lang="scss">
-@import "../../styles/quill-core.css";
-.content {
-  margin-top: 4.5rem;
-  transition: all 0.35s ease;
-}
-@media screen and (max-width: 639px) {
-  .content {
-    margin-top: 7.5rem;
-  }
-}
+<style scoped>
 </style>
