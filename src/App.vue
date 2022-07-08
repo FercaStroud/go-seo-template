@@ -10,9 +10,9 @@ div
 
 <script>
 import { useMeta } from "vue-meta";
-import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/navigators/Navbar.vue";
 import Preloader from "./components/Preloader.vue";
-import Footer from "./components/Footer.vue";
+import Footer from "./components/footers/Footer.vue";
 
 export default {
   name: "App",
@@ -26,10 +26,14 @@ export default {
   data() {
     return {
       SITE_NAME: import.meta.env.VITE_TITLE_DOMAIN,
+      THEME_NAME: null,
     };
   },
   mounted() {
-    this.$store.dispatch('loadPageSettings');
+    this.$store.dispatch('loadPageSettings');/*.then(function (){
+      this.THEME_NAME = this.$store.state.settings.theme_name;
+      console.log(this.THEME_NAME)
+    }.bind(this));*/
   },
 };
 </script>
