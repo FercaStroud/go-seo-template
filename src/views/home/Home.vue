@@ -15,7 +15,7 @@ import Banner from "./components/Banner.vue";
 import About from "./components/About.vue";
 import Services from "./components/Services.vue";
 import Blog from "./components/Blog.vue";
-import ClientsProviders from "../../components/ClientsProviders.vue";
+import ClientsProviders from "../../components/clientsProviders/ClientsProviders.vue";
 import Contact from "./components/Contact.vue";
 
 export default {

@@ -25,7 +25,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default {
-  name: "ClientsProviders",
+  name: "FlatClientsProviders",
   data() {
     return {
       PUBLIC_ASSETS: import.meta.env.VITE_PUBLIC_ASSETS,
