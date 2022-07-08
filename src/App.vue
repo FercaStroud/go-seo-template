@@ -11,7 +11,7 @@ div
 <script>
 import { useMeta } from "vue-meta";
 import Navbar from "./components/navigators/Navbar.vue";
-import Preloader from "./components/Preloader.vue";
+import Preloader from "./components/preloaders/Preloader.vue";
 import Footer from "./components/footers/Footer.vue";
 
 export default {

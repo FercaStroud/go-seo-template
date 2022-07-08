@@ -13,7 +13,7 @@ transition(name="fade")
 
 <script>
 export default {
-  name: "Preloader",
+  name: "FlatPreloader",
   data() {
     return {
       PUBLIC_ASSETS: import.meta.env.VITE_PUBLIC_ASSETS,
