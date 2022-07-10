@@ -1,7 +1,12 @@
 // zitro
-$primary-color: #6ab53d;
-$secondary-color: #a6ce88;
+//var(--primary-color): #6ab53d;
+//var(--secondary-color): #a6ce88;
 
 // padrinos
-// $primary-color: #a65a49;
-// $secondary-color: #ccc;
+// var(--primary-color): #a65a49;
+// var(--secondary-color): #ccc;
+
+:root {
+  --primary-color: #F16338;
+  --secondary-color: #ffffff;
+}

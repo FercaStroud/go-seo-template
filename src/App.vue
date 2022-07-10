@@ -30,10 +30,10 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch('loadPageSettings');/*.then(function (){
-      this.THEME_NAME = this.$store.state.settings.theme_name;
-      console.log(this.THEME_NAME)
-    }.bind(this));*/
+    this.$store.dispatch('loadPageSettings').then(function (){
+      document.documentElement.style.setProperty('--primary-color', this.$store.state.settings.primary_color);
+      document.documentElement.style.setProperty('--secondary-color', this.$store.state.settings.secondary_color);
+    }.bind(this));
   },
 };
 </script>

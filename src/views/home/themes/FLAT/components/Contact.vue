@@ -6,7 +6,7 @@
 
   .contact-container.container.flex.flex-wrap
     .flex.flex-col.basis-full.p-5(class="sm:basis-1/2")
-      p.mb-5(v-html="$store.state.settings.contact_text")
+      .mb-5(v-html="$store.state.settings.contact_text")
 
       .flex.flex-col.justify-between.align-center(class="sm:flex-row")
         .flex.flex-col.mb-5(class="sm:mb-0")
@@ -109,7 +109,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../../../styles/quill-core.css";
+@import "../../../../../styles/quill-core.css";
+
 .form {
   .form-input {
     border: 1px solid #ccc;
