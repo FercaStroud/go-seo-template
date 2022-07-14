@@ -2,7 +2,7 @@
 .container.mx-auto.flex.flex-col.items-center.my-5
   .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  )  {{ $store.state.settings.contact_component_title }}
+  ) {{ $store.state.settings.contact_component_title }}
 
   .contact-container.container.flex.flex-wrap
     .flex.flex-col.basis-full.p-5(class="sm:basis-1/2")
