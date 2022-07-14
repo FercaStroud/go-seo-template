@@ -20,9 +20,9 @@
           h3.title-primary.uppercase.font-black.text-lg.mb-5 Dudas y aclaraciones
           ul
             li.mb-1(v-for="(email, key) in $store.state.emails" :key="key")
-              a.capitalize.primary-underline-h(:href="'mailto:' + email.email")
+              a.primary-underline-h(:href="'mailto:' + email.email")
                 font-awesome-icon(:icon="['fa', 'envelope']")
-                | {{' ' + email.title }}
+                span {{ ' ' + email.title.toLowerCase() }}
 
 
     form.form.basis-full.flex.flex-col.gap-5.p-5(
