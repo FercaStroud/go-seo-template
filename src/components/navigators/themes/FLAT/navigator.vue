@@ -13,8 +13,8 @@
       router-link.link.primary-underline-h.px-2(to='/')  Inicio
       router-link.link.primary-underline-h.px-2(to='/portfolio')  {{ $store.state.settings.portfolio_navigator_title }}
       router-link.link.primary-underline-h.px-2(to='/blog')  {{ $store.state.settings.blog_navigator_title }}
-      router-link.link.primary-underline-h.px-2(to='/services')  {{ $store.state.settings.services_navigator_title }}
-      router-link.link.primary-underline-h.px-2(to='/products')  {{ $store.state.settings.store_navigator_title }}
+      //- router-link.link.primary-underline-h.px-2(to='/services')  {{ $store.state.settings.services_navigator_title }}
+      //- router-link.link.primary-underline-h.px-2(to='/products')  {{ $store.state.settings.store_navigator_title }}
       router-link.link.primary-underline-h.px-2(to='/contact')  {{ $store.state.settings.contact_navigator_title }}
 
 </template>

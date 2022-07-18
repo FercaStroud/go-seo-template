@@ -3,7 +3,7 @@
   Offers
   Banner
   About
-  Services
+  //Services
   Blog
   ClientsProviders
   Contact
