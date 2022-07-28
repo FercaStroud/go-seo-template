@@ -1,6 +1,6 @@
 <template lang="pug">
 .container.mx-auto.my-5
-  .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+  .title-primary-flat.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) {{ $store.state.settings.services_component_title }}
   .flex.flex-col.justify-center.items-center.text-center

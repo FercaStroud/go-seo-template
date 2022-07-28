@@ -36,6 +36,12 @@ export default {
 };
 </script>
 
+<style>
+html {
+  background-color: #212529;
+}
+</style>
+
 <style scoped lang="scss">
 .content {
   margin-top: 4.5rem;

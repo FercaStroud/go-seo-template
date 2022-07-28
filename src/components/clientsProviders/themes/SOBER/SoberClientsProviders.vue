@@ -1,7 +1,7 @@
 <template lang="pug">
-.container.mx-auto.text-center.p-2.my-5(style="background-color: #eee;")
-  .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
-    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
+.bg-sober-alt.container.mx-auto.text-center.p-2.my-5
+  .title-primary-sober.text-center.font-black.text-2xl.my-2.p-2(
+    class="sm:text-3xl sm:p-0"
   ) {{ $store.state.settings.clients_component_title }}
   .flex.justify-between.items-center
     swiper.p-5.overflow-hidden(

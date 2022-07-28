@@ -3,7 +3,7 @@
   .text.flex.flex-col.justify-center.pt-5.text-center.basis-full.mb-5(
     class="sm:text-left"
   )
-    h2.title-primary.font-black.text-2xl(class="md:text-3xl") {{ title }}
+    h2.title-primary-sober.font-black.text-2xl(class="md:text-3xl") {{ title }}
 
   .img-container.basis-full
     img.w-full.h-auto(

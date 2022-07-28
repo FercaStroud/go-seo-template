@@ -5,7 +5,7 @@ footer
   )
     .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
       .list
-        h3.title-primary.uppercase.font-black.text-lg.mb-5(class="title-p`rimary")
+        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5(class="title-p`rimary")
           | SITE MAP
         ul
           li.mb-1
@@ -25,7 +25,7 @@ footer
               | Productos
     .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
       .list
-        h3.title-primary.uppercase.font-black.text-lg.mb-5
+        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5
           | LLamanos
         ul
           li.mb-1(v-for="(phone, key) in $store.state.phones", :key="key")
@@ -34,7 +34,7 @@ footer
               | {{ ' ' + phone.title }}
     .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
       .list
-        h3.title-primary.uppercase.font-black.text-lg.mb-5 E-mail(s)
+        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5 E-mail(s)
         ul
           li.mb-1(v-for="(email, key) in $store.state.emails", :key="key")
             a.link.primary-underline-h(:href="'mailto:' + email.email")
@@ -42,7 +42,7 @@ footer
               span {{ email.title.length >= 25 ? ' ' + email.title.toLowerCase().substring(0, 25) + '...' : ' ' + email.title.toLowerCase() }}
     .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
       .list
-        h3.title-primary.uppercase.font-black.text-lg.mb-5 Síguenos en
+        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5 Síguenos en
         ul
           li.mb-1(
             v-for="(social, key) in $store.state.socialMedia",

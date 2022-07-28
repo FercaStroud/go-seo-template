@@ -25,7 +25,6 @@ body {
   color: white;
   background-color: var(--secondary-color);
 }
-
 img {
   image-rendering: -moz-crisp-edges; /* Firefox */
   image-rendering: -o-crisp-edges; /* Opera */
@@ -38,6 +37,13 @@ img {
   color: var(--primary-color);
 }
 
+.bg-sober {
+  background-color: #212529;
+  color: #fff;
+}
+.bg-sober-alt {
+  background-color: #2e3858;
+}
 .bg-primary {
   background-color: var(--primary-color);
 }
@@ -45,17 +51,21 @@ img {
   background-color: var(--secondary-color);
 }
 
-.title-primary {
+.title-primary-flat {
   text-decoration: underline solid 5px var(--primary-color);
 }
-.title-secondary {
+.title-secondary-flat {
   text-decoration: underline solid 5px var(--secondary-color);
 }
-.title-primary-sm {
+.title-primary-sm-flat {
   text-decoration: underline solid 3px var(--primary-color);
 }
-.title-secondary-sm {
+.title-secondary-sm-flat {
   text-decoration: underline solid 3px var(--secondary-color);
+}
+// TODO cambiar color por variable
+.title-primary-sober {
+  color: #4daaf2;
 }
 
 .primary-underline-h {
@@ -75,24 +85,55 @@ img {
     width: 100%;
   }
 }
+.primary-sober-b {
+  background-color: #212529;
+  transition: all 0.35s ease;
+  &:hover {
+    // TODO cambiar color por variable
+    background-color: #4daaf2;
+  }
+}
 
 .primary-button {
   background-color: var(--primary-color);
   color: white;
   padding: 0.2rem 0.5rem;
   transition: all 0.35s ease;
+  &:hover {
+    opacity: 0.8;
+  }
 }
-.primary-button:hover {
-  opacity: 0.8;
-}
-
 .secondary-button {
   background-color: var(--secondary-color);
   padding: 0.2rem 0.5rem;
   transition: all 0.35s ease;
+  &:hover {
+    opacity: 0.8;
+  }
 }
-.secondary-button:hover {
-  opacity: 0.8;
+// TODO cambiar color por variable
+.primary-button-sober {
+  background-color: #24c4a3;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  transition: all 0.35s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.secondary-button-sober {
+  background-color: var(--secondary-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  transition: all 0.35s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.color-white {
+  color: white;
 }
 
 .fade-in {

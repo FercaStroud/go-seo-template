@@ -1,6 +1,6 @@
 <template lang="pug">
 .container.mx-auto.flex.flex-wrap.justify-center.mb-5
-  .title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+  .title-primary-sober.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) {{ $store.state.settings.blog_component_title }}
 
@@ -16,7 +16,7 @@
                   alt=""
                 )
               .flex.justify-center.items-center.h-20.mb-5
-                h3.title-primary-sm.font-black.text-md(class="sm:text-xl") {{ post.title.length >= 45 ? post.title.substring(0, 42) + '...' : post.title }}
+                h3.title-primary-sm-flat.font-black.text-md(class="sm:text-xl") {{ post.title.length >= 45 ? post.title.substring(0, 42) + '...' : post.title }}
               .h-48.overflow-hidden.mb-5
                 .ql-editor(v-html="post.description")
               .flex.justify-center.items-center

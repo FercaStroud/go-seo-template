@@ -1,6 +1,6 @@
 <template lang="pug">
 .container.mx-auto.content.flex.flex-col.items-center.relative.px-5.py-2(class="sm:px-10")
-  h1.title-primary.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+  h1.title-primary-flat.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) {{ $store.state.settings.portfolio_navigator_title }}
   //- Modal
@@ -10,7 +10,7 @@
   )
     .container.mx-auto.flex.justify-center.items-center.p-5(class="sm:p-0")
       .modal.p-5.flex-flex-col.items-center.justify-center
-        h1.title-primary.font-black.text-2xl.mb-5(class="sm:text-3xl") {{ modalTitle }}
+        h1.title-primary-flat.font-black.text-2xl.mb-5(class="sm:text-3xl") {{ modalTitle }}
         .img-container.flex.justify-center.items-center
           img(
             :src="modalImage ? PUBLIC_ASSETS + 'images/portfolios/' + modalImage : 'https://via.placeholder.com/300x300'",
