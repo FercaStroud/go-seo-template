@@ -4,11 +4,13 @@ component(:is="$store.state.settings.theme_name")
 
 <script>
 import FLAT from './themes/FLAT/theFooter.vue'
+import SOBER from './themes/SOBER/theFooter.vue'
 
 export default {
   name: "TheFooter",
   components: {
-    FLAT
+    FLAT,
+    SOBER,
   },
   data() {
     return {

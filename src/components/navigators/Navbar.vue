@@ -3,23 +3,23 @@ component(:is="$store.state.settings.theme_name")
 </template>
 
 <script>
-import FLAT from './themes/FLAT/navigator.vue'
+import FLAT from "./themes/FLAT/navigator.vue";
+import SOBER from "./themes/SOBER/navigator.vue";
 
 export default {
   name: "Navbar",
   components: {
-    FLAT
+    FLAT,
+    SOBER,
   },
   data() {
     return {
       theme: null,
-    }
+    };
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
 
 <style scoped>
-
 </style>
