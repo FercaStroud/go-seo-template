@@ -1,5 +1,5 @@
 <template lang="pug">
-.content.relative.flex.flex-col.justify-center.items-center.mb-20
+.bg-sober.content.relative.flex.flex-col.justify-center.items-center.mb-20
   .container.mx-auto
     template(v-for="(post, key) in $store.state.posts" :key="key")
       Post(
@@ -25,12 +25,12 @@ export default {
 <style scoped lang="scss">
 @import "../../../../styles/quill-core.css";
 .content {
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   transition: all 0.35s ease;
 }
 @media screen and (max-width: 639px) {
   .content {
-    margin-top: 7.5rem;
+    margin-top: 5.5rem;
   }
 }
 </style>

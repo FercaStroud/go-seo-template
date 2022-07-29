@@ -1,6 +1,6 @@
 <template lang="pug">
 transition(name="fade")
-  .preloader.flex.flex-col.justify-center.items-center.w-full.h-full(
+  .preloader.bg-sober.flex.flex-col.justify-center.items-center.w-full.h-full(
     v-if="$store.state.isLoading"
   )
     .logo.w-48.h-48.bg-no-repeat.bg-center(
@@ -27,7 +27,6 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
   z-index: 9999;
 
   .circles .circle {

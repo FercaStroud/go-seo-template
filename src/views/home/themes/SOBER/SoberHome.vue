@@ -3,7 +3,7 @@
   Offers
   Banner
   About
-  //Services
+  Services
   Blog
   ClientsProviders
   Contact
@@ -38,18 +38,19 @@ export default {
 
 <style>
 html {
-  background-color: #212529;
+  /* background-color: #212529; */
 }
 </style>
 
 <style scoped lang="scss">
 .content {
-  margin-top: 4.5rem;
+  background-color: #212529;
+  margin-top: 4rem;
   transition: all 0.35s ease;
 }
 @media screen and (max-width: 639px) {
   .content {
-    margin-top: 7.5rem;
+    margin-top: 5.5rem;
   }
 }
 

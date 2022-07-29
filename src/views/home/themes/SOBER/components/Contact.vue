@@ -1,5 +1,5 @@
 <template lang="pug">
-.color-white.container.mx-auto.flex.flex-col.items-center.my-5
+.bg-sober.color-white.container.mx-auto.flex.flex-col.items-center.mt-5
   .title-primary-sober.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) {{ $store.state.settings.contact_component_title }}
@@ -76,7 +76,7 @@
         )
       button.submit.primary-button-sober.text-lg(type="submit") Enviar
 
-  Map(style="margin-top: 30px")
+  Map.mt-2.mb-5
 </template>
 
 <script>

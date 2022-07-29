@@ -66,16 +66,12 @@ export default {
 .offers-btn {
   position: relative;
   float: right;
-  top: 20px;
+  top: 30px;
 }
 
 .close {
-  color: #d30000;
+  color: #df4570;
   transition: color 0.35s ease;
   z-index: 1;
-}
-
-.close:hover {
-  color: #ff0a0a;
 }
 </style>

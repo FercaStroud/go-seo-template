@@ -86,11 +86,12 @@ img {
   }
 }
 .primary-sober-b {
-  background-color: #212529;
   transition: all 0.35s ease;
   &:hover {
     // TODO cambiar color por variable
     background-color: #4daaf2;
+    background-color: #24c4a3;
+    color: #212529;
   }
 }
 

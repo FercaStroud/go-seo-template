@@ -1,5 +1,5 @@
 <template lang="pug">
-footer
+footer.bg-sober-alt
   .container.mx-auto.flex.flex-col.flex-wrap.p-5.justify-center.items-start(
     class="sm:flex-row sm:px-10"
   )

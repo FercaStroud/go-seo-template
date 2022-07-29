@@ -1,6 +1,6 @@
 <template lang="pug">
-.flex.flex-col.flex-wrap.p-5.mb-5(class="md:mb-10 md:flex-row")
-  .text.flex.flex-col.justify-center.pt-5.text-center.basis-full.mb-5(
+.flex.flex-col.flex-wrap.p-5(class="md:flex-row")
+  .text.flex.flex-col.justify-center.text-center.basis-full.mb-5(
     class="sm:text-left"
   )
     h2.title-primary-sober.font-black.text-2xl(class="md:text-3xl") {{ title }}
@@ -12,7 +12,7 @@
     )
 
   .ql-editor(v-html="description")
-  hr
+  hr.mt-5
 </template>
 
 <script>
@@ -38,5 +38,6 @@ h2, .img-container {
 }
 hr {
   width: 100%;
+  border-color: #24c4a3;
 }
 </style>
