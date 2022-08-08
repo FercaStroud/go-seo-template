@@ -5,7 +5,7 @@
   ) {{ $store.state.settings.clients_component_title }}
   .flex.justify-between.items-center
     swiper.p-5.overflow-hidden(
-      :slides-per-view="'auto'",
+      :slidesPerView="'auto'",
       :spaceBetween="10",
       :pagination="{ clickable: true }",
       :centeredSlides="true",
