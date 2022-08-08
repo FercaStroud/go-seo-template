@@ -45,9 +45,9 @@ export default {
       zoom: 16,
       iconWidth: 25,
       iconHeight: 40,
-      // cords: [+this.$store.state.settings.latitude, +this.$store.state.settings.longitude],
+      cords: [+this.$store.state.settings.latitude, +this.$store.state.settings.longitude],
       // cords: [25.5298807, -103.418228], // enmedio
-      cords: [25.5245941, -103.4312689], // zitro
+      // cords: [25.5245941, -103.4312689], // zitro
       mapOptions: {
         scrollWheelZoom: false,
       },
