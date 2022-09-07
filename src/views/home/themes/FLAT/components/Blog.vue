@@ -1,6 +1,6 @@
 <template lang="pug">
 .container.mx-auto.flex.flex-wrap.justify-center.mb-5
-  .title-primary-sober.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
+  h1.title-primary-flat.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) {{ $store.state.settings.blog_component_title }}
 

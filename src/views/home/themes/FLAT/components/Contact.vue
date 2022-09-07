@@ -75,6 +75,7 @@
           required
         )
       button.submit.primary-button.text-lg(type="submit") Enviar
+      //img(style="margin:10%" src="https://appsgorilasonline.com/dona.png")
 
   Map(style="margin-top: 30px")
 </template>

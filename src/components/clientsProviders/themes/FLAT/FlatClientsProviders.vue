@@ -3,10 +3,11 @@
   .title-primary-flat.text-center.font-black.text-2xl.my-5.p-2(
     class="sm:text-3xl sm:p-0"
   ) {{ $store.state.settings.clients_component_title }}
+
   .flex.justify-between.items-center
     swiper.p-5.overflow-hidden(
-      :slidesPerView="2",
-      :spaceBetween="10",
+      :slidesPerView="3",
+      :spaceBetween="20",
       :pagination="{ clickable: true }",
       :centeredSlides="true",
       :autoplay="{ delay: 3000, disableOnInteraction: false }",

@@ -3,9 +3,10 @@
   h1.title-primary-flat.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
     class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
   ) Servicios
+
   .flex.flex-wrap.container.mx-auto
     .flex.flex-col.justify-center.items-center.basis-full.p-2(
-      class="sm:basis-1/2 lg:basis-1/3 lg:p-5"
+      class=""
       v-for="(service, key) in $store.state.services",
       :key="key"
     )
