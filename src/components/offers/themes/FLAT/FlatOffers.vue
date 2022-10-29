@@ -1,25 +1,26 @@
 <template lang="pug">
-.container.mx-auto(v-if="render && $store.state.offers")
-  .offer.flex.justify-between.items-center.text-center.relative
-    swiper.basis-full(
-      style="max-width:700px"
-      :autoplay="{ delay: 7500 }",
-      :modules="modules"
-      :slides-per-view="1",
-      :pagination="{ clickable: true }",
-      :centeredSlides="true",
-    )
-      swiper-slide(v-for="(offer,key) in $store.state.offers", :key="key")
-        .offers-btn.w-12.h-full
-          button.close.w-8.h-8(@click="closeOffer")
-            font-awesome-icon(:icon="['fas', 'times']")
-        a(target="_blank" :href="offer.href")
-          img.w-full.h-auto(
-            data-mdb-ripple="true"
-            :src="PUBLIC_ASSETS + 'images/offers/' + offer.src",
-            :alt="offer.title"
-          )
-
+vue-final-modal(v-model="render").offers
+  .container
+    button.btn.primary-button.hover-secondary.close-modal(@click="render = false") Cerrar
+    .row.pt-5.justify-content-md-center
+      .col-md-6.pt-5
+        swiper.pt-5(
+          v-show="render"
+          :autoplay="{ delay: 7500 }",
+          style=""
+          :modules="modules"
+          :slides-per-view="1",
+          :pagination="{ clickable: true }",
+          :centeredSlides="true",
+        )
+          swiper-slide(v-for="(offer,key) in $store.state.offers", :key="key")
+            a(target="_blank" :href="offer.href")
+              img.img-fluid(
+                style=""
+                data-mdb-ripple="true"
+                :src="PUBLIC_ASSETS + 'images/offers/' + offer.src",
+                :alt="offer.title"
+              )
 
 </template>
 
@@ -34,11 +35,16 @@ export default {
   data() {
     return {
       PUBLIC_ASSETS: import.meta.env.VITE_PUBLIC_ASSETS,
-      render: true,
+      render: false,
     };
   },
   mounted() {
-    this.$store.dispatch("loadOffers");
+    let vm = this;
+    this.$store.dispatch("loadOffers").then(function () {
+      if ((vm.$store.state.offers).length > 0) {
+        vm.render = true;
+      }
+    });
   },
   methods: {
     closeOffer() {
@@ -58,20 +64,19 @@ export default {
 </script>
 
 <style scoped>
-.offer {
+.close-modal {
+  margin-left: 50%;
+  left: 111.08px;
+  top: 183px;
   position: relative;
-  top: -15px;
+  z-index: 9999999;
 }
 
-.offers-btn {
-  position: relative;
-  float: right;
-  top: 30px;
+@media (max-width: 991px) {
+  .offers {
+    margin-top: 150px;
+
+  }
 }
 
-.close {
-  color: #df4570;
-  transition: color 0.35s ease;
-  z-index: 1;
-}
 </style>

@@ -8,5 +8,8 @@ export default {
     services: [],
     socialMedia: [],
     images: [],
+    categories: [],
+    products: [],
+    cart: [],
     isLoading: false,
 };

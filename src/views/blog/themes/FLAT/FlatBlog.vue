@@ -1,8 +1,9 @@
 <template lang="pug">
-.content.relative.flex.flex-col.justify-center.items-center.mb-20
-  .container.mx-auto
-    template(v-for="(post, key) in $store.state.posts" :key="key")
-      Post(
+.container.my-5.pt-1(data-aos="fade-down")
+  h1.my-5.pt-5.text-center() {{ $store.state.settings.blog_component_title }}
+
+  template(v-for="(post, key) in $store.state.posts" :key="key")
+      Post.pt-5(
         :img_src="post.image_src",
         :title="post.title",
         :description="post.description"
@@ -14,7 +15,9 @@ import Post from "./components/Post.vue";
 export default {
   name: "FlatBlog",
   mounted() {
-    this.$store.dispatch("loadPosts");
+    this.$store.dispatch("loadPosts").then(function (){
+      AOS.init();
+    })
   },
   components: {
     Post,

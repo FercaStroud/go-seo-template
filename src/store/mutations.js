@@ -28,11 +28,22 @@ const SET_PORTFOLIO = (state, payload) => {
 const SET_CLIENTS = (state, payload) => {
     state.clients = payload.data;
 };
+const SET_CATEGORIES = (state, payload) => {
+    state.categories = payload.data;
+};
+const SET_PRODUCTS = (state, payload) => {
+    state.products = payload.data;
+};
+const SET_CART = (state, payload) => {
+    state.cart = payload.data;
+};
 const SET_LOADING = (state, payload) => {
     state.isLoading = payload;
 };
 
 export default {
+    SET_CART,
+    SET_PRODUCTS,
     SET_SETTINGS,
     SET_LOADING,
     SET_OFFERS,
@@ -43,5 +54,6 @@ export default {
     SET_SERVICES,
     SET_POSTS,
     SET_PORTFOLIO,
-    SET_CLIENTS
+    SET_CLIENTS,
+    SET_CATEGORIES
 };

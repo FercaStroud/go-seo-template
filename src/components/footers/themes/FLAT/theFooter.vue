@@ -1,12 +1,9 @@
 <template lang="pug">
-footer
-  .container.mx-auto.flex.flex-col.flex-wrap.p-5.justify-center.items-start(
-    class="sm:flex-row sm:px-10"
-  )
-    .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
-      .list
-        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5(class="title-p`rimary")
-          | SITE MAP
+footer.py-3
+  .container
+    .row
+      .col-md-3.col-sm-12
+        h3.my-5.font-black.text-lg.mb-5 SITE MAP
         ul
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/portfolio")
@@ -23,26 +20,22 @@ footer
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/products")
               | Productos
-    .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
-      .list
-        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5
-          | LLamanos
+      .col-md-3.col-sm-12
+        h3.my-5.font-black.text-lg.mb-5 LLamanos
         ul
           li.mb-1(v-for="(phone, key) in $store.state.phones", :key="key")
             a.capitalize.link.primary-underline-h(:href="'tel:' + phone.phone")
               font-awesome-icon(:icon="['fa', 'phone']")
               | {{ ' ' + phone.title }}
-    .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
-      .list
-        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5 E-mail(s)
+      .col-md-3.col-sm-12
+        h3.my-5.font-black.text-lg.mb-5 E-mail(s)
         ul
           li.mb-1(v-for="(email, key) in $store.state.emails", :key="key")
             a.link.primary-underline-h(:href="'mailto:' + email.email")
               font-awesome-icon(:icon="['fa', 'envelope']")
               span {{ email.title.length >= 25 ? ' ' + email.title.toLowerCase().substring(0, 25) + '...' : ' ' + email.title.toLowerCase() }}
-    .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
-      .list
-        h3.title-primary-flat.uppercase.font-black.text-lg.mb-5 Síguenos en
+      .col-md-3.col-sm-12
+        h3.my-5.font-black.text-lg.mb-5 Síguenos en
         ul
           li.mb-1(
             v-for="(social, key) in $store.state.socialMedia",
@@ -55,6 +48,7 @@ footer
                 :alt="social.title"
               )
               | {{ ' ' + social.title }}
+
     .column.basis-full.flex.flex-col.text-center(style="font-size: 0.8em")
       p Desarrollado por&nbsp;
         a.link.primary-underline-h(

@@ -191,7 +191,67 @@ const loadClients = async ({commit}, payload) => {
     }
 };
 
+const loadCategories = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('categories?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_CATEGORIES', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
+const loadProducts = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('products?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_PRODUCTS', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
+const loadCart = async ({commit}, payload) => {
+    commit('SET_LOADING', true);
+    try {
+        const response = await axios.get('cart?domain=' + import.meta.env.VITE_DOMAIN);
+
+        const checkErrors = checkResponse(response);
+
+        if (checkErrors) {
+            commit('SET_DIALOG_MESSAGE', checkErrors.message, {root: true});
+        } else {
+            commit('SET_CART', response);
+        }
+    } catch (e) {
+        commit('SET_DIALOG_MESSAGE', 'errors.generic_error', {root: true});
+    } finally {
+        commit('SET_LOADING', false);
+    }
+};
+
 export default {
+    loadCategories,
+    loadProducts,
+    loadCart,
     loadPageSettings,
     loadOffers,
     loadSlides,

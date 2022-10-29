@@ -1,7 +1,7 @@
 <template lang="pug">
 .content
-  Offers
   Banner
+  Offers
   About
   Services
   Blog
@@ -38,12 +38,12 @@ export default {
 
 <style scoped lang="scss">
 .content {
-  margin-top: 4rem;
+  //margin-top: 4rem;
   transition: all 0.35s ease;
 }
 @media screen and (max-width: 639px) {
   .content {
-    margin-top: 5.5rem;
+    Margin-top: 10.5rem;
   }
 }
 

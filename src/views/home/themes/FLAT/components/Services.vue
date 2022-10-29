@@ -1,27 +1,26 @@
 <template lang="pug">
-.container.mx-auto.my-5
-  .title-primary-flat.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
-    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) {{ $store.state.settings.services_component_title }}
+.container.my-(data-aos="fade-down")
+  h1.text-center() {{ $store.state.settings.services_component_title }}
 
-  .flex.flex-col.justify-center.items-center.text-center
-    .features.flex.flex-wrap.justify-center.items-center
-      a.flex.flex-col.justify-center.items-center.text-center.p-5.basis-full(
-        class="basis-1/2 sm:basis-1/3 md:p-10",
-        href="/services",
-        v-for="(service, key) in $store.state.services",
-        :key="key"
-      )
-        .img-container.flex.justify-center.items-center.p-2.h-10
-          img(
-            :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
-            :alt="service.title"
-          )
-        p.font-black.text-base.mb-2(class="sm:text-lg md:text-xl lg:text-2xl")
-          br/
-          br/
-          br/
-          | {{ service.title }}
+  .row.my-4
+    .col-md-6.col-sm-12.my-1(
+      v-for="(service, key) in $store.state.services",
+      :key="key"
+      data-aos="fade-down"
+    )
+      .text-bg-light.me-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden
+        .my-3.py-3
+          p
+            img.my-3(
+              style="max-width:200px"
+              :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
+              :alt="service.title"
+            )
+          h2(style="height:120px") {{service.title}}
+          router-link(to='/services').btn.primary-button(href='/services') Más Detalles
+
+
+
 </template>
 
 <script>
@@ -33,7 +32,9 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch("loadServices");
+    this.$store.dispatch("loadServices").then(function (){
+        AOS.init();
+    })
   },
 };
 </script>

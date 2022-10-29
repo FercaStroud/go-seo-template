@@ -4,7 +4,7 @@
     v-model:zoom="zoom",
     :center="cords",
     :options="mapOptions",
-    style="height: 400px; width: 98vw"
+    style="height: 400px; width: 100%"
   )
     l-tile-layer(url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
     l-marker(:lat-lng="cords")

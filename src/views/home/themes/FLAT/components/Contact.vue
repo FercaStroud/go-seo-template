@@ -1,83 +1,82 @@
 <template lang="pug">
-.container.mx-auto.flex.flex-col.items-center.my-5
-  .title-primary-flat.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
-    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) {{ $store.state.settings.contact_component_title }}
+.container.my-5(data-aos="fade-down")
+  h1.text-center()  {{ $store.state.settings.contact_component_title }}
 
-  .contact-container.container.flex.flex-wrap
-    .flex.flex-col.basis-full.p-5(class="sm:basis-1/2")
-      .mb-5(v-html="$store.state.settings.contact_text")
+  .mb-5(v-html="$store.state.settings.contact_text")
 
-      .flex.flex-col.justify-between.align-center(class="sm:flex-row")
-        .flex.flex-col.mb-5(class="sm:mb-0")
-          h3.title-primary-flat.uppercase.font-black.text-lg.mb-5 Llamanos
-          ul
-            li.mb-1(v-for="(phone, key) in $store.state.phones" :key="key")
-              a.capitalize.primary-underline-h(:href="'tel:' + phone.phone")
-                font-awesome-icon(:icon="['fa', 'phone']")
-                | {{' ' + phone.title }}
-        .flex.flex-col
-          h3.title-primary-flat.uppercase.font-black.text-lg.mb-5 Dudas y aclaraciones
-          ul
-            li.mb-1(v-for="(email, key) in $store.state.emails" :key="key")
-              a.primary-underline-h(:href="'mailto:' + email.email")
-                font-awesome-icon(:icon="['fa', 'envelope']")
-                span {{ ' ' + email.title.toLowerCase() }}
+  .row
+    .col-md-4
+      h4.my-2 Llamanos
+      template(v-for="(phone, key) in $store.state.phones" :key="key")
+        a.text-black.capitalize.primary-underline-h(:href="'tel:' + phone.phone" style="text-decoration:none")
+          font-awesome-icon(:icon="['fa', 'phone']")
+          | {{' ' + phone.title }}
+        br/
 
+      h3.my-2 Dudas y aclaraciones
+      template(v-for="(email, key) in $store.state.emails" :key="key" )
+        a.text-black.primary-underline-h(:href="'mailto:' + email.email" style="text-decoration:none")
+          font-awesome-icon(:icon="['fa', 'envelope']")
+          span {{ ' ' + email.title.toLowerCase() }}
+        br/
 
-    form.form.basis-full.flex.flex-col.gap-5.p-5(
-      class="sm:basis-1/2",
-      @submit.prevent="onSubmit"
-    )
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
-        label.w-32(for="name") Nombre
-          span.required *
-        input#name.form-input.basis-full.ml-0(
-          class="sm:ml-5",
-          type="text",
-          name="name",
-          placeholder="Nombre completo",
-          v-model="name",
-          required
-        )
+    .col-md-8
+      form.form.row(
+        class="sm:basis-1/2",
+        @submit.prevent="onSubmit"
+      )
+        .col-md-2.my-1
+          label.w-32(for="name") Nombre
+            span.required *
+        .col-md-10.my-1
+          input#name.form-input.w-100(
+            class="sm:ml-5",
+            type="text",
+            name="name",
+            placeholder="Nombre completo",
+            v-model="name",
+            required
+          )
 
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
-        label.w-32(for="email") Correo
-          span.required *
-        input#email.form-input.basis-full.ml-0(
-          class="sm:ml-5",
-          type="email",
-          name="email",
-          placeholder="Correo Electrónico",
-          v-model="email",
-          required
-        )
+        .col-md-2.my-1
+          label.w-32(for="email") Correo
+            span.required *
+        .col-md-10.my-1
+          input#email.form-input.w-100(
+            class="sm:ml-5",
+            type="email",
+            name="email",
+            placeholder="Correo Electrónico",
+            v-model="email",
+            required
+          )
 
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
-        label.w-32(for="subject") Asunto
-          span.required *
-        input#subject.form-input.basis-full.ml-0(
-          class="sm:ml-5",
-          type="text",
-          name="name",
-          placeholder="Nombre completo",
-          v-model="name",
-          required
-        )
-      .form-field.flex.flex-col.gap-5(class="sm:flex-row sm:gap-5 md:items-center")
-        label.w-32(for="message") Mensaje
-          span.required *
-        textarea#message.form-input.basis-full.ml-0(
-          class="sm:ml-5",
-          name="message",
-          placeholder="Mensaje",
-          v-model="name",
-          required
-        )
-      button.submit.primary-button.text-lg(type="submit") Enviar
-      //img(style="margin:10%" src="https://appsgorilasonline.com/dona.png")
+        .col-md-2.my-1
+          label.w-32(for="subject") Asunto
+            span.required *
+        .col-md-10.my-1
+          input#subject.form-input.w-100(
+            type="text",
+            name="name",
+            placeholder="Nombre completo",
+            v-model="name",
+            required
+          )
 
-  Map(style="margin-top: 30px")
+        .col-md-2.my-1
+          label.w-32(for="message") Mensaje
+            span.required *
+        .col-md-10.my-1
+          textarea#message.form-input.w-100(
+            name="message",
+            placeholder="Mensaje",
+            v-model="name",
+            required
+          )
+        button.submit.primary-button.text-lg(type="submit") Enviar
+        //img(style="margin:10%" src="https://appsgorilasonline.com/dona.png")
+    .col-md-12
+      Map(style="margin-top: 30px")
 </template>
 
 <script>
@@ -85,8 +84,12 @@ import Map from "../../../../../components/maps/Map.vue";
 export default {
   name: "Contact",
   mounted() {
-    this.$store.dispatch('loadPhones');
-    this.$store.dispatch('loadEmails');
+    this.$store.dispatch('loadPhones').then(function (){
+      AOS.init();
+    });
+    this.$store.dispatch('loadEmails').then(function (){
+      AOS.init();
+    });
   },
   components: { Map },
   data() {

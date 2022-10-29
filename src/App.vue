@@ -33,6 +33,7 @@ export default {
     this.$store.dispatch('loadPageSettings').then(function (){
       document.documentElement.style.setProperty('--primary-color', this.$store.state.settings.primary_color);
       document.documentElement.style.setProperty('--secondary-color', this.$store.state.settings.secondary_color);
+      document.documentElement.style.setProperty('--swiper-theme-color', this.$store.state.settings.secondary_color);
     }.bind(this));
   },
 };

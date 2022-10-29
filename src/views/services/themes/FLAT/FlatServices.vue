@@ -1,17 +1,14 @@
 <template lang="pug">
-.content.flex.flex-col.items-center.relative.container.mx-auto
-  h1.title-primary-flat.text-center.font-black.text-2xl.mt-2.mb-5.p-2(
-    class="sm:text-3xl sm:mt-5 sm:mb-10 sm:p-0"
-  ) Servicios
-
-  .flex.flex-wrap.container.mx-auto
-    .flex.flex-col.justify-center.items-center.basis-full.p-2(
+.container.my-5.pt-5(data-aos="fade-down")
+  h1.pt-5.text-center() {{ $store.state.settings.services_component_title }}
+  .row
+    .col-md-12.col-sm-12.text-center(
       class=""
       v-for="(service, key) in $store.state.services",
       :key="key"
     )
-      .img-container.flex.justify-center.items-center.h-20.mb-2
-        img(
+      p.text-center
+        img.img-fluid(
           :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
           :alt="service.title"
         )
@@ -28,7 +25,9 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch("loadServices");
+    this.$store.dispatch("loadServices").then(function (){
+      AOS.init();
+    })
     window.scrollTo(0,0);
   },
   components: {},
@@ -55,4 +54,5 @@ export default {
   width: 100%;
   height: auto;
 }
+
 </style>
