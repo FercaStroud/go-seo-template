@@ -3,9 +3,18 @@
   Banner
   Offers
   About
-  Services
-  Blog
-  ClientsProviders
+  //Services
+  // Blog
+  //ClientsProviders
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC2.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC3.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC4.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC5.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC6.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC7.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC8.webp" alt="")
+  img(style="width:100%" src="https://inviertesolido.com/Brochure-TC9.webp" alt="")
   Contact
 </template>
 

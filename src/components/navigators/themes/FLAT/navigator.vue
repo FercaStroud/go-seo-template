@@ -12,19 +12,19 @@
       )
 
     ul.nav.nav-pills
-      li.nav-item
+      //li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/' @mouseover="showCategoriesNav=false")  Inicio
-      li.nav-item
+      //li.nav-item
         router-link.link.nav-link.primary-underline-h(
           to='/store'
           @mouseover="showCategoriesNav=true"
           @click="showCategoriesNav=false"
         )  {{ $store.state.settings.store_navigator_title }}
-      li.nav-item
+      //li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/portfolio' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.portfolio_navigator_title }}
-      li.nav-item
+      //li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/blog' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.blog_navigator_title }}
-      li.nav-item
+      //li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/services' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.services_navigator_title }}
       li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/contact' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.contact_navigator_title }}
@@ -84,7 +84,7 @@ export default {
   position: fixed;
   top: 0;
   z-index: 999999;
-  background-color: rgba(255,255,255,.85);
+  background-color: rgba(255,255,255,1);
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.022),
   0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
   0px 0px 29.2px rgba(0, 0, 0, 0.048), 0px 0px 80px rgba(0, 0, 0, 0.07);

@@ -5,19 +5,22 @@ footer.py-3
       .col-md-3.col-sm-12
         h3.my-5.font-black.text-lg.mb-5 SITE MAP
         ul
-          li.mb-1
+          //li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/portfolio")
               | Portafolio
           li.mb-1
+            router-link.capitalize.link.primary-underline-h(to="/")
+              | Inicio
+          li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/contact")
               | Contacto
-          li.mb-1
+          //li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/blog")
               | Blog
-          li.mb-1
+          //li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/services")
               | Servicios
-          li.mb-1
+          //li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/products")
               | Productos
       .col-md-3.col-sm-12
@@ -31,7 +34,7 @@ footer.py-3
         h3.my-5.font-black.text-lg.mb-5 E-mail(s)
         ul
           li.mb-1(v-for="(email, key) in $store.state.emails", :key="key")
-            a.link.primary-underline-h(:href="'mailto:' + email.email")
+            a.link.capitalize.primary-underline-h(:href="'mailto:' + email.email")
               font-awesome-icon(:icon="['fa', 'envelope']")
               span {{ email.title.length >= 25 ? ' ' + email.title.toLowerCase().substring(0, 25) + '...' : ' ' + email.title.toLowerCase() }}
       .col-md-3.col-sm-12

@@ -6,6 +6,7 @@ swiper.cover-container.d-flex.w-100.h-100.mx-auto.flex-column(
   :autoplay="{ delay: 7500 }",
   :modules="modules"
   data-aos="fade-down"
+  style="margin-top:80px"
 )
   swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
     a(target="_blank" :href="slide.href")
