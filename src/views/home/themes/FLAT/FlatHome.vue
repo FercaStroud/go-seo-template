@@ -1,6 +1,6 @@
 <template lang="pug">
 .content
-  Banner
+  Banner(style="margin-top:80px")
   Offers
   About
   Services

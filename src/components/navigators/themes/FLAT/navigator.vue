@@ -14,7 +14,7 @@
     ul.nav.nav-pills
       li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/' @mouseover="showCategoriesNav=false")  Inicio
-      li.nav-item
+      //li.nav-item
         router-link.link.nav-link.primary-underline-h(
           to='/store'
           @mouseover="showCategoriesNav=true"

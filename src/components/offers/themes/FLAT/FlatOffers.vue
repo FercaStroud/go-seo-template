@@ -74,7 +74,7 @@ export default {
 
 @media (max-width: 991px) {
   .offers {
-    margin-top: 150px;
+    margin-top: -80px;
 
   }
 }

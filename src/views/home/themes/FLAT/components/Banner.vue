@@ -8,16 +8,15 @@ swiper.cover-container.d-flex.w-100.h-100.mx-auto.flex-column(
   data-aos="fade-down"
 )
   swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
-    a(target="_blank" :href="slide.href")
-      img.w-100.h-auto(
-        :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
-        :alt="slide.title"
-      )
+    img.w-100.h-auto(
+      :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
+      :alt="slide.title"
+    )
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
+import {Swiper, SwiperSlide} from "swiper/vue";
+import {Autoplay, Pagination, Navigation, Keyboard} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -30,7 +29,7 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch("loadSlides").then(function (){
+    this.$store.dispatch("loadSlides").then(function () {
       AOS.init();
     })
 

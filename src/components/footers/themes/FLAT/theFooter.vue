@@ -27,6 +27,10 @@ footer.py-3
             a.capitalize.link.primary-underline-h(:href="'tel:' + phone.phone")
               font-awesome-icon(:icon="['fa', 'phone']")
               | {{ ' ' + phone.title }}
+          li.mb-1
+            a.capitalize.link.primary-underline-h(:href="'https://wa.me/+528713861541'")
+              font-awesome-icon(:icon="['fa', 'phone']")
+              | {{ ' ' + 'WhatsApp' }}
       .col-md-3.col-sm-12
         h3.my-5.font-black.text-lg.mb-5 E-mail(s)
         ul
@@ -81,7 +85,7 @@ export default {
 
 <style scoped>
 footer {
-  background-color: #222;
+  background-color: #001138;
   color: white;
 }
 
@@ -91,7 +95,8 @@ footer {
 }
 
 .link {
-  color: #ccc;
+  text-decoration: none;
+  color: white;
   position: relative;
   transition: color 0.35s ease;
 }

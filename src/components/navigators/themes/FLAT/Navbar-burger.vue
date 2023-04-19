@@ -92,7 +92,10 @@ export default {
 
 .burger {
   border: 1px solid #333;
+  position: fixed;
   border-radius: 4px;
+  right: 20px;
+  top: 17px;
 }
 .bar1,
 .bar2,
@@ -114,12 +117,22 @@ export default {
   -webkit-transform: rotate(45deg) translate(-4px, -6px);
   transform: rotate(45deg) translate(-4px, -6px);
 }
-
-.link {
-  color: #555;
-  transition: color 0.35s ease;
-}
-.link:hover {
+.primary-underline-h{
+  text-decoration: none !important;
   color: black;
 }
+.nav-image{
+  max-width:150px;
+  width:150px
+}
+.nav-categories{
+  transition: color 0.35s ease;
+  border-bottom:3px solid var(--primary-color);
+}
+@media(max-width: 767px){
+  .search{
+    margin-top:10px;
+  }
+}
+
 </style>
