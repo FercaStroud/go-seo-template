@@ -58,8 +58,8 @@
           input#subject.form-input.w-100(
             type="text",
             name="name",
-            placeholder="Nombre completo",
-            v-model="name",
+            placeholder="Asunto",
+            v-model="subject",
             required
           )
 
@@ -70,7 +70,7 @@
           textarea#message.form-input.w-100(
             name="message",
             placeholder="Mensaje",
-            v-model="name",
+            v-model="message",
             required
           )
         button.submit.primary-button.text-lg(type="submit") Enviar
@@ -96,6 +96,8 @@ export default {
     return {
       name: "",
       email: "",
+      subject: "",
+      message: "",
       selectedBudget: "",
     };
   },
