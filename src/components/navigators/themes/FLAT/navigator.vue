@@ -84,7 +84,7 @@ export default {
   position: fixed;
   top: 0;
   z-index: 999999;
-  background-color: rgba(255,255,255,.85);
+  background-color: rgba(255,255,255,1);
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.022),
   0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
   0px 0px 29.2px rgba(0, 0, 0, 0.048), 0px 0px 80px rgba(0, 0, 0, 0.07);

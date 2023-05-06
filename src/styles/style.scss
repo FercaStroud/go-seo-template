@@ -13,6 +13,12 @@ html,
 body {
   scroll-behavior: smooth;
 }
+#app{
+
+  background-image: url("../assets/bg.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
 .font-1{
   font-family: 'Raleway', sans-serif !important;
 }

@@ -28,7 +28,7 @@ footer.py-3
               font-awesome-icon(:icon="['fa', 'phone']")
               | {{ ' ' + phone.title }}
           li.mb-1
-            a.capitalize.link.primary-underline-h(:href="'https://wa.me/+528713861541'")
+            a.capitalize.link.primary-underline-h(:href="'https://wa.me/+528717558506'")
               font-awesome-icon(:icon="['fa', 'phone']")
               | {{ ' ' + 'WhatsApp' }}
       .col-md-3.col-sm-12
@@ -85,7 +85,7 @@ export default {
 
 <style scoped>
 footer {
-  background-color: #001138;
+  background-color: #73AB17;
   color: white;
 }
 

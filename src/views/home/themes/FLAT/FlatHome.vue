@@ -3,9 +3,9 @@
   Banner(style="margin-top:80px")
   Offers
   About
+  ClientsProviders
   Services
   Blog
-  ClientsProviders
   Contact
 </template>
 

@@ -21,12 +21,20 @@
           br/
           br/
           strong.color-white.pt-5(style="text-align:center;font-size:2em") {{modalImage.title}}
-      .row.justify-content-md-center
+      .row.justify-content-md-center(style="background:white;padding:20px")
         .col-md-6.col-sm-12
           img.img-fluid(
             :src="PUBLIC_ASSETS + 'images/portfolios/' + modalImage.src",
             :alt="modalImage.title"
           )
+        .col
+          p(v-if="modalImage.title === 'Alfalfa'" ) La alfalfa es un cultivo forrajero muy popular entre los ganaderos debido a que es altamente digerible y rico en nutrientes esenciales como proteínas, carbohidratos, vitaminas y minerales. Además, puede mejorar la salud y la producción de leche del ganado, mientras reduce los costos de alimentación. En general, la alfalfa es una excelente opción como alimento para el ganado por sus beneficios nutricionales y su rentabilidad.
+          p(v-if="modalImage.title === 'Avena'" ) La avena es una fuente nutritiva y rentable de alimento para el ganado debido a su alto contenido de energía, su digestibilidad, su capacidad para mejorar la salud intestinal y fortalecer los huesos, y su rentabilidad. En general, la avena es una excelente opción para alimentar al ganado debido a sus numerosos beneficios para la salud y el rendimiento animal.
+          p(v-if="modalImage.title === 'Rastrojo de maíz'" ) El rastrojo de maiz es un alimento vegetal comun en la alimentacion del ganado debido a su alto contenido de fibra, energia, nutrientes y disponibilidad. Además, su uso como subproducto de la producción de maíz lo convierte en una opción sostenible. En general, el rastrojo de maíz es una fuente valiosa y económica de alimento para el ganado.
+          p(v-if="modalImage.title === 'Pajas'" ) La paja es un alimento economico y de alto contenido en fibra utilizado en la alimentacion del ganado. Es una fuente valiosa de alimento debido a su disponibilidad, capacidad de reducir residuos, fortalecedor dental, control de peso y beneficios digestivos. Sin embargo, es importante complementarla con otros alimentos para asegurar una dieta equilibrada.
+          p(v-if="modalImage.title === 'Compra y venta de forrajes de temporada'") Ofrecemos un servicio de compra y venta de forrajes de temporada durante todo el año, incluyendo variedades como alfalfa, avena, rastrojo de maíz y paja. Proporcionamos descripciones detalladas de cada tipo de forraje, así como la opción de comprar y vender a granel y un servicio de entrega seguro. Nos enfocamos en brindar una experiencia de compra y venta sin problemas y un servicio excepcional a nivel nacional.
+
+
 </template>
 
 <script>

@@ -3,7 +3,7 @@ component(:is="$store.state.settings.theme_name")
 </template>
 
 <script>
-import FLAT from "./themes/FLAT/Navbar-burger.vue";
+import FLAT from "./themes/FLAT/navigator.vue";
 import SOBER from "./themes/SOBER/navigator.vue";
 import GLASS from "./themes/GLASS/navigator.vue";
 

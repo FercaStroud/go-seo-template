@@ -3,7 +3,7 @@
   h1.text-center() {{ $store.state.settings.services_component_title }}
 
   .row.my-4
-    .col-md-6.col-sm-12.my-1(
+    .col-md-4.col-sm-12.my-1(
       v-for="(service, key) in $store.state.services",
       :key="key"
       data-aos="fade-down"
@@ -12,11 +12,10 @@
         .my-3.py-3
           p
             img.my-3(
-              style="max-width:200px"
+              style="width: 100%"
               :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
               :alt="service.title"
             )
-          h2(style="height:120px") {{service.title}}
           router-link(to='/services').btn.primary-button(href='/services') Más Detalles
 
 
