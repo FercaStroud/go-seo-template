@@ -3,7 +3,7 @@ swiper.cover-container.d-flex.w-100.h-100.mx-auto.flex-column(
   :keyboard="true"
   :navigation="true"
   :pagination="true",
-  :autoplay="{ delay: 7500 }",
+  :autoplay="{ delay: 10500 }",
   :modules="modules"
   data-aos="fade-down"
 )

@@ -12,7 +12,7 @@
       .text-center
         span {{ image.title.length >= 35 ? image.title.substring(0, 35) + '...' : image.title }}
 
-  vue-final-modal(v-model="showModal")
+  vue-final-modal#modal(v-model="showModal")
     .container
       button.btn.close-modal(@click="showModal = false") Cerrar
 
@@ -20,7 +20,7 @@
         .col-md-12.pt-5(style="text-align:center;")
           br/
           br/
-          strong.color-white.pt-5(style="text-align:center;font-size:2em") {{modalImage.title}}
+          strong.color-white.pt-5(style="text-align:center;font-size:2em")
       .row.justify-content-md-center(style="background:white;padding:20px")
         .col-md-6.col-sm-12
           img.img-fluid(
@@ -66,5 +66,18 @@ export default {
   top: 108px;
   right: 9px;
   background: white;
+}
+@media(max-width: 768px){
+  #modal{
+    margin-top:-220px;
+    width: 100% !important;
+  }
+  .close-modal{
+    top: 50px;
+    right: 40px;
+  }
+  .close-modal:hover{
+    background: white;
+  }
 }
 </style>

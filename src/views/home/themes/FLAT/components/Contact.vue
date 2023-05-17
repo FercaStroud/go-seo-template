@@ -6,7 +6,7 @@
 
   .row
     .col-md-4
-      h4.my-2 Llamanos
+      h4.my-2 Llámanos
       template(v-for="(phone, key) in $store.state.phones" :key="key")
         a.text-black.capitalize.primary-underline-h(:href="'tel:' + phone.phone" style="text-decoration:none")
           font-awesome-icon(:icon="['fa', 'phone']")

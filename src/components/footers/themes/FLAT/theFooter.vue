@@ -7,7 +7,7 @@ footer.py-3
         ul
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/portfolio")
-              | Portafolio
+              | Productos
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/contact")
               | Contacto
@@ -16,10 +16,7 @@ footer.py-3
               | Blog
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/services")
-              | Servicios
-          li.mb-1
-            router-link.capitalize.link.primary-underline-h(to="/products")
-              | Productos
+              | Distribuidores
       .col-md-3.col-sm-12
         h3.my-5.font-black.text-lg.mb-5 Llámanos
         ul

@@ -4,7 +4,7 @@
     .logo-n-burger.basis-full.flex.justify-between.items-center
       .img-container
         router-link(to="/")
-          img(
+          img.nav-image(
             v-if="$store.state.settings.logo",
             :src="PUBLIC_ASSETS + 'images/logos/' + $store.state.settings.logo",
             alt="LOGO"
@@ -80,14 +80,6 @@ export default {
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.022),
     0px 0px 6.9px rgba(0, 0, 0, 0.031), 0px 0px 14.2px rgba(0, 0, 0, 0.039),
     0px 0px 29.2px rgba(0, 0, 0, 0.048), 0px 0px 80px rgba(0, 0, 0, 0.07);
-}
-.img-container a {
-  max-width: 200px;
-  max-height: 50px;
-}
-.img-container a img {
-  width: auto;
-  height: 100%;
 }
 
 .burger {

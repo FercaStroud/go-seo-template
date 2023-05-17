@@ -10,7 +10,7 @@ footer
         ul
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/portfolio")
-              | Portafolio
+              | Productos
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/contact")
               | Contacto
@@ -20,13 +20,10 @@ footer
           li.mb-1
             router-link.capitalize.link.primary-underline-h(to="/services")
               | Servicios
-          li.mb-1
-            router-link.capitalize.link.primary-underline-h(to="/products")
-              | Productos
     .column.basis-full.flex.flex-col.gap-10.mb-10(class="sm:basis-1/2 lg:basis-1/4")
       .list
         h3.title-primary-glass.uppercase.font-black.text-lg.mb-5
-          | LLamanos
+          | LLámanos
         ul
           li.mb-1(v-for="(phone, key) in $store.state.phones", :key="key")
             a.capitalize.link.primary-underline-h(:href="'tel:' + phone.phone")

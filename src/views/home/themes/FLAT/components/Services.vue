@@ -1,7 +1,6 @@
 <template lang="pug">
 .container.my-(data-aos="fade-down")
   h1.text-center() {{ $store.state.settings.services_component_title }}
-
   .row.my-4
     .col-md-4.col-sm-12.my-1(
       v-for="(service, key) in $store.state.services",

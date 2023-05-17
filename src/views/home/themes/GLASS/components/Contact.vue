@@ -10,7 +10,7 @@
 
       .flex.flex-col.justify-between.align-center(class="sm:flex-row")
         .flex.flex-col.mb-5(class="sm:mb-0")
-          h3.title-primary-glass.uppercase.font-black.text-lg.mb-5 Llamanos
+          h3.title-primary-glass.uppercase.font-black.text-lg.mb-5 Llámanos
           ul
             li.mb-1(v-for="(phone, key) in $store.state.phones" :key="key")
               a.capitalize.primary-underline-h(:href="'tel:' + phone.phone")
