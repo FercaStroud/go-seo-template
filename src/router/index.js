@@ -47,6 +47,16 @@ const routes = [
     name: "PrivacyPolicy",
     component: () => import('../views/privacy-policy/PrivacyPolicy.vue'),
   },
+  {
+    path: "/catalogo-marcas",
+    name: "CatBrands",
+    component: () => import('../views/catalogs/Brands.vue'),
+  },
+  {
+    path: "/catalogo-peeisa",
+    name: "CatPeeisa",
+    component: () => import('../views/catalogs/Peeisa.vue'),
+  },
 ];
 
 const router = createRouter({
