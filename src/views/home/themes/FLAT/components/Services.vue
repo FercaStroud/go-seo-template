@@ -15,7 +15,7 @@
               :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
               :alt="service.title"
             )
-          router-link(to='/services').btn.primary-button(href='/services') Más Detalles
+          router-link(:to="'/service/'+service.id").btn.primary-button(:href="'/service/'+service.id") Más Detalles
 
 
 
