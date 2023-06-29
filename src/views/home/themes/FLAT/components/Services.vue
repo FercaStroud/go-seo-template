@@ -2,7 +2,7 @@
 .container.my-(data-aos="fade-down")
   h1.text-center() {{ $store.state.settings.services_component_title }}
   .row.my-4
-    .col-md-4.col-sm-12.my-1(
+    .col-md-3.col-sm-12.my-1(
       v-for="(service, key) in $store.state.services",
       :key="key"
       data-aos="fade-down"

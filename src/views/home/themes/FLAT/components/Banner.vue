@@ -1,17 +1,18 @@
 <template lang="pug">
-swiper.cover-container.d-flex.w-100.h-100.mx-auto.flex-column(
-  :keyboard="true"
-  :navigation="true"
-  :pagination="true",
-  :autoplay="{ delay: 10500 }",
-  :modules="modules"
-  data-aos="fade-down"
-)
-  swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
-    img.w-100.h-auto(
-      :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
-      :alt="slide.title"
-    )
+.container
+  swiper.cover-container.d-flex.w-100.h-100.mx-auto.flex-column(
+    :keyboard="true"
+    :navigation="true"
+    :pagination="true",
+    :autoplay="{ delay: 10500 }",
+    :modules="modules"
+    data-aos="fade-down"
+  )
+    swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
+      img.w-100.h-auto(
+        :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
+        :alt="slide.title"
+      )
 </template>
 
 <script>

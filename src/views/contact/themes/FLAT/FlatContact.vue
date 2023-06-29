@@ -81,6 +81,7 @@
 
 <script>
 import Map from "../../../../components/maps/Map.vue";
+import axios from "axios";
 export default {
   name: "FlatContact",
   mounted() {
@@ -102,13 +103,23 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
-      alert(
-          `name: ${this.name}\nemail: ${this.email}\nselected: ${this.selectedBudget}`
+    async onSubmit() {
+      const data = {
+        domain: import.meta.env.VITE_DOMAIN,
+        name: this.name,
+        subject: this.subject,
+        email: this.email,
+        message: this.message
+      }
+      const response = await axios.get(
+          'send/email/agro?domain='+data.domain+
+          '&name='+data.name+
+          '&subject='+data.subject+
+          '&email='+data.email+
+          '&message='+data.message
       );
-      this.name = "";
-      this.email = "";
-      this.selectedBudget = "";
+      console.log(response);
+      alert("Mensaje enviado.")
     },
   },
 };
