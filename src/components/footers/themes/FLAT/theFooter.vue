@@ -1,5 +1,5 @@
 <template lang="pug">
-footer.py-3
+footer.py-3(style="margin-top:-70px")
   .container
     .row
       .col-md-3.col-sm-12

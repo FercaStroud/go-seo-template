@@ -1,5 +1,5 @@
 <template lang="pug">
-.map
+.map.p-5
   l-map(
     v-model:zoom="zoom",
     :center="cords",

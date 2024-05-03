@@ -1,11 +1,9 @@
 <template lang="pug">
-.content
+.content(style="background: url('/enmDRAGON_PRSIACASO.png'); background-size:cover")
   Banner
   Offers
   About
   Services
-  Blog
-  ClientsProviders
   Contact
 </template>
 

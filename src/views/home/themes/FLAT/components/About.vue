@@ -1,5 +1,5 @@
 <template lang="pug">
-.container.my-5(data-aos="fade-down")
+.container-fluid.my-5(data-aos="fade-down")
   h1.text-center() {{ $store.state.settings.about_us_component_title }}
   .about
     .ql-editor(v-html="$store.state.settings.about" )

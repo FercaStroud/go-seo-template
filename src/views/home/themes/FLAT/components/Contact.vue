@@ -1,26 +1,13 @@
 <template lang="pug">
-.container.my-5(data-aos="fade-down")
-  h1.text-center()  {{ $store.state.settings.contact_component_title }}
-
-  .mb-5(v-html="$store.state.settings.contact_text")
-
+.container-fluid.my-5(data-aos="fade-down")
   .row
-    .col-md-4
-      h4.my-2 Llamanos
-      template(v-for="(phone, key) in $store.state.phones" :key="key")
-        a.text-black.capitalize.primary-underline-h(:href="'tel:' + phone.phone" style="text-decoration:none")
-          font-awesome-icon(:icon="['fa', 'phone']")
-          | {{' ' + phone.title }}
-        br/
+    .col-md-6
+      img(
+        style="max-width:100%"
+        :src="'/enmCONTACTO.png'",
+      )
 
-      h3.my-2 Dudas y aclaraciones
-      template(v-for="(email, key) in $store.state.emails" :key="key" )
-        a.text-black.primary-underline-h(:href="'mailto:' + email.email" style="text-decoration:none")
-          font-awesome-icon(:icon="['fa', 'envelope']")
-          span {{ ' ' + email.title.toLowerCase() }}
-        br/
-
-    .col-md-8
+    .col-md-6
       form.form.row(
         class="sm:basis-1/2",
         @submit.prevent="onSubmit"
@@ -58,8 +45,8 @@
           input#subject.form-input.w-100(
             type="text",
             name="name",
-            placeholder="Nombre completo",
-            v-model="name",
+            placeholder="Asunto",
+            v-model="subject",
             required
           )
 
@@ -70,13 +57,13 @@
           textarea#message.form-input.w-100(
             name="message",
             placeholder="Mensaje",
-            v-model="name",
+            v-model="message",
             required
           )
         button.submit.primary-button.text-lg(type="submit") Enviar
         //img(style="margin:10%" src="https://appsgorilasonline.com/dona.png")
-    .col-md-12
-      Map(style="margin-top: 30px")
+    .col-md-12(style="background:url('/enmFONDOPARAMAPA.png');background-size:100% 100%")
+      Map(style="margin-top: 80px")
 </template>
 
 <script>
@@ -95,6 +82,8 @@ export default {
   data() {
     return {
       name: "",
+      subject: "",
+      message: "",
       email: "",
       selectedBudget: "",
     };

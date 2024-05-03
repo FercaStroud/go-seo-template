@@ -1,17 +1,23 @@
 <template lang="pug">
-swiper.cover-container.d-flex.w-100.h-100.mx-auto.flex-column(
-  :keyboard="true"
-  :navigation="true"
-  :pagination="true",
-  :autoplay="{ delay: 7500 }",
-  :modules="modules"
-  data-aos="fade-down"
-)
-  swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
-    a(target="_blank" :href="slide.href")
-      img.w-100.h-auto(
-        :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
-        :alt="slide.title"
+div
+  .row(style="margin-top:80px")
+  img(
+    style="max-width:100%"
+    :src="'/enmBANNERTOP.png'",
+  )
+  swiper.cover-container.d-flex.w-100.h-100.mx-auto.flex-column(
+    :keyboard="true"
+    :navigation="true"
+    :pagination="true",
+    :autoplay="{ delay: 7500 }",
+    :modules="modules"
+    data-aos="fade-down"
+  )
+    swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
+      a(target="_blank" :href="slide.href")
+        img.w-100.h-auto(
+          :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
+          :alt="slide.title"
       )
 </template>
 
