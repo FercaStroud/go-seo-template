@@ -1,13 +1,13 @@
 <template lang="pug">
 .container-fluid.my-5(data-aos="fade-down")
   .row
-    .col-md-6
+    .col-md-3.offset-2
       img(
         style="max-width:100%"
         :src="'/enmCONTACTO.png'",
       )
 
-    .col-md-6
+    .col-md-4.offset-1(style="padding-bottom:30px")
       form.form.row(
         class="sm:basis-1/2",
         @submit.prevent="onSubmit"
@@ -21,7 +21,7 @@
             type="text",
             name="name",
             placeholder="Nombre completo",
-            v-model="name",
+            v-model="form.name",
             required
           )
 
@@ -34,19 +34,19 @@
             type="email",
             name="email",
             placeholder="Correo Electrónico",
-            v-model="email",
+            v-model="form.email",
             required
           )
 
         .col-md-2.my-1
-          label.w-32(for="subject") Asunto
+          label.w-32(for="subject") Teléfono
             span.required *
         .col-md-10.my-1
           input#subject.form-input.w-100(
-            type="text",
+            type="number",
             name="name",
-            placeholder="Asunto",
-            v-model="subject",
+            placeholder="Teléfono",
+            v-model="form.phone",
             required
           )
 
@@ -57,12 +57,12 @@
           textarea#message.form-input.w-100(
             name="message",
             placeholder="Mensaje",
-            v-model="message",
+            v-model="form.message",
             required
           )
         button.submit.primary-button.text-lg(type="submit") Enviar
         //img(style="margin:10%" src="https://appsgorilasonline.com/dona.png")
-    .col-md-12(style="background:url('/enmFONDOPARAMAPA.png');background-size:100% 100%")
+    .col-md-12.fx-contact(style="background:url('/enmFONDOPARAMAPA.png');background-size:cover")
       Map(style="margin-top: 80px")
 </template>
 
@@ -81,21 +81,49 @@ export default {
   components: { Map },
   data() {
     return {
-      name: "",
-      subject: "",
-      message: "",
-      email: "",
-      selectedBudget: "",
+      loading: false,
+      form: {
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      },
     };
   },
   methods: {
-    onSubmit() {
-      alert(
-        `name: ${this.name}\nemail: ${this.email}\nselected: ${this.selectedBudget}`
-      );
-      this.name = "";
-      this.email = "";
-      this.selectedBudget = "";
+    async onSubmit() {
+      try {
+        this.loading = true;
+
+        const currentDate = new Date();
+
+        this.form.currentDate = currentDate.toLocaleDateString('es-MX', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        const lurl = window.location.href;
+        const urlParams = new URLSearchParams(lurl.split('?')[1]);
+
+        for (const [key, value] of urlParams) {
+          this.form[key] = value;
+        }
+
+        const url = 'https://hooks.zapier.com/hooks/catch/5727933/37vb2rb/';
+        const queryParams = new URLSearchParams(this.form);
+
+        const requestUrl = `${url}?${queryParams}`;
+
+        await fetch(requestUrl);
+        this.loading = false;
+        alert("Mensaje enviado.");
+
+      } catch (error) {
+        this.loading = false;
+        console.error(error);
+      }
     },
   },
 };
@@ -115,6 +143,14 @@ export default {
   .submit {
     padding: 0.2rem 2rem;
     border-radius: 0.2rem 0.5rem 0.2rem 0.5rem;
+  }
+}
+
+@media(max-width: 991px){
+  .fx-contact{
+    background-position-y: -140px !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
   }
 }
 </style>

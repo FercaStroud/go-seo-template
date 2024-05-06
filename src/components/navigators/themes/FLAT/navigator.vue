@@ -15,15 +15,7 @@
       li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/' @mouseover="showCategoriesNav=false")  Inicio
       li.nav-item
-        router-link.link.nav-link.primary-underline-h(
-          to='/store'
-          @mouseover="showCategoriesNav=true"
-          @click="showCategoriesNav=false"
-        )  {{ $store.state.settings.store_navigator_title }}
-      li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/portfolio' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.portfolio_navigator_title }}
-      li.nav-item
-        router-link.link.nav-link.primary-underline-h(to='/blog' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.blog_navigator_title }}
       li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/services' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.services_navigator_title }}
       li.nav-item
@@ -122,6 +114,10 @@ export default {
   .search{
     margin-top:10px;
   }
+}
+
+a{
+  font-family: "Oswald", sans-serif !important;
 }
 
 </style>
