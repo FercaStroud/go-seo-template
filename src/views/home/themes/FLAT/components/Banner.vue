@@ -14,7 +14,7 @@ div
     data-aos="fade-down"
   )
     swiper-slide(v-for="(slide, key) in $store.state.slides", :key="key")
-      a(target="_blank" :href="slide.href")
+      a(href="#contacto")
         img.w-100.h-auto(
           :src="PUBLIC_ASSETS + 'images/slides/' + slide.src",
           :alt="slide.title"

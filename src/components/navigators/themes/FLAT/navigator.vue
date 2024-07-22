@@ -17,9 +17,9 @@
       li.nav-item
         router-link.link.nav-link.primary-underline-h(to='/portfolio' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.portfolio_navigator_title }}
       li.nav-item
-        router-link.link.nav-link.primary-underline-h(to='/services' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.services_navigator_title }}
+        a.link.nav-link.primary-underline-h(href='#servicios' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.services_navigator_title }}
       li.nav-item
-        router-link.link.nav-link.primary-underline-h(to='/contact' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.contact_navigator_title }}
+        a.link.nav-link.primary-underline-h(href='#contacto' @mouseover="showCategoriesNav=false")  {{ $store.state.settings.contact_navigator_title }}
 
   .container-fluid.p-3.nav-categories(
     v-show="showCategoriesNav"

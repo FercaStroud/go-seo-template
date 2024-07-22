@@ -1,19 +1,38 @@
 <template lang="pug">
-.container.my-5.pt-5(data-aos="fade-down")
-  h1.pt-5.text-center() {{ $store.state.settings.services_component_title }}
-  .row
-    .col-md-12.col-sm-12.text-center(
-      class=""
+.container-fluid.my-(data-aos="fade-down" style="margin-top:50px")
+
+  .row.my-4
+    .col-md-4.col-sm-12.my-1(
       v-for="(service, key) in $store.state.services",
       :key="key"
+      data-aos="fade-down"
     )
-      p.text-center
-        img.img-fluid(
-          :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
-          :alt="service.title"
+      .me-md-3.pt-3.px-3.pt-md-5.px-md-5.text-center.overflow-hidden
+        p
+          img(
+            style="max-width:100%"
+            :src="PUBLIC_ASSETS + 'images/services/' + service.icon",
+            :alt="service.title"
+          )
+        img(
+          style="max-width:100%"
+          :src="'/d'+(key+1)+'.png'",
         )
-      h2.font-black.text-xl.mb-2(class="sm:text-xl md:text-2xl") {{ service.title }}
-      .ql-editor(v-html="service.description" )
+  .row
+    img(
+      style="max-width:100%"
+      :src="'/enmCOMPONEN.png'",
+    )
+  .row
+    img(
+      style="max-width:100%"
+      :src="'/BANNER.png'",
+    )
+  .row
+    img(
+      style="max-width:100%"
+      :src="'/enmBANNERSERVICIO.png'",
+    )
 </template>
 
 <script>

@@ -19,16 +19,19 @@
           style="max-width:100%"
           :src="'/d'+(key+1)+'.png'",
         )
+
   .row
     img(
       style="max-width:100%"
       :src="'/enmCOMPONEN.png'",
     )
-  .row
+
+  .row#servicios
     img(
       style="max-width:100%"
       :src="'/enmBANNERSERVICIO.png'",
     )
+
 </template>
 
 <script>

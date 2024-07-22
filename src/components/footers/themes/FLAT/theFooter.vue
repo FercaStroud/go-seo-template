@@ -1,5 +1,5 @@
 <template lang="pug">
-footer.py-3(style="margin-top:-70px")
+footer.py-3(style="margin-top:-20px")
   .container
     .row
       .col-md-3.col-sm-12
@@ -21,7 +21,7 @@ footer.py-3(style="margin-top:-70px")
             router-link.capitalize.link.primary-underline-h(to="/products")
               | Productos
       .col-md-3.col-sm-12
-        h3.my-5.font-black.text-lg.mb-5 LLamanos
+        h3.my-5.font-black.text-lg.mb-5 Llámanos
         ul
           li.mb-1(v-for="(phone, key) in $store.state.phones", :key="key")
             a.capitalize.link.primary-underline-h(:href="'tel:' + phone.phone")

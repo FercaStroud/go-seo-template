@@ -3,7 +3,7 @@
   .row
     .col-md-3.offset-2
       img(
-        style="max-width:100%"
+        style="width:100%"
         :src="'/enmCONTACTO.png'",
       )
 

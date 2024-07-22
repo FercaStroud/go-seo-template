@@ -1,10 +1,10 @@
 <template lang="pug">
-.content(style="background: url('/enmDRAGON_PRSIACASO.png'); background-size:cover; background-position: right; background-position-x:800px; background-repeat:no-repeat")
+.content(style="background-size:cover; background-position: right; background-position-x:800px; background-repeat:no-repeat")
   Banner
   Offers
   About
   Services
-  Contact
+  Contact#contacto
 </template>
 
 <script>
